@@ -69,7 +69,7 @@ Script duration 310.0
 Run total estimated duration= 311.000
 run duration: 0:05:11
 doing event level: 2
-15:21:06 -- Setting default integration. t=1.048576
+07:52:21 -- Setting default integration. t=1.048576
 setting integration time = 1.048576
 SetIntegrationTime 1.048576 ===>> OK
 ----------------- start -----------------
@@ -97,31 +97,31 @@ queue conditionals path /Users/obama/PychronDev/queue_conditionals/normal.yaml
 loading conditionals from /Users/obama/PychronDev/queue_conditionals/normal.yaml
 loading system conditionals pre_run_terminations
 loading conditionals from /Users/obama/PychronDev/setupfiles/spectrometer/default_conditionals.yaml
-15:21:06 -- ******* Pre Extraction Check *******
+07:52:21 -- ******* Pre Extraction Check *******
 Get a measurement from the spectrometer
-GetData ===>> L2(CDD),0.00110071301372752,H2,0.141907555957957,H1,-0.127088441277284,AX,-0.0945696789572411,L1,...
-Pre Extraction Termination data. keys=L2(CDD),H2,H1,AX,L1, signals=0.00110,0.14191,-0.12709,-0.09457,-0.61691
-15:21:06 -- testing system defined conditionals
+GetData ===>> L2(CDD),0.00110071301372752,H2,0.284718619788783,H1,-0.0598685728646833,AX,0.03672095361273,L1,-0...
+Pre Extraction Termination data. keys=L2(CDD),H2,H1,AX,L1, signals=0.00110,0.28472,-0.05987,0.03672,-0.50601
+07:52:21 -- testing system defined conditionals
 Checking default pre extraction terminations n=2
 testing L2_CDD_
 evaluate ot="L2(CDD).inactive" t="L2_CDD_", ctx="{'L2_CDD_': False}"
 GetDeflection L2 (CDD) ===>> 0
 testing L2_CDD_==3250
 evaluate ot="L2(CDD).deflection==3250" t="L2_CDD_==3250", ctx="{'L2_CDD_': 0.0}"
-15:21:06 -- ******* Pre Extraction Check Passed *******
+07:52:21 -- ******* Pre Extraction Check Passed *******
 =================================================================================
-15:21:06 -- stopping status monitor
+07:52:21 -- stopping status monitor
 stop 4714906832
 Status monitor stopped
 Status monitor finished
-15:21:08 -- starting status monitor
+07:52:23 -- starting status monitor
 start 4714906832
 StatusMonitor period=1. Frequencies(state=1, checksum=3, lock=5, owner=5)
 start extraction
 do extraction
-Analysis started at 15:21:09.525989
+Analysis started at 07:52:24.582177
 Extraction Started felix_air_x2.py
-15:21:09 -- ******* Extraction Started felix_air_x2.py *******
+07:52:24 -- ******* Extraction Started felix_air_x2.py *******
 state changed from not run to extraction
 DO EXTRACTION <pychron.extraction_line.pyscript_runner.RemotePyScriptRunner object at 0x11a1e0b90>
 testing...
@@ -210,8 +210,8 @@ doing actuation None-script open_channel False
 Open V ===>> OK
 GetValveState V ===>> OK
 change switch state (True, True)
-update switch state V True args=() kw={} ncanvase=5
-15:21:09 -- OPEN   VALVE-V (Felix Ion Pump)
+update switch state V True args=() kw={} ncanvase=6
+07:52:24 -- OPEN   VALVE-V (Felix Ion Pump)
 ---------------------------------------- open None (Felix Ion Pump) result=[(True, True)], time=0.10 sec
 locked=[False]
 close () {'description': 'Microbone to Minibone'}
@@ -236,7 +236,7 @@ doing actuation None-script close_channel True
 Close Q ===>> OK
 set states for children of Q. state=False
 handle state [('Q', False)]
-update switch state Q False args=() kw={'refresh': False} ncanvase=5
+update switch state Q False args=() kw={'refresh': False} ncanvase=6
 GetValveState Q ===>> False
 change switch state (False, False)
 ---------------------------------------- close None (Quad Inlet) result=[(False, False)]
@@ -244,18 +244,18 @@ locked=[False]
 open () {'description': 'Bone to Turbo'}
 opening name=--- desc=Bone to Turbo
 checking ownership. requestor=129.138.12.137
-refresh_canvas_needed fired
 check software interlocks C
 interlocks []
 actuate state mode=None-script, software_lock=False
 doing actuation None-script open_channel False
+refresh_canvas_needed fired
 Open C ===>> OK
-Get Checksum: 711448736
+Get Checksum: -1104108852
 GetValveState C ===>> OK
 change switch state (True, True)
-update switch state C True args=() kw={} ncanvase=5
-15:21:10 -- OPEN   VALVE-C (Bone to Turbo)
----------------------------------------- open None (Bone to Turbo) result=[(True, True)], time=0.18 sec
+update switch state C True args=() kw={} ncanvase=6
+07:52:25 -- OPEN   VALVE-C (Bone to Turbo)
+---------------------------------------- open None (Bone to Turbo) result=[(True, True)], time=0.22 sec
 locked=[False]
 open () {'description': 'Bone to Minibone'}
 opening name=--- desc=Bone to Minibone
@@ -263,13 +263,13 @@ checking ownership. requestor=129.138.12.137
 check software interlocks E
 interlocks []
 actuate state mode=None-script, software_lock=False
-doing actuation None-script open_channel True
+doing actuation None-script open_channel False
 Open E ===>> OK
 GetValveState E ===>> OK
 change switch state (True, True)
-update switch state E True args=() kw={} ncanvase=5
-15:21:11 -- OPEN   VALVE-E (Bone to Minibone)
----------------------------------------- open None (Bone to Minibone) result=[(True, True)], time=0.19 sec
+update switch state E True args=() kw={} ncanvase=6
+07:52:26 -- OPEN   VALVE-E (Bone to Minibone)
+---------------------------------------- open None (Bone to Minibone) result=[(True, True)], time=0.20 sec
 locked=[False]
 open () {'description': 'Minibone to Bone'}
 opening name=--- desc=Minibone to Bone
@@ -277,13 +277,17 @@ checking ownership. requestor=129.138.12.137
 check software interlocks I
 interlocks []
 actuate state mode=None-script, software_lock=False
-doing actuation None-script open_channel False
+doing actuation None-script open_channel True
 Open I ===>> OK
+set states for children of I. state=True
+handle state [('I', True)]
+update switch state I True args=() kw={'refresh': False} ncanvase=6
 GetValveState I ===>> OK
 change switch state (True, True)
-update switch state I True args=() kw={} ncanvase=5
-15:21:11 -- OPEN   VALVE-I (Minibone to Bone)
----------------------------------------- open None (Minibone to Bone) result=[(True, True)], time=0.49 sec
+update switch state I True args=() kw={} ncanvase=6
+refresh_canvas_needed fired
+07:52:27 -- OPEN   VALVE-I (Minibone to Bone)
+---------------------------------------- open None (Minibone to Bone) result=[(True, True)], time=0.55 sec
 locked=[False]
 open () {'description': 'Bone to Getter GP-50'}
 opening name=--- desc=Bone to Getter GP-50
@@ -295,9 +299,9 @@ doing actuation None-script open_channel False
 Open N ===>> OK
 GetValveState N ===>> OK
 change switch state (True, True)
-update switch state N True args=() kw={} ncanvase=5
-15:21:12 -- OPEN   VALVE-N (Bone to Getter GP-50)
----------------------------------------- open None (Bone to Getter GP-50) result=[(True, True)], time=0.19 sec
+update switch state N True args=() kw={} ncanvase=6
+07:52:27 -- OPEN   VALVE-N (Bone to Getter GP-50)
+---------------------------------------- open None (Bone to Getter GP-50) result=[(True, True)], time=0.18 sec
 locked=[False]
 close () {'description': 'Bone to CO2 Laser'}
 closing name=--- desc=Bone to CO2 Laser
@@ -314,15 +318,15 @@ locked=[False]
 close () {'description': 'Bone to Diode Laser'}
 closing name=--- desc=Bone to Diode Laser
 checking ownership. requestor=129.138.12.137
-set states for children of D. state=False
 check software interlocks B
-handle state [('D', False)]
 interlocks []
-update switch state D False args=() kw={'refresh': False} ncanvase=5
 actuate state mode=None-script, software_lock=False
 doing actuation None-script close_channel True
-refresh_canvas_needed fired
 Close B ===>> OK
+set states for children of B. state=False
+set states for children of D. state=False
+handle state [('B', False), ('D', False)]
+update switch state B False args=() kw={'refresh': True} ncanvase=6
 GetValveState B ===>> False
 change switch state (False, False)
 ---------------------------------------- close None (Bone to Diode Laser) result=[(False, False)]
@@ -333,6 +337,7 @@ gosub finished
 doing GOSUB
 testing...
 no interpolation path defined
+update switch state D False args=() kw={'refresh': False} ncanvase=6
 executed 32.0
 Evacuate Pipette 2
 open () {'description': 'Minibone to Turbo'}
@@ -345,9 +350,10 @@ doing actuation None-script open_channel False
 Open P ===>> OK
 GetValveState P ===>> OK
 change switch state (True, True)
-update switch state P True args=() kw={} ncanvase=5
-15:21:13 -- OPEN   VALVE-P (Minibone to Turbo)
----------------------------------------- open None (Minibone to Turbo) result=[(True, True)], time=0.21 sec
+update switch state P True args=() kw={} ncanvase=6
+refresh_canvas_needed fired
+07:52:28 -- OPEN   VALVE-P (Minibone to Turbo)
+---------------------------------------- open None (Minibone to Turbo) result=[(True, True)], time=0.31 sec
 locked=[False]
 close () {'description': 'Inner Pipette 2'}
 closing name=--- desc=Inner Pipette 2
@@ -363,11 +369,7 @@ change switch state (False, False)
 locked=[False]
 sleep (1,) {}
 SLEEP 1.0
-set states for children of B. state=False
-handle state [('B', False)]
-update switch state B False args=() kw={'refresh': False} ncanvase=5
-refresh_canvas_needed fired
-Get Checksum: 114333912
+Get Checksum: -2041565936
 open () {'description': 'Outer Pipette 2'}
 opening name=--- desc=Outer Pipette 2
 checking ownership. requestor=129.138.12.137
@@ -378,21 +380,21 @@ doing actuation None-script open_channel True
 Open Y ===>> OK
 GetValveState Y ===>> OK
 change switch state (True, True)
-update switch state Y True args=() kw={} ncanvase=5
-15:21:14 -- OPEN   VALVE-Y (Outer Pipette 2)
+update switch state Y True args=() kw={} ncanvase=6
+07:52:30 -- OPEN   VALVE-Y (Outer Pipette 2)
 ---------------------------------------- open None (Outer Pipette 2) result=[(True, True)], time=0.20 sec
 locked=[False]
 sleep (15,) {}
 SLEEP 15.0
 block started
 WaitControl setup for 15.0  
-Get Checksum: -1245808005
-Get Checksum: -1245808005
-Get Checksum: -1245808005
-Get Checksum: -1245808005
-Get Checksum: -1245808005
+Get Checksum: 1349286382
+Get Checksum: 1349286382
+Get Checksum: 1349286382
+Get Checksum: 1349286382
+Get Checksum: 1349286382
 Join finished
-block finished. duration 15.0281391144
+block finished. duration 15.0494530201
 executed 48.0
 EvacPipette2.py completed successfully
 gosub finished
@@ -417,7 +419,7 @@ sleep (1,) {}
 SLEEP 1.0
 set states for children of Y. state=False
 handle state [('Y', False)]
-update switch state Y False args=() kw={'refresh': False} ncanvase=5
+update switch state Y False args=() kw={'refresh': False} ncanvase=6
 refresh_canvas_needed fired
 filling air pipette
 open () {'description': 'Inner Pipette 2'}
@@ -430,25 +432,21 @@ doing actuation None-script open_channel True
 Open Z ===>> OK
 GetValveState Z ===>> OK
 change switch state (True, True)
-update switch state Z True args=() kw={} ncanvase=5
-15:21:31 -- OPEN   VALVE-Z (Inner Pipette 2)
----------------------------------------- open None (Inner Pipette 2) result=[(True, True)], time=0.14 sec
+update switch state Z True args=() kw={} ncanvase=6
+07:52:46 -- OPEN   VALVE-Z (Inner Pipette 2)
+---------------------------------------- open None (Inner Pipette 2) result=[(True, True)], time=0.12 sec
 locked=[False]
 sleep (15,) {}
 SLEEP 15.0
 block started
 WaitControl setup for 15.0  
-Get Checksum: -1268893331
-set states for children of U. state=False
-handle state [('U', False)]
-update switch state U False args=() kw={'refresh': False} ncanvase=5
-refresh_canvas_needed fired
-Get Checksum: -1737055753
-Get Checksum: -1737055753
-Get Checksum: -1737055753
-Get Checksum: -1737055753
+Get Checksum: 1368144632
+Get Checksum: 1368144632
+Get Checksum: 1368144632
+Get Checksum: 1368144632
+Get Checksum: 1368144632
 Join finished
-block finished. duration 15.0347621441
+block finished. duration 15.0497369766
 close () {'description': 'Inner Pipette 2'}
 closing name=--- desc=Inner Pipette 2
 checking ownership. requestor=129.138.12.137
@@ -457,16 +455,17 @@ interlocks ['Y']
 actuate state mode=None-script, software_lock=False
 doing actuation None-script close_channel True
 Close Z ===>> OK
-set states for children of Z. state=False
-handle state [('Z', False)]
-update switch state Z False args=() kw={'refresh': False} ncanvase=5
-refresh_canvas_needed fired
 GetValveState Z ===>> False
 change switch state (False, False)
 ---------------------------------------- close None (Inner Pipette 2) result=[(False, False)]
 locked=[False]
 sleep (1,) {}
 SLEEP 1.0
+set states for children of Z. state=False
+handle state [('Z', False)]
+update switch state Z False args=() kw={'refresh': False} ncanvase=6
+refresh_canvas_needed fired
+Get Checksum: -2041565936
 executed 51.0
 FillPipette2.py completed successfully
 gosub finished
@@ -482,7 +481,6 @@ check software interlocks C
 interlocks []
 actuate state mode=None-script, software_lock=False
 doing actuation None-script close_channel True
-Get Checksum: 371640858
 Close C ===>> OK
 GetValveState C ===>> False
 change switch state (False, False)
@@ -492,7 +490,7 @@ sleep (1,) {}
 SLEEP 1.0
 set states for children of C. state=False
 handle state [('C', False)]
-update switch state C False args=() kw={'refresh': False} ncanvase=5
+update switch state C False args=() kw={'refresh': False} ncanvase=6
 refresh_canvas_needed fired
 open () {'description': 'Bone to Minibone'}
 opening name=--- desc=Bone to Minibone
@@ -504,9 +502,9 @@ doing actuation None-script open_channel False
 Open E ===>> OK
 GetValveState E ===>> OK
 change switch state (True, True)
-update switch state E True args=() kw={} ncanvase=5
-15:21:49 -- OPEN   VALVE-E (Bone to Minibone)
----------------------------------------- open None (Bone to Minibone) result=[(True, True)], time=0.21 sec
+update switch state E True args=() kw={} ncanvase=6
+07:53:04 -- OPEN   VALVE-E (Bone to Minibone)
+---------------------------------------- open None (Bone to Minibone) result=[(True, True)], time=0.16 sec
 locked=[False]
 open () {'description': 'Minibone to Bone'}
 opening name=--- desc=Minibone to Bone
@@ -518,8 +516,8 @@ doing actuation None-script open_channel False
 Open I ===>> OK
 GetValveState I ===>> OK
 change switch state (True, True)
-update switch state I True args=() kw={} ncanvase=5
-15:21:49 -- OPEN   VALVE-I (Minibone to Bone)
+update switch state I True args=() kw={} ncanvase=6
+07:53:04 -- OPEN   VALVE-I (Minibone to Bone)
 ---------------------------------------- open None (Minibone to Bone) result=[(True, True)], time=0.43 sec
 locked=[False]
 executed 3.0
@@ -548,11 +546,11 @@ block started
 WaitControl setup for 2.0  
 set states for children of P. state=False
 handle state [('P', False)]
-update switch state P False args=() kw={'refresh': False} ncanvase=5
+update switch state P False args=() kw={'refresh': False} ncanvase=6
 refresh_canvas_needed fired
-Get Checksum: 223076261
+Get Checksum: 2037967168
 Join finished
-block finished. duration 2.01287579536
+block finished. duration 2.00518417358
 open () {'description': 'Outer Pipette 2'}
 opening name=--- desc=Outer Pipette 2
 checking ownership. requestor=129.138.12.137
@@ -562,24 +560,28 @@ actuate state mode=None-script, software_lock=False
 doing actuation None-script open_channel True
 Open Y ===>> OK
 GetValveState Y ===>> OK
-increment shot count 3529
-saved current shot count 3529
+increment shot count 3540
+saved current shot count 3540
 change switch state (True, True)
-update switch state Y True args=() kw={} ncanvase=5
-15:21:52 -- OPEN   VALVE-Y (Outer Pipette 2)
----------------------------------------- open None (Outer Pipette 2) result=[(True, True)], time=0.36 sec
+update switch state Y True args=() kw={} ncanvase=6
+07:53:07 -- OPEN   VALVE-Y (Outer Pipette 2)
+---------------------------------------- open None (Outer Pipette 2) result=[(True, True)], time=0.22 sec
 locked=[False]
 sleep (15,) {}
 SLEEP 15.0
 block started
 WaitControl setup for 15.0  
-Get Checksum: -182049100
-Get Checksum: -182049100
-Get Checksum: -182049100
-Get Checksum: -182049100
-Get Checksum: -182049100
+Get Checksum: 2009225527
+Get Checksum: 2009225527
+Get Checksum: 2009225527
+set states for children of O. state=True
+handle state [('O', True)]
+update switch state O True args=() kw={'refresh': False} ncanvase=6
+refresh_canvas_needed fired
+Get Checksum: 66044463
+Get Checksum: 66044463
 Join finished
-block finished. duration 15.0642311573
+block finished. duration 15.0420780182
 executed 51.0
 ExpandPipette2.py completed successfully
 gosub finished
@@ -599,7 +601,7 @@ sleep (1,) {}
 SLEEP 1.0
 set states for children of Y. state=False
 handle state [('Y', False)]
-update switch state Y False args=() kw={'refresh': False} ncanvase=5
+update switch state Y False args=() kw={'refresh': False} ncanvase=6
 refresh_canvas_needed fired
 Shot 2
 doing GOSUB
@@ -621,7 +623,7 @@ change switch state (False, False)
 locked=[False]
 sleep (1,) {}
 SLEEP 1.0
-Get Checksum: 223076261
+Get Checksum: 1784700045
 filling air pipette
 open () {'description': 'Inner Pipette 2'}
 opening name=--- desc=Inner Pipette 2
@@ -633,21 +635,21 @@ doing actuation None-script open_channel True
 Open Z ===>> OK
 GetValveState Z ===>> OK
 change switch state (True, True)
-update switch state Z True args=() kw={} ncanvase=5
-15:22:10 -- OPEN   VALVE-Z (Inner Pipette 2)
----------------------------------------- open None (Inner Pipette 2) result=[(True, True)], time=0.11 sec
+update switch state Z True args=() kw={} ncanvase=6
+07:53:25 -- OPEN   VALVE-Z (Inner Pipette 2)
+---------------------------------------- open None (Inner Pipette 2) result=[(True, True)], time=0.13 sec
 locked=[False]
 sleep (15,) {}
 SLEEP 15.0
 block started
 WaitControl setup for 15.0  
-Get Checksum: -188324446
-Get Checksum: -188324446
-Get Checksum: -188324446
-Get Checksum: -188324446
-Get Checksum: -188324446
+Get Checksum: 34570553
+Get Checksum: 34570553
+Get Checksum: 34570553
+Get Checksum: 34570553
+Get Checksum: 34570553
 Join finished
-block finished. duration 15.0674967766
+block finished. duration 15.0430750847
 close () {'description': 'Inner Pipette 2'}
 closing name=--- desc=Inner Pipette 2
 checking ownership. requestor=129.138.12.137
@@ -664,7 +666,7 @@ sleep (1,) {}
 SLEEP 1.0
 set states for children of Z. state=False
 handle state [('Z', False)]
-update switch state Z False args=() kw={'refresh': False} ncanvase=5
+update switch state Z False args=() kw={'refresh': False} ncanvase=6
 refresh_canvas_needed fired
 executed 51.0
 FillPipette2.py completed successfully
@@ -690,9 +692,9 @@ sleep (2,) {}
 SLEEP 2.0
 block started
 WaitControl setup for 2.0  
-Get Checksum: 223076261
+Get Checksum: 1784700045
 Join finished
-block finished. duration 2.00695085526
+block finished. duration 2.00549817085
 open () {'description': 'Outer Pipette 2'}
 opening name=--- desc=Outer Pipette 2
 checking ownership. requestor=129.138.12.137
@@ -702,32 +704,24 @@ actuate state mode=None-script, software_lock=False
 doing actuation None-script open_channel True
 Open Y ===>> OK
 GetValveState Y ===>> OK
-increment shot count 3530
-saved current shot count 3530
+increment shot count 3541
+saved current shot count 3541
 change switch state (True, True)
-update switch state Y True args=() kw={} ncanvase=5
-15:22:29 -- OPEN   VALVE-Y (Outer Pipette 2)
----------------------------------------- open None (Outer Pipette 2) result=[(True, True)], time=0.21 sec
+update switch state Y True args=() kw={} ncanvase=6
+07:53:43 -- OPEN   VALVE-Y (Outer Pipette 2)
+---------------------------------------- open None (Outer Pipette 2) result=[(True, True)], time=0.23 sec
 locked=[False]
 sleep (15,) {}
 SLEEP 15.0
 block started
 WaitControl setup for 15.0  
-Get Checksum: -182049100
-Get Checksum: -182049100
-Get Checksum: -182049100
-set states for children of O. state=False
-handle state [('O', False)]
-update switch state O False args=() kw={'refresh': False} ncanvase=5
-refresh_canvas_needed fired
-Get Checksum: -432106631
-set states for children of R. state=True
-handle state [('R', True)]
-update switch state R True args=() kw={'refresh': False} ncanvase=5
-refresh_canvas_needed fired
-Get Checksum: -552315793
+Get Checksum: 66044463
+Get Checksum: 66044463
+Get Checksum: 66044463
+Get Checksum: 66044463
+Get Checksum: 66044463
 Join finished
-block finished. duration 15.039139986
+block finished. duration 15.0357069969
 executed 51.0
 ExpandPipette2.py completed successfully
 gosub finished
@@ -747,7 +741,7 @@ sleep (1,) {}
 SLEEP 1.0
 set states for children of Y. state=False
 handle state [('Y', False)]
-update switch state Y False args=() kw={'refresh': False} ncanvase=5
+update switch state Y False args=() kw={'refresh': False} ncanvase=6
 refresh_canvas_needed fired
 executed 176.0
 felix_air_x2.py completed successfully
@@ -765,9 +759,9 @@ no extraction position for
 create new session 4670303312
 close session 4670303312
 Extraction Finished
-15:22:45 -- ******* Extraction Finished *******
+07:54:00 -- ******* Extraction Finished *******
 no overlap. not waiting for min ms pumptime
-15:22:45 -- Sending spectrometer configuration
+07:54:00 -- Sending spectrometer configuration
 ======== Sending configuration ========
 SetZFocus 9.84 ===>> OK
 SetHV 9000.0 ===>> OK
@@ -777,15 +771,15 @@ SetIonRepeller -4.08 ===>> OK
 SetElectronEnergy 107.0 ===>> OK
 SetYSymmetry 12.72 ===>> OK
 send trap current 400.0
-GetParameter Trap Current Readback ===>> 398.53177073796
+GetParameter Trap Current Readback ===>> 397.972349386559
 SetParameter Trap Current Set,400.0 ===>> OK
 updating mftable name argon
 Using mftable located at /Users/obama/PychronDev/setupfiles/spectrometer/mftables/argon.csv
 ============ MFtable ===========
 Isotope  H2     H1     AX     L1     L2     L2(CDD)
-Ar40     3.4936 3.5648 3.6390 3.7160 3.8118 3.7984
-Ar39     3.4246 3.4949 3.5677 3.6460 3.7369 3.7232
-Ar36     3.2145 3.2807 3.3491 3.4209 3.5176 3.4949
+Ar40     3.4935 3.5647 3.6390 3.7160 3.8117 3.7983
+Ar39     3.4245 3.4948 3.5676 3.6459 3.7369 3.7231
+Ar36     3.2144 3.2807 3.3490 3.4208 3.5175 3.4948
 ================================
 get initial guess parabolic
 get initial guess parabolic
@@ -796,19 +790,20 @@ get initial guess parabolic
 ======== Configuration Finished ========
 GetYSymmetry ===>> 12.72
 GetZSymmetry ===>> 18.34
-GetParameter Trap Current Readback ===>> 397.524812305439
+GetParameter Trap Current Readback ===>> 397.860465116279
 GetHighVoltage ===>> 9000
 start measurement
 do measurement
 L#=ic-01-F analysis type=detector_ic
 Measurement Started felix_ic_peak_hop.py
-15:22:45 -- ******* Measurement Started felix_ic_peak_hop.py *******
+07:54:00 -- ******* Measurement Started felix_ic_peak_hop.py *******
 state changed from extraction to measurement
 setting spec, defl, and gains
 GetExtractionLens ===>> 42.35
 GetYSymmetry ===>> 12.72
 GetZSymmetry ===>> 18.34
 GetZFocus ===>> 9.84
+Get Checksum: 1784700045
 GetDeflection H2 (CDD) ===>> 3250
 GetDeflection H1 (CDD) ===>> 3250
 GetDeflection AX (CDD) ===>> 3250
@@ -825,8 +820,8 @@ GetGain AX(CDD) ===>> 0
 GetGain L1(CDD) ===>> 0
 GetGain L2(CDD) ===>> 0
 pre measurement save
-New frame /Users/obama/PychronDev/data/isotopes/6b/132c1e-5b28-4202-bfcb-b6243297816f.h5
-flush and close file /Users/obama/PychronDev/data/isotopes/6b/132c1e-5b28-4202-bfcb-b6243297816f.h5
+New frame /Users/obama/PychronDev/data/isotopes/c4/36115d-f4a6-4025-8593-4c9b4a71fbc1.h5
+flush and close file /Users/obama/PychronDev/data/isotopes/c4/36115d-f4a6-4025-8593-4c9b4a71fbc1.h5
 testing...
 no interpolation path defined
 setting detector H2 to Ar40 (39.9624)
@@ -877,7 +872,7 @@ define_hops ([{'counts': 10, 'settle': 5, 'positioning': {'detector': 'H2', 'iso
 *************** Set Analysis View Ar/Ar
 equilibrate () {'delay': 3.0, 'inlet': 'H', 'outlet': 'V', 'eqtime': 30.0}
 Equilibration Started
-15:22:46 -- ******* Equilibration Started *******
+07:54:00 -- ******* Equilibration Started *******
 checking ownership. requestor=129.138.12.137
 check software interlocks V
 interlocks []
@@ -889,9 +884,9 @@ change switch state (False, False)
 waiting 3.0s before opening inlet value ('H',)
 set states for children of V. state=False
 handle state [('V', False)]
-update switch state V False args=() kw={'refresh': False} ncanvase=5
+update switch state V False args=() kw={'refresh': False} ncanvase=6
 refresh_canvas_needed fired
-Get Checksum: -1049018104
+Get Checksum: 678225031
 checking ownership. requestor=129.138.12.137
 check software interlocks H
 interlocks []
@@ -900,33 +895,25 @@ doing actuation None-script open_channel True
 Open H ===>> OK
 GetValveState H ===>> OK
 change switch state (True, True)
-update switch state H True args=() kw={} ncanvase=5
-15:22:49 -- OPEN   VALVE-H (Felix Inlet)
+update switch state H True args=() kw={} ncanvase=6
+07:54:04 -- OPEN   VALVE-H (Felix Inlet)
 set_time_zero () {}
 equilibrating for 30.0sec
 sleep (29.0,) {}
 SLEEP 29.0
 block started
 WaitControl setup for 29.0  
-Get Checksum: -901528206
-Get Checksum: -901528206
-set states for children of R. state=False
-handle state [('R', False)]
-update switch state R False args=() kw={'refresh': False} ncanvase=5
-refresh_canvas_needed fired
-set states for children of U. state=True
-handle state [('U', True)]
-update switch state U True args=() kw={'refresh': False} ncanvase=5
-refresh_canvas_needed fired
-Get Checksum: -963590587
-Get Checksum: -963590587
-Get Checksum: -963590587
-Get Checksum: -963590587
-Get Checksum: -963590587
-Get Checksum: -963590587
-Get Checksum: -963590587
+Get Checksum: -919093432
+Get Checksum: -919093432
+Get Checksum: -919093432
+Get Checksum: -919093432
+Get Checksum: -919093432
+Get Checksum: -919093432
+Get Checksum: -919093432
+Get Checksum: -919093432
+Get Checksum: -919093432
 Join finished
-block finished. duration 29.0725769997
+block finished. duration 29.0758330822
 set_fits ('Ar40H2:parabolic', 'Ar40H1:parabolic', 'Ar40AX:parabolic', 'Ar40L1:parabolic') {}
 set "Ar40H2" to "parabolic"
 set "Ar40H1" to "parabolic"
@@ -952,10 +939,10 @@ add group /signal/Ar40 (Group) u'' table H2
 add group /signal/Ar40 (Group) u'' table H1
 add group /signal/Ar40 (Group) u'' table AX
 add group /signal/Ar40 (Group) u'' table L1
-flush and close file /Users/obama/PychronDev/data/isotopes/6b/132c1e-5b28-4202-bfcb-b6243297816f.h5
+flush and close file /Users/obama/PychronDev/data/isotopes/c4/36115d-f4a6-4025-8593-4c9b4a71fbc1.h5
 measuring signal. ncounts=384.0
 Equilibration Finished
-15:23:19 -- ******* Equilibration Finished *******
+07:54:34 -- ******* Equilibration Finished *******
 checking ownership. requestor=129.138.12.137
 check software interlocks H
 interlocks []
@@ -965,7 +952,7 @@ Close H ===>> OK
 GetValveState H ===>> False
 change switch state (False, False)
 Post Equilibration Started felix_pump_extraction_line.py
-15:23:19 -- ******* Post Equilibration Started felix_pump_extraction_line.py *******
+07:54:34 -- ******* Post Equilibration Started felix_pump_extraction_line.py *******
 testing...
 no interpolation path defined
 calculate duration
@@ -986,7 +973,6 @@ check software interlocks H
 interlocks []
 actuate state mode=None-script, software_lock=False
 doing actuation None-script close_channel True
-Close H ===>> OK
 starting measurement
 $$$$$$$$$$$$$$$$$ SETTING is_baseline False
 Peak hop Detectors=['H2']
@@ -995,14 +981,24 @@ Peak hop DeflectionsPairs=[('H2', None)]
 ----------------------- HOP Ar40 H2
 detector Detector(H2)
 POSITION Ar40 H2
-GetValveState H ===>> False
 Mapping mass to dac mass func: "parabolic"
+H2 map mass coeffs = [  1.08772369e-05   9.93017553e-02  -4.92057340e-01]
+H2 map mass to dac 39.9624 >> 3.49365
+GetHighVoltage ===>> 9000
+positioning Ar40 (3.49365) on H2
+setting magnet DAC
+current  : 3.493554
+requested: 3.493650
+Delta Dac: 0.000096
+Checking detector protection. dv=0.00010
+Close H ===>> OK
+SetMagnetDAC 3.49365 ===>> OK
+Magnet settling time: 0.500
+GetValveState H ===>> False
 change switch state (False, False)
 ---------------------------------------- close None (Felix Inlet) result=[(False, False)]
 locked=[False]
-H2 map mass coeffs = [  1.08772369e-05   9.93017553e-02  -4.91977340e-01]
 is_closed ('A',) {}
-H2 map mass to dac 39.9624 >> 3.49373
 is A () closed?
 is closed False
 close () {'description': 'CO2 Laser to Bone'}
@@ -1017,25 +1013,15 @@ change switch state (True, False)
 locked=[True]
 sleep (1,) {}
 SLEEP 1.0
-GetHighVoltage ===>> 9000
-positioning Ar40 (3.49373) on H2
-setting magnet DAC
-current  : 3.493612
-requested: 3.493730
-Delta Dac: 0.000118
-Checking detector protection. dv=0.00012
-SetMagnetDAC 3.49373 ===>> OK
-Magnet settling time: 0.500
-set states for children of H. state=False
-handle state [('H', False)]
-update switch state H False args=() kw={'refresh': False} ncanvase=5
-refresh_canvas_needed fired
-Get Checksum: -844479937
 update detector isotope pairing
 detectors=['H2']
 isotopes=['Ar40']
 updating pairing H2 - Ar40
 could not locate det=H2 iso=Ar40
+set states for children of H. state=False
+handle state [('H', False)]
+update switch state H False args=() kw={'refresh': False} ncanvase=6
+refresh_canvas_needed fired
 close () {'description': 'CO2 Laser to Roughing'}
 closing name=--- desc=CO2 Laser to Roughing
 checking ownership. requestor=129.138.12.137
@@ -1056,9 +1042,9 @@ doing actuation None-script open_channel True
 Open C ===>> OK
 GetValveState C ===>> OK
 change switch state (True, True)
-update switch state C True args=() kw={} ncanvase=5
-15:23:20 -- OPEN   VALVE-C (Bone to Turbo)
----------------------------------------- open None (Bone to Turbo) result=[(True, True)], time=0.17 sec
+update switch state C True args=() kw={} ncanvase=6
+07:54:35 -- OPEN   VALVE-C (Bone to Turbo)
+---------------------------------------- open None (Bone to Turbo) result=[(True, True)], time=0.19 sec
 locked=[False]
 open () {'description': 'Bone to Getter GP-50'}
 opening name=--- desc=Bone to Getter GP-50
@@ -1070,9 +1056,10 @@ doing actuation None-script open_channel False
 Open N ===>> OK
 GetValveState N ===>> OK
 change switch state (True, True)
-update switch state N True args=() kw={} ncanvase=5
-15:23:21 -- OPEN   VALVE-N (Bone to Getter GP-50)
----------------------------------------- open None (Bone to Getter GP-50) result=[(True, True)], time=0.17 sec
+update switch state N True args=() kw={} ncanvase=6
+07:54:36 -- OPEN   VALVE-N (Bone to Getter GP-50)
+---------------------------------------- open None (Bone to Getter GP-50) result=[(True, True)], time=0.18 sec
+Get Checksum: -922406346
 locked=[False]
 open () {'description': 'Bone to Diode Laser'}
 opening name=--- desc=Bone to Diode Laser
@@ -1084,9 +1071,9 @@ doing actuation None-script open_channel True
 Open B ===>> OK
 GetValveState B ===>> OK
 change switch state (True, True)
-update switch state B True args=() kw={} ncanvase=5
-15:23:21 -- OPEN   VALVE-B (Bone to Diode Laser)
----------------------------------------- open None (Bone to Diode Laser) result=[(True, True)], time=0.18 sec
+update switch state B True args=() kw={} ncanvase=6
+07:54:36 -- OPEN   VALVE-B (Bone to Diode Laser)
+---------------------------------------- open None (Bone to Diode Laser) result=[(True, True)], time=0.19 sec
 locked=[False]
 open () {'description': 'Bone to CO2 Laser'}
 opening name=--- desc=Bone to CO2 Laser
@@ -1098,13 +1085,12 @@ doing actuation None-script open_channel True
 Open D ===>> OK
 GetValveState D ===>> OK
 change switch state (True, True)
-update switch state D True args=() kw={} ncanvase=5
-15:23:22 -- OPEN   VALVE-D (Bone to CO2 Laser)
----------------------------------------- open None (Bone to CO2 Laser) result=[(True, True)], time=0.18 sec
+update switch state D True args=() kw={} ncanvase=6
+07:54:36 -- OPEN   VALVE-D (Bone to CO2 Laser)
+---------------------------------------- open None (Bone to CO2 Laser) result=[(True, True)], time=0.21 sec
 locked=[False]
 sleep (1,) {}
 SLEEP 1.0
-Get Checksum: -1051963752
 set_resource () {'name': 'CO2PumpTimeFlag', 'value': 30}
 Set CO2PumpTimeFlag 30 ===>> OK
 release ('FelixCO2Flag',) {}
@@ -1134,9 +1120,9 @@ doing actuation None-script open_channel False
 Open E ===>> OK
 GetValveState E ===>> OK
 change switch state (True, True)
-update switch state E True args=() kw={} ncanvase=5
-15:23:23 -- OPEN   VALVE-E (Bone to Minibone)
----------------------------------------- open None (Bone to Minibone) result=[(True, True)], time=0.18 sec
+update switch state E True args=() kw={} ncanvase=6
+07:54:38 -- OPEN   VALVE-E (Bone to Minibone)
+---------------------------------------- open None (Bone to Minibone) result=[(True, True)], time=0.19 sec
 locked=[False]
 open () {'description': 'Minibone to Turbo'}
 opening name=--- desc=Minibone to Turbo
@@ -1148,9 +1134,10 @@ doing actuation None-script open_channel True
 Open P ===>> OK
 GetValveState P ===>> OK
 change switch state (True, True)
-update switch state P True args=() kw={} ncanvase=5
-15:23:24 -- OPEN   VALVE-P (Minibone to Turbo)
----------------------------------------- open None (Minibone to Turbo) result=[(True, True)], time=0.17 sec
+update switch state P True args=() kw={} ncanvase=6
+07:54:38 -- OPEN   VALVE-P (Minibone to Turbo)
+---------------------------------------- open None (Minibone to Turbo) result=[(True, True)], time=0.20 sec
+Get Checksum: 1185001219
 locked=[False]
 open () {'description': 'Quad Inlet'}
 opening name=--- desc=Quad Inlet
@@ -1162,9 +1149,9 @@ doing actuation None-script open_channel True
 Open Q ===>> OK
 GetValveState Q ===>> OK
 change switch state (True, True)
-update switch state Q True args=() kw={} ncanvase=5
-15:23:24 -- OPEN   VALVE-Q (Quad Inlet)
----------------------------------------- open None (Quad Inlet) result=[(True, True)], time=0.20 sec
+update switch state Q True args=() kw={} ncanvase=6
+07:54:39 -- OPEN   VALVE-Q (Quad Inlet)
+---------------------------------------- open None (Quad Inlet) result=[(True, True)], time=0.22 sec
 locked=[False]
 close () {'description': 'Minibone to Bone'}
 closing name=--- desc=Minibone to Bone
@@ -1173,10 +1160,11 @@ check software interlocks I
 interlocks []
 actuate state mode=None-script, software_lock=False
 doing actuation None-script close_channel True
+Join finished
+delaying 5 for detectors to settle after peak hop
 Close I ===>> OK
-set states for children of I. state=False
-handle state [('I', False)]
-update switch state I False args=() kw={'refresh': False} ncanvase=5
+GetData ===>> L2(CDD),3.39851480047056,H2,1025.19729053508,H1,0.00701122705188213,AX,0.499878430085298,L1,-0.60...
+GetData ===>> L2(CDD),3.39851480047056,H2,1025.19729053508,H1,0.00701122705188213,AX,0.499878430085298,L1,-0.60...
 GetValveState I ===>> False
 change switch state (False, False)
 ---------------------------------------- close None (Minibone to Bone) result=[(False, False)]
@@ -1189,617 +1177,25 @@ Set FelixMiniboneFlag 0 ===>> OK
 executed 0
 PumpMinibone.py completed successfully
 gosub finished
-refresh_canvas_needed fired
 executed 4.0
 felix_pump_extraction_line.py completed successfully
-Join finished
 Post Equilibration Finished
-delaying 5 for detectors to settle after peak hop
-15:23:25 -- ******* Post Equilibration Finished *******
-GetData ===>> L2(CDD),3.33163123773204,H2,1027.24389002067,H1,0.0694135724819451,AX,0.467640592774385,L1,-0.714...
-GetData ===>> L2(CDD),3.33163123773204,H2,1027.24389002067,H1,0.0694135724819451,AX,0.467640592774385,L1,-0.714...
-Get Checksum: 1499143366
-GetData ===>> L2(CDD),3.31589408650258,H2,1026.70404502584,H1,0.015515176509344,AX,0.655231756678253,L1,-0.4773...
-GetData ===>> L2(CDD),3.36200410941292,H2,1026.86631572207,H1,-0.0782539595485389,AX,0.524086199120022,L1,-0.73...
-GetData ===>> L2(CDD),3.26726666870205,H2,1027.56821090722,H1,-0.223830866512486,AX,0.466722805382727,L1,-0.641...
-Get Checksum: 1499143366
-GetData ===>> L2(CDD),3.37034488534714,H2,1026.49612262261,H1,0.0888361206728305,AX,0.64123286646006,L1,-0.5662...
-GetData ===>> L2(CDD),3.40166228897223,H2,1026.33442523635,H1,0.0236744417329015,AX,0.702049196102893,L1,-0.615...
-GetData ===>> L2(CDD),3.3627909743464,H2,1026.63100231469,H1,0.295612812160934,AX,0.379536993042745,L1,-0.68822...
-Get Checksum: 1499143366
-GetData ===>> L2(CDD),3.34547998049297,H2,1026.21147588131,H1,0.343319118952148,AX,0.579502483459236,L1,-0.5295...
-GetData ===>> L2(CDD),3.3361950228222,H2,1026.18571465646,H1,-0.0843440416213488,AX,0.285706349430604,L1,-0.774...
-$$$$$$$$$$$$$$$$$ SETTING is_baseline False
-Peak hop Detectors=['H1']
-Peak hop Deflections=[None]
-Peak hop DeflectionsPairs=[('H1', None)]
------------------------ HOP Ar40 H1
-detector Detector(H1)
-POSITION Ar40 H1
-Mapping mass to dac mass func: "parabolic"
-H1 map mass coeffs = [ 0.       0.       3.56491]
-H1 map mass to dac 39.9624 >> 3.56491
-GetHighVoltage ===>> 9000
-positioning Ar40 (3.56491) on H1
-setting magnet DAC
-current  : 3.493730
-requested: 3.564910
-Delta Dac: 0.071180
-Checking detector protection. dv=0.07118
-SetMagnetDAC 3.56491 ===>> OK
-Magnet settling time: 0.500
-Get Checksum: 1499143366
-update detector isotope pairing
-detectors=['H1']
-isotopes=['Ar40']
-updating pairing H1 - Ar40
-could not locate det=H1 iso=Ar40
-Get Checksum: 1499143366
-Join finished
-delaying 5 for detectors to settle after peak hop
-GetData ===>> L2(CDD),0,H2,0.112298728554273,H1,1019.52532903031,AX,-0.269519574293704,L1,-0.593599973904872
-GetData ===>> L2(CDD),0,H2,0.112298728554273,H1,1019.52532903031,AX,-0.269519574293704,L1,-0.593599973904872
-Get Checksum: 1499143366
-GetData ===>> L2(CDD),0,H2,-0.0427249881082793,H1,1024.511360033,AX,-0.111997307165176,L1,-0.409172504136889
-GetData ===>> L2(CDD),0,H2,0.0815251491125719,H1,1026.47203358497,AX,-0.172303637510707,L1,-0.737609018297425
-GetDeflection L2 (CDD) ===>> 0
-testing L2_CDD_==3250
-evaluate ot="L2(CDD).deflection==3250" t="L2_CDD_==3250", ctx="{'L2_CDD_': 0.0}"
-GetData ===>> L2(CDD),0.000157244698251559,H2,-0.0396946847335376,H1,1027.30193241739,AX,-0.0639559100340395,L1...
-Get Checksum: 1499143366
-GetData ===>> L2(CDD),0,H2,-0.0865467873333487,H1,1027.28607684312,AX,-0.170698575010784,L1,-0.61598740114949
-GetData ===>> L2(CDD),0,H2,0.0810588902027711,H1,1026.87001689589,AX,-0.147998118695915,L1,-0.437104327771724
-GetData ===>> L2(CDD),0,H2,0.133397840558983,H1,1026.69408096831,AX,-0.227676654434203,L1,-0.653029378591187
-Get Checksum: 1499143366
-GetData ===>> L2(CDD),0,H2,0.231788659221357,H1,1026.43699505511,AX,-0.233523308753249,L1,-0.669184314399427
-GetData ===>> L2(CDD),0,H2,-0.130832781181315,H1,1026.93447914453,AX,-0.17207434303197,L1,-0.609063509863367
-$$$$$$$$$$$$$$$$$ SETTING is_baseline False
-Peak hop Detectors=['AX']
-Peak hop Deflections=[None]
-Peak hop DeflectionsPairs=[('AX', None)]
------------------------ HOP Ar40 AX
-detector Detector(AX)
-POSITION Ar40 AX
-Mapping mass to dac mass func: "parabolic"
-AX map mass coeffs = [ 0.       0.       3.63922]
-AX map mass to dac 39.9624 >> 3.63922
-GetHighVoltage ===>> 9000
-positioning Ar40 (3.63922) on AX
-setting magnet DAC
-current  : 3.564910
-requested: 3.639220
-Delta Dac: 0.074310
-Checking detector protection. dv=0.07431
-SetMagnetDAC 3.63922 ===>> OK
-Magnet settling time: 0.500
-Get Checksum: 1499143366
-update detector isotope pairing
-detectors=['AX']
-isotopes=['Ar40']
-updating pairing AX - Ar40
-could not locate det=AX iso=Ar40
-Get Checksum: 1499143366
-Join finished
-delaying 5 for detectors to settle after peak hop
-GetData ===>> L2(CDD),0.000157244698251559,H2,-0.113701331901332,H1,-0.228426464765252,AX,1029.07596214713,L1,-...
-GetData ===>> L2(CDD),0,H2,0.0678871678269799,H1,0.158484686360972,AX,1029.02067907914,L1,-0.582175262603313
-Get Checksum: 1499143366
-GetData ===>> L2(CDD),0,H2,-0.0308368210398146,H1,0.066655372496781,AX,1029.59445538928,L1,-0.72422446506246
-GetData ===>> L2(CDD),0,H2,0.144588714502351,H1,-0.267832820873704,AX,1029.73685955299,L1,-0.461919115120897
-GetDeflection L2 (CDD) ===>> 0
-testing L2_CDD_==3250
-evaluate ot="L2(CDD).deflection==3250" t="L2_CDD_==3250", ctx="{'L2_CDD_': 0.0}"
-GetData ===>> L2(CDD),0,H2,-0.0218623246997726,H1,-0.049641549840213,AX,1028.43030047679,L1,-0.64518259823471
-Get Checksum: 1499143366
-GetData ===>> L2(CDD),0,H2,-0.0564777854315064,H1,0.145267162716008,AX,1028.6652618961,L1,-0.63883589113826
-GetData ===>> L2(CDD),0,H2,-0.0641699436760957,H1,0.0650464261475086,AX,1027.5346220749,L1,-0.389781342881235
-GetData ===>> L2(CDD),0,H2,0.0520347105997168,H1,0.127222661947362,AX,1028.56440870734,L1,-0.619103136076175
-Get Checksum: 1499143366
-GetData ===>> L2(CDD),0,H2,0.10577091868091,H1,0.209517520531854,AX,1028.25696339551,L1,-0.515239902378254
-GetData ===>> L2(CDD),0,H2,-0.045871831675392,H1,-0.0079279620820842,AX,1027.60866955059,L1,-0.763108387880975
-$$$$$$$$$$$$$$$$$ SETTING is_baseline False
-Peak hop Detectors=['L1']
-Peak hop Deflections=[None]
-Peak hop DeflectionsPairs=[('L1', None)]
------------------------ HOP Ar40 L1
-detector Detector(L1)
-POSITION Ar40 L1
-Mapping mass to dac mass func: "parabolic"
-L1 map mass coeffs = [ 0.       0.       3.71615]
-L1 map mass to dac 39.9624 >> 3.71615
-GetHighVoltage ===>> 9000
-positioning Ar40 (3.71615) on L1
-setting magnet DAC
-current  : 3.639220
-requested: 3.716150
-Delta Dac: 0.076930
-Checking detector protection. dv=0.07693
-SetMagnetDAC 3.71615 ===>> OK
-Magnet settling time: 0.500
-Get Checksum: 1499143366
-update detector isotope pairing
-detectors=['L1']
-isotopes=['Ar40']
-updating pairing L1 - Ar40
-could not locate det=L1 iso=Ar40
-Get Checksum: 1499143366
-Join finished
-delaying 5 for detectors to settle after peak hop
-GetData ===>> L2(CDD),0,H2,0.0146192678543315,H1,-0.00723846613759722,AX,-0.178494567791856,L1,1028.01327569393
-GetData ===>> L2(CDD),0,H2,0.0146192678543315,H1,-0.00723846613759722,AX,-0.178494567791856,L1,1028.01327569393
-Get Checksum: 1499143366
-GetData ===>> L2(CDD),0,H2,-0.0290885489903612,H1,0.310211841095996,AX,-0.333369509743184,L1,1027.19255304415
-GetData ===>> L2(CDD),0,H2,0.03455068071555,H1,-0.152021799670831,AX,-0.0258879925614408,L1,1026.62758777304
-GetDeflection L2 (CDD) ===>> 0
-testing L2_CDD_==3250
-evaluate ot="L2(CDD).deflection==3250" t="L2_CDD_==3250", ctx="{'L2_CDD_': 0.0}"
-GetData ===>> L2(CDD),0,H2,-0.0442401362747467,H1,-0.172703359065041,AX,0.0745635003048083,L1,1026.65655790995
-Get Checksum: 1499143366
-GetData ===>> L2(CDD),0,H2,-0.0483193696730619,H1,0.244230585528729,AX,-0.0459541005875195,L1,1026.34515861405
-GetData ===>> L2(CDD),0,H2,0.135729262072888,H1,-0.142370253524494,AX,-0.123577332961937,L1,1025.85973233655
-GetData ===>> L2(CDD),0,H2,-0.08165189652797,H1,0.170093269542839,AX,-0.069574240213071,L1,1025.8694428348
-Get Checksum: 1499143366
-GetData ===>> L2(CDD),0.000157244698251559,H2,-0.00822559471860034,H1,-0.115138584818639,AX,-0.167947033067902,...
-GetData ===>> L2(CDD),0.000157244698251559,H2,0.215117480575128,H1,0.0222954061441874,AX,0.0197496280872408,L1,...
-$$$$$$$$$$$$$$$$$ SETTING is_baseline False
-Peak hop Detectors=['H2']
-Peak hop Deflections=[None]
-Peak hop DeflectionsPairs=[('H2', None)]
------------------------ HOP Ar40 H2
-detector Detector(H2)
-POSITION Ar40 H2
-Mapping mass to dac mass func: "parabolic"
-H2 map mass coeffs = [  1.08772369e-05   9.93017553e-02  -4.91977340e-01]
-H2 map mass to dac 39.9624 >> 3.49373
-GetHighVoltage ===>> 9000
-positioning Ar40 (3.49373) on H2
-setting magnet DAC
-current  : 3.716150
-requested: 3.493730
-Delta Dac: 0.222420
-Checking detector protection. dv=0.22242
-Move 0.22242>0.15. Do AF Demag
-Doing AF Demagnetization around target=3.49373. duration=4, start_amplitude=0.2, period=0.5
-set af dac raw:-0.1875 dac:3.30623
-SetMagnetDAC 3.30623 ===>> OK
-Get Checksum: 1499143366
-set af dac raw:0.1625 dac:3.65623
-SetMagnetDAC 3.65623 ===>> OK
-set af dac raw:-0.1375 dac:3.35623
-SetMagnetDAC 3.35623 ===>> OK
-set af dac raw:0.1125 dac:3.60623
-SetMagnetDAC 3.60623 ===>> OK
-set af dac raw:-0.0875 dac:3.40623
-SetMagnetDAC 3.40623 ===>> OK
-set af dac raw:0.0625 dac:3.55623
-SetMagnetDAC 3.55623 ===>> OK
-set af dac raw:-0.0375 dac:3.45623
-SetMagnetDAC 3.45623 ===>> OK
-Get Checksum: 1499143366
-set af dac raw:0.0125 dac:3.50623
-SetMagnetDAC 3.50623 ===>> OK
-SetMagnetDAC 3.49373 ===>> OK
-Magnet settling time: 0.500
-update detector isotope pairing
-detectors=['H2']
-isotopes=['Ar40']
-updating pairing H2 - Ar40
-could not locate det=H2 iso=Ar40
-Get Checksum: 1499143366
-Get Checksum: 1499143366
-Join finished
-delaying 5 for detectors to settle after peak hop
-GetData ===>> L2(CDD),3.42101939607593,H2,1016.69975013909,H1,-0.0555019920292391,AX,0.491618098435362,L1,-0.52...
-GetData ===>> L2(CDD),3.41645551710939,H2,1017.34935552205,H1,-0.27185378709377,AX,0.517087682010164,L1,-0.6681...
-GetData ===>> L2(CDD),3.42212102279011,H2,1017.14527398361,H1,0.169403646837227,AX,0.500452066859412,L1,-0.4576...
-GetData ===>> L2(CDD),3.39221983067421,H2,1016.82964052865,H1,0.07309118472969,AX,0.564931018833323,L1,-0.50081...
-Get Checksum: 1499143366
-GetDeflection L2 (CDD) ===>> 0
-testing L2_CDD_==3250
-evaluate ot="L2(CDD).deflection==3250" t="L2_CDD_==3250", ctx="{'L2_CDD_': 0.0}"
-GetData ===>> L2(CDD),3.41378014213247,H2,1016.72355880887,H1,-0.0472284162368372,AX,0.543934729328495,L1,-0.38...
-GetData ===>> L2(CDD),3.44698638976852,H2,1016.67068957051,H1,-0.0376907338635764,AX,0.724311228210912,L1,-0.49...
-GetData ===>> L2(CDD),3.40638352622911,H2,1015.96472777628,H1,0.170093269542839,AX,0.615874739399499,L1,-0.5206...
-Get Checksum: 1499143366
-GetData ===>> L2(CDD),3.40638352622911,H2,1015.96472777628,H1,0.170093269542839,AX,0.615874739399499,L1,-0.5206...
-GetData ===>> L2(CDD),3.40103279107971,H2,1016.71534384913,H1,0.166875034467463,AX,0.466837528758596,L1,-0.3520...
-15:24:38 -- collecting point 50
-GetData ===>> L2(CDD),3.42967504247226,H2,1016.07560446949,H1,0.129866102742609,AX,0.332505820545644,L1,-0.5684...
-$$$$$$$$$$$$$$$$$ SETTING is_baseline False
-Peak hop Detectors=['H1']
-Peak hop Deflections=[None]
-Peak hop DeflectionsPairs=[('H1', None)]
------------------------ HOP Ar40 H1
-detector Detector(H1)
-POSITION Ar40 H1
-Mapping mass to dac mass func: "parabolic"
-H1 map mass coeffs = [ 0.       0.       3.56491]
-H1 map mass to dac 39.9624 >> 3.56491
-GetHighVoltage ===>> 9000
-positioning Ar40 (3.56491) on H1
-setting magnet DAC
-current  : 3.493730
-requested: 3.564910
-Delta Dac: 0.071180
-Checking detector protection. dv=0.07118
-SetMagnetDAC 3.56491 ===>> OK
-Magnet settling time: 0.500
-update detector isotope pairing
-detectors=['H1']
-isotopes=['Ar40']
-updating pairing H1 - Ar40
-could not locate det=H1 iso=Ar40
-Get Checksum: 1499143366
-Get Checksum: 1499143366
-Join finished
-delaying 5 for detectors to settle after peak hop
-GetData ===>> L2(CDD),0,H2,0.0710343774003834,H1,1018.7083696271,AX,-0.351365943407915,L1,-0.684300474532477
-GetData ===>> L2(CDD),0,H2,0.0710343774003834,H1,1018.7083696271,AX,-0.351365943407915,L1,-0.684300474532477
-GetData ===>> L2(CDD),0,H2,-0.11311862426752,H1,1018.43623855603,AX,0.0425692499848818,L1,-0.417136618599968
-Get Checksum: 1499143366
-GetData ===>> L2(CDD),0.000157244698251559,H2,-0.0682490939562491,H1,1017.67790981635,AX,-0.162787870719832,L1,...
-GetDeflection L2 (CDD) ===>> 0
-testing L2_CDD_==3250
-evaluate ot="L2(CDD).deflection==3250" t="L2_CDD_==3250", ctx="{'L2_CDD_': 0.0}"
-GetData ===>> L2(CDD),0,H2,0.176530038071909,H1,1017.64911576737,AX,-0.0476740332367527,L1,-0.59002255354817
-GetData ===>> L2(CDD),0,H2,-0.0692980155647198,H1,1017.36735004611,AX,-0.101449043583507,L1,-0.598908379755019
-Get Checksum: 1499143366
-GetData ===>> L2(CDD),0,H2,0.126287039261944,H1,1017.56063026046,AX,-0.142036293910522,L1,-0.406286939254235
-GetData ===>> L2(CDD),0,H2,0.183291473897611,H1,1016.70861187908,AX,-0.00891747180351266,L1,-0.518702189651712
-GetData ===>> L2(CDD),0.000157244698251559,H2,0.104954945509644,H1,1016.37436586567,AX,-0.373029993516774,L1,-0...
-Get Checksum: 1499143366
-GetData ===>> L2(CDD),0,H2,0.21453457737182,H1,1017.10669890651,AX,-0.0213013948389158,L1,-0.496081689041046
-$$$$$$$$$$$$$$$$$ SETTING is_baseline False
-Peak hop Detectors=['AX']
-Peak hop Deflections=[None]
-Peak hop DeflectionsPairs=[('AX', None)]
------------------------ HOP Ar40 AX
-detector Detector(AX)
-POSITION Ar40 AX
-Mapping mass to dac mass func: "parabolic"
-AX map mass coeffs = [ 0.       0.       3.63922]
-AX map mass to dac 39.9624 >> 3.63922
-GetHighVoltage ===>> 9000
-positioning Ar40 (3.63922) on AX
-setting magnet DAC
-current  : 3.564910
-requested: 3.639220
-Delta Dac: 0.074310
-Checking detector protection. dv=0.07431
-SetMagnetDAC 3.63922 ===>> OK
-Magnet settling time: 0.500
-update detector isotope pairing
-detectors=['AX']
-isotopes=['Ar40']
-updating pairing AX - Ar40
-could not locate det=AX iso=Ar40
-Get Checksum: 1499143366
-Get Checksum: 1499143366
-Join finished
-delaying 5 for detectors to settle after peak hop
-GetData ===>> L2(CDD),0,H2,0.0303545600462903,H1,-0.180056695538427,AX,1019.12248828151,L1,-0.559325435622304
-GetData ===>> L2(CDD),0,H2,0.0303545600462903,H1,-0.180056695538427,AX,1019.12248828151,L1,-0.559325435622304
-GetData ===>> L2(CDD),0,H2,0.0166007351623415,H1,-0.1274331464784,AX,1018.44375151268,L1,-0.490772719482306
-Get Checksum: 1499143366
-GetData ===>> L2(CDD),0,H2,0.0227782766521366,H1,-0.168337289008899,AX,1018.70275701074,L1,-0.547438696268823
-GetDeflection L2 (CDD) ===>> 0
-testing L2_CDD_==3250
-evaluate ot="L2(CDD).deflection==3250" t="L2_CDD_==3250", ctx="{'L2_CDD_': 0.0}"
-GetData ===>> L2(CDD),0,H2,-0.106242647977373,H1,-0.23934092285778,AX,1018.76957625172,L1,-0.559787053624737
-GetData ===>> L2(CDD),0,H2,-0.10181402748547,H1,0.175035580026693,AX,1018.94742491886,L1,-0.539706467100839
-Get Checksum: 1499143366
-GetData ===>> L2(CDD),0.000157244698251559,H2,0.0415442551670702,H1,-0.0476880611979606,AX,1018.16428012617,L1,...
-GetData ===>> L2(CDD),0,H2,-0.00426274864465481,H1,-0.0625114937673928,AX,1018.73660469856,L1,-0.586214317355149
-GetData ===>> L2(CDD),0,H2,0.1190597204198,H1,-0.0420573953294525,AX,1018.51090969843,L1,-0.618295353909684
-Get Checksum: 1499143366
-GetData ===>> L2(CDD),0,H2,-0.0931898142440451,H1,0.0171240402458448,AX,1018.50161608532,L1,-0.525626727062709
-$$$$$$$$$$$$$$$$$ SETTING is_baseline False
-Peak hop Detectors=['L1']
-Peak hop Deflections=[None]
-Peak hop DeflectionsPairs=[('L1', None)]
------------------------ HOP Ar40 L1
-detector Detector(L1)
-POSITION Ar40 L1
-Mapping mass to dac mass func: "parabolic"
-L1 map mass coeffs = [ 0.       0.       3.71615]
-L1 map mass to dac 39.9624 >> 3.71615
-GetHighVoltage ===>> 9000
-positioning Ar40 (3.71615) on L1
-setting magnet DAC
-current  : 3.639220
-requested: 3.716150
-Delta Dac: 0.076930
-Checking detector protection. dv=0.07693
-SetMagnetDAC 3.71615 ===>> OK
-Magnet settling time: 0.500
-update detector isotope pairing
-detectors=['L1']
-isotopes=['Ar40']
-updating pairing L1 - Ar40
-could not locate det=L1 iso=Ar40
-Get Checksum: 1499143366
-Get Checksum: 1499143366
-Join finished
-delaying 5 for detectors to settle after peak hop
-GetData ===>> L2(CDD),0.000157244698251559,H2,0.135729262072888,H1,0.177564213786146,AX,-0.0135041285448018,L1,...
-GetData ===>> L2(CDD),0.000157244698251559,H2,0.135729262072888,H1,0.177564213786146,AX,-0.0135041285448018,L1,...
-GetData ===>> L2(CDD),0,H2,0.17559742990132,H1,0.11297119289576,AX,-0.0889514946999581,L1,1016.43091497393
-Get Checksum: 1499143366
-GetData ===>> L2(CDD),0,H2,-0.0211630098381083,H1,-0.110427543026987,AX,-0.0686569640570522,L1,1016.2563517665
-GetDeflection L2 (CDD) ===>> 0
-testing L2_CDD_==3250
-evaluate ot="L2(CDD).deflection==3250" t="L2_CDD_==3250", ctx="{'L2_CDD_': 0.0}"
-GetData ===>> L2(CDD),0,H2,-0.0254754435183405,H1,0.0222954061441874,AX,-0.00696813606861262,L1,1016.35823645414
-GetData ===>> L2(CDD),0,H2,-0.176515178970242,H1,-0.0144781489704199,AX,0.0590822786310655,L1,1016.47790274871
-Get Checksum: 1499143366
-GetData ===>> L2(CDD),0,H2,0.224793724494913,H1,-0.113529938989329,AX,-0.267112222753414,L1,1016.00386992595
-GetData ===>> L2(CDD),0,H2,-0.0354988645628082,H1,-0.118126062812571,AX,-0.199360002447999,L1,1015.82935718979
-GetData ===>> L2(CDD),0,H2,4.97785609351911E-05,H1,-0.299081031563744,AX,0.0117227540445755,L1,1016.30526961665
-Get Checksum: 1499143366
-GetData ===>> L2(CDD),0,H2,0.00739277403958419,H1,-0.111691483327398,AX,-0.141577690474064,L1,1016.13054531407
-$$$$$$$$$$$$$$$$$ SETTING is_baseline False
-Peak hop Detectors=['H2']
-Peak hop Deflections=[None]
-Peak hop DeflectionsPairs=[('H2', None)]
------------------------ HOP Ar40 H2
-detector Detector(H2)
-POSITION Ar40 H2
-Mapping mass to dac mass func: "parabolic"
-H2 map mass coeffs = [  1.08772369e-05   9.93017553e-02  -4.91977340e-01]
-H2 map mass to dac 39.9624 >> 3.49373
-GetHighVoltage ===>> 9000
-positioning Ar40 (3.49373) on H2
-setting magnet DAC
-current  : 3.716150
-requested: 3.493730
-Delta Dac: 0.222420
-Checking detector protection. dv=0.22242
-Move 0.22242>0.15. Do AF Demag
-Doing AF Demagnetization around target=3.49373. duration=4, start_amplitude=0.2, period=0.5
-set af dac raw:-0.1875 dac:3.30623
-SetMagnetDAC 3.30623 ===>> OK
-set af dac raw:0.1625 dac:3.65623
-SetMagnetDAC 3.65623 ===>> OK
-set af dac raw:-0.1375 dac:3.35623
-SetMagnetDAC 3.35623 ===>> OK
-Get Checksum: 1499143366
-set af dac raw:0.1125 dac:3.60623
-SetMagnetDAC 3.60623 ===>> OK
-set af dac raw:-0.0875 dac:3.40623
-SetMagnetDAC 3.40623 ===>> OK
-set af dac raw:0.0625 dac:3.55623
-SetMagnetDAC 3.55623 ===>> OK
-set af dac raw:-0.0375 dac:3.45623
-SetMagnetDAC 3.45623 ===>> OK
-set af dac raw:0.0125 dac:3.50623
-SetMagnetDAC 3.50623 ===>> OK
-Get Checksum: 1499143366
-SetMagnetDAC 3.49373 ===>> OK
-Magnet settling time: 0.500
-update detector isotope pairing
-detectors=['H2']
-isotopes=['Ar40']
-updating pairing H2 - Ar40
-could not locate det=H2 iso=Ar40
-Get Checksum: 1499143366
-Join finished
-delaying 5 for detectors to settle after peak hop
-GetData ===>> L2(CDD),3.37317760553984,H2,1008.33152049512,H1,0.335616977209051,AX,0.760918472336223,L1,-0.6840...
-GetData ===>> L2(CDD),3.37317760553984,H2,1008.33152049512,H1,0.335616977209051,AX,0.760918472336223,L1,-0.6840...
-Get Checksum: 1499143366
-GetData ===>> L2(CDD),3.37648244822402,H2,1007.42152842111,H1,0.0632076336054378,AX,0.645134176061608,L1,-0.373...
-GetData ===>> L2(CDD),3.34972903589121,H2,1007.42435307041,H1,-0.0525143200680876,AX,0.652592606066879,L1,-0.47...
-GetDeflection L2 (CDD) ===>> 0
-testing L2_CDD_==3250
-evaluate ot="L2(CDD).deflection==3250" t="L2_CDD_==3250", ctx="{'L2_CDD_': 0.0}"
-GetData ===>> L2(CDD),3.38183315151858,H2,1007.5970199826,H1,0.134348475427507,AX,0.382863675187014,L1,-0.69687...
-Get Checksum: 1499143366
-GetData ===>> L2(CDD),3.39930167237076,H2,1007.92757963885,H1,0.155496360824143,AX,0.417737173066193,L1,-0.4826...
-GetData ===>> L2(CDD),3.39300670137325,H2,1006.63590119052,H1,0.0318337759713611,AX,0.532117347021293,L1,-0.590...
-GetData ===>> L2(CDD),3.38954447142059,H2,1006.89475815747,H1,-0.0082727098691194,AX,0.47819521067675,L1,-0.441...
-Get Checksum: 1499143366
-GetData ===>> L2(CDD),3.41079001921228,H2,1005.79307549912,H1,0.268369545803309,AX,0.690115122791708,L1,-0.6592...
-GetData ===>> L2(CDD),3.36735479392142,H2,1006.67350856916,H1,-0.151332406719959,AX,0.624480363754785,L1,-0.681...
-Get Checksum: 1499143366
-$$$$$$$$$$$$$$$$$ SETTING is_baseline False
-Peak hop Detectors=['H1']
-Peak hop Deflections=[None]
-Peak hop DeflectionsPairs=[('H1', None)]
------------------------ HOP Ar40 H1
-detector Detector(H1)
-POSITION Ar40 H1
-Mapping mass to dac mass func: "parabolic"
-H1 map mass coeffs = [ 0.       0.       3.56491]
-H1 map mass to dac 39.9624 >> 3.56491
-GetHighVoltage ===>> 9000
-positioning Ar40 (3.56491) on H1
-setting magnet DAC
-current  : 3.493730
-requested: 3.564910
-Delta Dac: 0.071180
-Checking detector protection. dv=0.07118
-SetMagnetDAC 3.56491 ===>> OK
-Magnet settling time: 0.500
-update detector isotope pairing
-detectors=['H1']
-isotopes=['Ar40']
-updating pairing H1 - Ar40
-could not locate det=H1 iso=Ar40
-set states for children of O. state=True
-handle state [('O', True)]
-update switch state O True args=() kw={'refresh': False} ncanvase=5
+07:54:40 -- ******* Post Equilibration Finished *******
+set states for children of I. state=False
+handle state [('I', False)]
+update switch state I False args=() kw={'refresh': False} ncanvase=6
 refresh_canvas_needed fired
+GetData ===>> L2(CDD),3.37207599190034,H2,1024.96706649063,H1,0.00138027474824276,AX,0.611858807692915,L1,-0.52...
+GetData ===>> L2(CDD),3.41614076702202,H2,1024.82088557423,H1,-0.0921576755130022,AX,0.448596683683342,L1,-0.78...
 Get Checksum: 1509310064
-Join finished
-delaying 5 for detectors to settle after peak hop
-GetData ===>> L2(CDD),0,H2,-0.0746591528827881,H1,1009.09113978874,AX,-0.27639768836608,L1,-0.594984778236488
-GetData ===>> L2(CDD),0,H2,-0.0870129661327296,H1,1008.03076687046,AX,-0.253699725351206,L1,-0.499197809791555
+GetData ===>> L2(CDD),3.43061929590549,H2,1024.86706511659,H1,0.109638218414445,AX,0.620693879561226,L1,-0.5407...
+GetData ===>> L2(CDD),3.40103279107971,H2,1024.93651473745,H1,-0.0734278294653669,AX,0.633430294685443,L1,-0.64...
+GetData ===>> L2(CDD),3.41897351867322,H2,1024.16333702384,H1,-0.111806386908902,AX,0.625398301558973,L1,-0.442...
 Get Checksum: 1509310064
-GetData ===>> L2(CDD),0.000157244698251559,H2,0.0568137331540948,H1,1007.77893464334,AX,-0.0471007226950644,L1,...
-GetData ===>> L2(CDD),0,H2,0.0191649929313317,H1,1007.93400964028,AX,-0.0446928146911632,L1,-0.612871656197028
-GetDeflection L2 (CDD) ===>> 0
-testing L2_CDD_==3250
-evaluate ot="L2(CDD).deflection==3250" t="L2_CDD_==3250", ctx="{'L2_CDD_': 0.0}"
-GetData ===>> L2(CDD),0,H2,0.0930651279492418,H1,1007.550682956,AX,-0.187551597744083,L1,-0.653260165286102
+GetData ===>> L2(CDD),3.37081700524412,H2,1023.66761515655,H1,0.021490969627947,AX,0.386878651706668,L1,-0.5174...
+GetData ===>> L2(CDD),3.42275052390177,H2,1023.97451344267,H1,0.125498682723387,AX,0.759541372126686,L1,-0.6005...
+GetData ===>> L2(CDD),3.4055966529776,H2,1024.37479382462,H1,-0.0397591549164182,AX,0.742442541925696,L1,-0.500...
 Get Checksum: 1509310064
-GetData ===>> L2(CDD),0,H2,0.137244689036354,H1,1008.41505923472,AX,0.0430279413989321,L1,-0.710147407729885
-GetData ===>> L2(CDD),0,H2,0.0620590286881673,H1,1008.05841296427,AX,-0.284995261821291,L1,-0.275042360214941
-GetData ===>> L2(CDD),0,H2,0.0784944701720585,H1,1007.33979173012,AX,-0.161526737938766,L1,-0.666761091210315
-Get Checksum: 1509310064
-GetData ===>> L2(CDD),0.000157244698251559,H2,0.0902675448205366,H1,1007.05789234793,AX,0.10873774526152,L1,-0....
-15:25:58 -- collecting point 100
-GetData ===>> L2(CDD),0,H2,-0.109156203154806,H1,1006.29540793678,AX,-0.190188438544438,L1,-0.600523975759758
-Get Checksum: 1509310064
-$$$$$$$$$$$$$$$$$ SETTING is_baseline False
-Peak hop Detectors=['AX']
-Peak hop Deflections=[None]
-Peak hop DeflectionsPairs=[('AX', None)]
------------------------ HOP Ar40 AX
-detector Detector(AX)
-POSITION Ar40 AX
-Mapping mass to dac mass func: "parabolic"
-AX map mass coeffs = [ 0.       0.       3.63922]
-AX map mass to dac 39.9624 >> 3.63922
-GetHighVoltage ===>> 9000
-positioning Ar40 (3.63922) on AX
-setting magnet DAC
-current  : 3.564910
-requested: 3.639220
-Delta Dac: 0.074310
-Checking detector protection. dv=0.07431
-SetMagnetDAC 3.63922 ===>> OK
-Magnet settling time: 0.500
-update detector isotope pairing
-detectors=['AX']
-isotopes=['Ar40']
-updating pairing AX - Ar40
-could not locate det=AX iso=Ar40
-Get Checksum: 1509310064
-Join finished
-delaying 5 for detectors to settle after peak hop
-GetData ===>> L2(CDD),0.000314489402501528,H2,0.0118219090765788,H1,-0.204758899764506,AX,1009.59466690488,L1,-...
-GetData ===>> L2(CDD),0.000314489402501528,H2,0.0118219090765788,H1,-0.204758899764506,AX,1009.59466690488,L1,-...
-Get Checksum: 1509310064
-GetData ===>> L2(CDD),0,H2,-0.0769900729862163,H1,-0.288626779655152,AX,1009.41809320405,L1,-0.404324750223183
-GetData ===>> L2(CDD),0,H2,0.192734246967571,H1,0.0230998433312055,AX,1009.42963103457,L1,-0.526088361129566
-GetDeflection L2 (CDD) ===>> 0
-testing L2_CDD_==3250
-evaluate ot="L2(CDD).deflection==3250" t="L2_CDD_==3250", ctx="{'L2_CDD_': 0.0}"
-GetData ===>> L2(CDD),0,H2,0.119759136038344,H1,0.000920606623544858,AX,1008.456834665,L1,-0.428332436875572
-Get Checksum: 1509310064
-GetData ===>> L2(CDD),0.000157244698251559,H2,-0.0352657629139003,H1,-0.157422027402069,AX,1009.79819008512,L1,...
-GetData ===>> L2(CDD),0,H2,0.121973955463196,H1,-0.0999712461096807,AX,1008.85458072869,L1,-0.598908379755019
-GetData ===>> L2(CDD),0,H2,-0.0382960800100399,H1,0.288255904916089,AX,1009.10695563036,L1,-0.40940334895586
-Get Checksum: 1509310064
-GetData ===>> L2(CDD),0,H2,-0.109039661114315,H1,0.0621733143412656,AX,1008.41715339292,L1,-0.473922318964427
-GetData ===>> L2(CDD),0,H2,-0.14656548048467,H1,0.0067813916202341,AX,1008.23222136183,L1,-0.722493690359165
-Get Checksum: 1509310064
-$$$$$$$$$$$$$$$$$ SETTING is_baseline False
-Peak hop Detectors=['L1']
-Peak hop Deflections=[None]
-Peak hop DeflectionsPairs=[('L1', None)]
------------------------ HOP Ar40 L1
-detector Detector(L1)
-POSITION Ar40 L1
-Mapping mass to dac mass func: "parabolic"
-L1 map mass coeffs = [ 0.       0.       3.71615]
-L1 map mass to dac 39.9624 >> 3.71615
-GetHighVoltage ===>> 9000
-positioning Ar40 (3.71615) on L1
-setting magnet DAC
-current  : 3.639220
-requested: 3.716150
-Delta Dac: 0.076930
-Checking detector protection. dv=0.07693
-SetMagnetDAC 3.71615 ===>> OK
-Magnet settling time: 0.500
-update detector isotope pairing
-detectors=['L1']
-isotopes=['Ar40']
-updating pairing L1 - Ar40
-could not locate det=L1 iso=Ar40
-Get Checksum: 1509310064
-Join finished
-delaying 5 for detectors to settle after peak hop
-GetData ===>> L2(CDD),0,H2,0.0337347669533561,H1,-0.112380904611396,AX,-0.234898986959667,L1,1007.35709266803
-GetData ===>> L2(CDD),0,H2,0.0337347669533561,H1,-0.112380904611396,AX,-0.234898986959667,L1,1007.35709266803
-GetData ===>> L2(CDD),0,H2,-0.0969192130857752,H1,-0.12076882409419,AX,-0.0919325761452817,L1,1006.98220136211
-GetData ===>> L2(CDD),0,H2,-0.202268855553083,H1,-0.168567082662303,AX,-0.311933827892866,L1,1006.88117071555
-Get Checksum: 1509310064
-GetDeflection L2 (CDD) ===>> 0
-testing L2_CDD_==3250
-evaluate ot="L2(CDD).deflection==3250" t="L2_CDD_==3250", ctx="{'L2_CDD_': 0.0}"
-GetData ===>> L2(CDD),0,H2,0.0304711187109362,H1,0.00390845334916466,AX,-0.206926476864206,L1,1006.66317160765
-GetData ===>> L2(CDD),0,H2,0.117894028833205,H1,-0.0763005288521788,AX,-0.111767998316881,L1,1006.74840313517
-GetData ===>> L2(CDD),0,H2,-0.26519353828941,H1,-0.0422872190695165,AX,-0.251063058575033,L1,1006.58285505511
-Get Checksum: 1509310064
-GetData ===>> L2(CDD),0,H2,0.019514664965911,H1,-0.0979029541702919,AX,-0.0847091705676205,L1,1005.83817676174
-GetData ===>> L2(CDD),0,H2,0.144238997753707,H1,-0.207516315868094,AX,0.0535779042687253,L1,1005.8013473544
-GetData ===>> L2(CDD),0.000157244698251559,H2,0.0163676211533528,H1,-0.130535487743761,AX,0.11034327654518,L1,1...
-Get Checksum: 1509310064
-$$$$$$$$$$$$$$$$$ SETTING is_baseline False
-Peak hop Detectors=['H2']
-Peak hop Deflections=[None]
-Peak hop DeflectionsPairs=[('H2', None)]
------------------------ HOP Ar40 H2
-detector Detector(H2)
-POSITION Ar40 H2
-Mapping mass to dac mass func: "parabolic"
-H2 map mass coeffs = [  1.08772369e-05   9.93017553e-02  -4.91977340e-01]
-H2 map mass to dac 39.9624 >> 3.49373
-GetHighVoltage ===>> 9000
-positioning Ar40 (3.49373) on H2
-setting magnet DAC
-current  : 3.716150
-requested: 3.493730
-Delta Dac: 0.222420
-Checking detector protection. dv=0.22242
-Move 0.22242>0.15. Do AF Demag
-Doing AF Demagnetization around target=3.49373. duration=4, start_amplitude=0.2, period=0.5
-set af dac raw:-0.1875 dac:3.30623
-SetMagnetDAC 3.30623 ===>> OK
-set af dac raw:0.1625 dac:3.65623
-SetMagnetDAC 3.65623 ===>> OK
-set af dac raw:-0.1375 dac:3.35623
-SetMagnetDAC 3.35623 ===>> OK
-set af dac raw:0.1125 dac:3.60623
-SetMagnetDAC 3.60623 ===>> OK
-Get Checksum: 1509310064
-set af dac raw:-0.0875 dac:3.40623
-SetMagnetDAC 3.40623 ===>> OK
-set af dac raw:0.0625 dac:3.55623
-SetMagnetDAC 3.55623 ===>> OK
-set af dac raw:-0.0375 dac:3.45623
-SetMagnetDAC 3.45623 ===>> OK
-set af dac raw:0.0125 dac:3.50623
-SetMagnetDAC 3.50623 ===>> OK
-SetMagnetDAC 3.49373 ===>> OK
-Magnet settling time: 0.500
-update detector isotope pairing
-detectors=['H2']
-isotopes=['Ar40']
-updating pairing H2 - Ar40
-could not locate det=H2 iso=Ar40
-Get Checksum: 1509310064
-Get Checksum: 1509310064
-Join finished
-delaying 5 for detectors to settle after peak hop
-GetData ===>> L2(CDD),3.35413546833601,H2,997.90281839695,H1,-0.0279231300750828,AX,0.449399732482367,L1,-0.277...
-GetData ===>> L2(CDD),3.35413546833601,H2,997.90281839695,H1,-0.0279231300750828,AX,0.449399732482367,L1,-0.277...
-GetData ===>> L2(CDD),3.33666713880945,H2,992.900867260367,H1,0.200896919858059,AX,0.521791597740512,L1,-0.6189...
-Get Checksum: 1509310064
-GetData ===>> L2(CDD),3.28977054805424,H2,980.312416624665,H1,-0.11008283174881,AX,0.608875554983326,L1,-0.6846...
-GetDeflection L2 (CDD) ===>> 0
-testing L2_CDD_==3250
-evaluate ot="L2(CDD).deflection==3250" t="L2_CDD_==3250", ctx="{'L2_CDD_': 0.0}"
-GetData ===>> L2(CDD),3.31117295284477,H2,982.895117374901,H1,0.291244641718251,AX,0.677148460823204,L1,-0.5707...
-GetData ===>> L2(CDD),3.31967099732048,H2,984.345712140219,H1,0.147106111682102,AX,0.68931187317107,L1,-0.47172...
-Get Checksum: 1509310064
-GetData ===>> L2(CDD),3.31620882893861,H2,988.550403114125,H1,-0.180056695538427,AX,0.694934634590582,L1,-0.539...
-GetData ===>> L2(CDD),3.34894217345011,H2,993.368834700273,H1,0.091364528494184,AX,0.793510418898474,L1,-0.5794...
-Get Checksum: 1509310064
-GetData ===>> L2(CDD),3.35806978699767,H2,995.620745300009,H1,0.107109762696653,AX,0.532805734244198,L1,-0.5728...
-GetData ===>> L2(CDD),3.3332049561581,H2,996.595162158931,H1,0.0909048174885618,AX,0.623103458688197,L1,-0.7063...
 $$$$$$$$$$$$$$$$$ SETTING is_baseline False
 Peak hop Detectors=['H1']
 Peak hop Deflections=[None]
@@ -1808,16 +1204,16 @@ Peak hop DeflectionsPairs=[('H1', None)]
 detector Detector(H1)
 POSITION Ar40 H1
 Mapping mass to dac mass func: "parabolic"
-H1 map mass coeffs = [ 0.       0.       3.56491]
-H1 map mass to dac 39.9624 >> 3.56491
+H1 map mass coeffs = [ 0.       0.       3.56483]
+H1 map mass to dac 39.9624 >> 3.56483
 GetHighVoltage ===>> 9000
-positioning Ar40 (3.56491) on H1
+positioning Ar40 (3.56483) on H1
 setting magnet DAC
-current  : 3.493730
-requested: 3.564910
+current  : 3.493650
+requested: 3.564830
 Delta Dac: 0.071180
 Checking detector protection. dv=0.07118
-SetMagnetDAC 3.56491 ===>> OK
+SetMagnetDAC 3.56483 ===>> OK
 Magnet settling time: 0.500
 update detector isotope pairing
 detectors=['H1']
@@ -1828,22 +1224,22 @@ Get Checksum: 1509310064
 Get Checksum: 1509310064
 Join finished
 delaying 5 for detectors to settle after peak hop
-GetData ===>> L2(CDD),0,H2,0.109617658513184,H1,998.979562571395,AX,-0.0933084567749645,L1,-0.556555722986203
-GetData ===>> L2(CDD),0,H2,0.109617658513184,H1,998.979562571395,AX,-0.0933084567749645,L1,-0.556555722986203
-GetData ===>> L2(CDD),0,H2,-0.0923740063522626,H1,998.06572016925,AX,-0.290153769022694,L1,-0.636527987334731
+GetData ===>> L2(CDD),0.000314489402501528,H2,-0.137125891270862,H1,1026.0108721056,AX,0.12181143503236,L1,-0.8...
+GetData ===>> L2(CDD),0.000314489402501528,H2,-0.137125891270862,H1,1026.0108721056,AX,0.12181143503236,L1,-0.8...
+GetData ===>> L2(CDD),0,H2,-0.110088538978632,H1,1024.69963967767,AX,-0.0415969241196027,L1,-0.834987611505286
+GetData ===>> L2(CDD),0,H2,0.115795787478157,H1,1025.00551329199,AX,-0.137679552440973,L1,-0.757223977579837
 Get Checksum: 1509310064
-GetData ===>> L2(CDD),0.000157244698251559,H2,-0.102862913098171,H1,998.553895296962,AX,-0.123462679924114,L1,-...
 GetDeflection L2 (CDD) ===>> 0
 testing L2_CDD_==3250
 evaluate ot="L2(CDD).deflection==3250" t="L2_CDD_==3250", ctx="{'L2_CDD_': 0.0}"
-GetData ===>> L2(CDD),0,H2,0.175364277997689,H1,998.177542911346,AX,0.184200610908433,L1,-0.624411402120513
-GetData ===>> L2(CDD),0,H2,-0.0216292198013533,H1,998.161841854784,AX,0.0573621582608963,L1,-0.605255348553074
+GetData ===>> L2(CDD),0.000157244698251559,H2,0.101108224013296,H1,1023.86732422204,AX,-0.397902931045313,L1,-0...
+GetData ===>> L2(CDD),0,H2,0.0808257608316201,H1,1023.34404076372,AX,-0.241777348493491,L1,-0.672761442309863
+GetData ===>> L2(CDD),0,H2,-0.0180160867750187,H1,1024.21123686295,AX,-0.215180744738781,L1,-0.515816951116949
 Get Checksum: 1509310064
-GetData ===>> L2(CDD),0,H2,0.239832895990975,H1,997.855181656,AX,-0.0578789037303875,L1,-0.628104091771814
-GetData ===>> L2(CDD),0,H2,-0.00554484766082084,H1,997.662636077978,AX,-0.215753955156695,L1,-0.446222393297999
+GetData ===>> L2(CDD),0,H2,-0.215553292373488,H1,1023.69469408144,AX,-0.162787870719832,L1,-0.737262868388827
+GetData ===>> L2(CDD),0,H2,0.131416136641439,H1,1023.28792285123,AX,0.00793867950134384,L1,-0.611717674041079
+GetData ===>> L2(CDD),0,H2,0.0922491653768421,H1,1023.25854535901,AX,-0.0471007226950644,L1,-0.556209508349251
 Get Checksum: 1509310064
-GetData ===>> L2(CDD),0,H2,-0.143652036743791,H1,997.359742002387,AX,-0.424952953532815,L1,-0.594061575568887
-GetData ===>> L2(CDD),0,H2,0.117894028833205,H1,997.732919254433,AX,-0.0420555752031811,L1,-0.768069725641772
 $$$$$$$$$$$$$$$$$ SETTING is_baseline False
 Peak hop Detectors=['AX']
 Peak hop Deflections=[None]
@@ -1852,16 +1248,16 @@ Peak hop DeflectionsPairs=[('AX', None)]
 detector Detector(AX)
 POSITION Ar40 AX
 Mapping mass to dac mass func: "parabolic"
-AX map mass coeffs = [ 0.       0.       3.63922]
-AX map mass to dac 39.9624 >> 3.63922
+AX map mass coeffs = [ 0.       0.       3.63914]
+AX map mass to dac 39.9624 >> 3.63914
 GetHighVoltage ===>> 9000
-positioning Ar40 (3.63922) on AX
+positioning Ar40 (3.63914) on AX
 setting magnet DAC
-current  : 3.564910
-requested: 3.639220
+current  : 3.564830
+requested: 3.639140
 Delta Dac: 0.074310
 Checking detector protection. dv=0.07431
-SetMagnetDAC 3.63922 ===>> OK
+SetMagnetDAC 3.63914 ===>> OK
 Magnet settling time: 0.500
 update detector isotope pairing
 detectors=['AX']
@@ -1872,23 +1268,22 @@ Get Checksum: 1509310064
 Get Checksum: 1509310064
 Join finished
 delaying 5 for detectors to settle after peak hop
-GetData ===>> L2(CDD),0,H2,0.16848632183913,H1,-0.185456766310049,AX,999.636148858064,L1,-0.637681939924067
-GetData ===>> L2(CDD),0,H2,-0.0610231589785408,H1,-0.013788657708308,AX,1000.39221463082,L1,-0.480039279078908
-GetData ===>> L2(CDD),0,H2,-0.114167497757333,H1,-0.0734278294653669,AX,999.334805955286,L1,-0.745801196672813
+GetData ===>> L2(CDD),0,H2,-0.0591583928990038,H1,-0.326192629386314,AX,1027.44527757153,L1,-0.830718849995441
+GetData ===>> L2(CDD),0,H2,-0.0591583928990038,H1,-0.326192629386314,AX,1027.44527757153,L1,-0.830718849995441
+GetData ===>> L2(CDD),0.000157244698251559,H2,-0.101697484570037,H1,-0.110772254182621,AX,1026.98938876222,L1,-...
+GetData ===>> L2(CDD),0,H2,0.154264260795049,H1,-0.19579724298479,AX,1026.28234082456,L1,-0.381239874862954
 Get Checksum: 1509310064
-GetData ===>> L2(CDD),0.000314489402501528,H2,-0.0877122339144743,H1,-0.10617609531762,AX,999.370183078422,L1,-...
 GetDeflection L2 (CDD) ===>> 0
 testing L2_CDD_==3250
 evaluate ot="L2(CDD).deflection==3250" t="L2_CDD_==3250", ctx="{'L2_CDD_': 0.0}"
-GetData ===>> L2(CDD),0.000157244698251559,H2,0.0136868140393857,H1,-0.0872167084980462,AX,998.955819061099,L1,...
-GetData ===>> L2(CDD),0,H2,-0.088411501196563,H1,0.0319486966650866,AX,998.718196477998,L1,-0.573520088546607
+GetData ===>> L2(CDD),0,H2,-0.0533309759861237,H1,0.0627479360179396,AX,1026.56846096198,L1,-1.04828634743978
+GetData ===>> L2(CDD),0,H2,0.123372791368175,H1,-0.149953619341047,AX,1026.29201208059,L1,-0.363810429395698
+GetData ===>> L2(CDD),0,H2,0.0515684657469596,H1,0.152393109487023,AX,1026.23011713737,L1,-0.425793190471125
 Get Checksum: 1509310064
-GetData ===>> L2(CDD),0,H2,-0.169872717985443,H1,-0.00976661552337756,AX,998.426447385179,L1,-0.53232039949332
-GetData ===>> L2(CDD),0,H2,-0.126637351959427,H1,-0.0737725538435254,AX,998.963484948838,L1,-0.450723685133775
+GetData ===>> L2(CDD),0.000157244698251559,H2,0.17198358163924,H1,-0.0854931093986968,AX,1026.06572130123,L1,-0...
+GetData ===>> L2(CDD),0,H2,-0.045172533980012,H1,0.202391151788985,AX,1025.52589334864,L1,-0.522395282432852
+GetData ===>> L2(CDD),0,H2,0.117194614547879,H1,-0.116517421965354,AX,1025.2953992429,L1,-0.540745128340112
 Get Checksum: 1509310064
-GetData ===>> L2(CDD),0,H2,0.0087914460947869,H1,0.145267162716008,AX,998.728474074968,L1,-0.432949231461799
-15:27:18 -- collecting point 150
-GetData ===>> L2(CDD),0,H2,-0.0592749408835374,H1,-0.0790583122150005,AX,998.108289538528,L1,-0.52712703697519
 $$$$$$$$$$$$$$$$$ SETTING is_baseline False
 Peak hop Detectors=['L1']
 Peak hop Deflections=[None]
@@ -1897,16 +1292,16 @@ Peak hop DeflectionsPairs=[('L1', None)]
 detector Detector(L1)
 POSITION Ar40 L1
 Mapping mass to dac mass func: "parabolic"
-L1 map mass coeffs = [ 0.       0.       3.71615]
-L1 map mass to dac 39.9624 >> 3.71615
+L1 map mass coeffs = [ 0.       0.       3.71607]
+L1 map mass to dac 39.9624 >> 3.71607
 GetHighVoltage ===>> 9000
-positioning Ar40 (3.71615) on L1
+positioning Ar40 (3.71607) on L1
 setting magnet DAC
-current  : 3.639220
-requested: 3.716150
+current  : 3.639140
+requested: 3.716070
 Delta Dac: 0.076930
 Checking detector protection. dv=0.07693
-SetMagnetDAC 3.71615 ===>> OK
+SetMagnetDAC 3.71607 ===>> OK
 Magnet settling time: 0.500
 update detector isotope pairing
 detectors=['L1']
@@ -1917,26 +1312,26 @@ Get Checksum: 1509310064
 Get Checksum: 1509310064
 Join finished
 delaying 5 for detectors to settle after peak hop
-GetData ===>> L2(CDD),0,H2,-0.058575652770287,H1,-0.179482218145365,AX,-0.121169616300321,L1,996.717936832029
-GetData ===>> L2(CDD),0,H2,-0.058575652770287,H1,-0.179482218145365,AX,-0.121169616300321,L1,996.717936832029
-GetData ===>> L2(CDD),0,H2,-0.0919078301082333,H1,-0.210503507750822,AX,-0.0677396870262587,L1,997.753858300544
+GetData ===>> L2(CDD),0.000314489402501528,H2,-0.0189485094790285,H1,0.206184212470085,AX,-0.307807117750075,L1...
+GetData ===>> L2(CDD),0,H2,-0.165444385599752,H1,-0.282997520152035,AX,-0.233637948678641,L1,1024.94906071578
 set states for children of U. state=False
 handle state [('U', False)]
-update switch state U False args=() kw={'refresh': False} ncanvase=5
+update switch state U False args=() kw={'refresh': False} ncanvase=6
 refresh_canvas_needed fired
+GetData ===>> L2(CDD),0.000157244698251559,H2,-0.135843964722358,H1,0.146071702457454,AX,2.65717158228653E-05,L...
+GetData ===>> L2(CDD),0,H2,0.0965621181117126,H1,0.000920606623544858,AX,-0.472059440116936,L1,1024.471554697
 Get Checksum: 1041668763
-GetData ===>> L2(CDD),0,H2,-0.0512330973985288,H1,-0.0317152703506782,AX,-0.0653318306614252,L1,997.609258043611
 GetDeflection L2 (CDD) ===>> 0
 testing L2_CDD_==3250
 evaluate ot="L2(CDD).deflection==3250" t="L2_CDD_==3250", ctx="{'L2_CDD_': 0.0}"
-GetData ===>> L2(CDD),0,H2,0.0167172921877462,H1,-0.140187152312885,AX,-0.058108225419684,L1,996.696605953333
-GetData ===>> L2(CDD),0,H2,0.00541132538463264,H1,0.0886062657447115,AX,-0.076568442156062,L1,996.763571966544
+GetData ===>> L2(CDD),0,H2,-0.213572291312656,H1,-0.0776794215194035,AX,0.0749075302816589,L1,1024.44119722781
+GetData ===>> L2(CDD),0.000157244698251559,H2,0.171167553234106,H1,0.112281611024033,AX,-0.147424867917608,L1,1...
+GetData ===>> L2(CDD),0.000157244698251559,H2,-0.0887611346499646,H1,0.0196522601101979,AX,-0.0352904495562515,...
 Get Checksum: 1041668763
-GetData ===>> L2(CDD),0,H2,0.0525009556748574,H1,0.0302248877008084,AX,0.179842412094052,L1,997.049654422552
-GetData ===>> L2(CDD),0,H2,0.0615927790573059,H1,-0.0821608090735717,AX,-0.0818427247565265,L1,997.001736967895
-GetData ===>> L2(CDD),0,H2,0.126636749592371,H1,0.0196522601101979,AX,-0.033455831014382,L1,996.76077436956
+GetData ===>> L2(CDD),0,H2,0.0239438548930696,H1,0.0903301790390183,AX,0.215970182706713,L1,1023.82253464736
+GetData ===>> L2(CDD),0,H2,-0.17022232231978,H1,-0.0920427695909534,AX,-0.256680296485035,L1,1023.44680479463
+GetData ===>> L2(CDD),0,H2,0.00342988074348888,H1,-0.144093750991066,AX,-0.206009331618561,L1,1023.51912097057
 Get Checksum: 1041668763
-GetData ===>> L2(CDD),0,H2,-0.019997483958341,H1,-0.101005390416142,AX,-0.200621085648806,L1,996.386993452722
 $$$$$$$$$$$$$$$$$ SETTING is_baseline False
 Peak hop Detectors=['H2']
 Peak hop Deflections=[None]
@@ -1945,36 +1340,35 @@ Peak hop DeflectionsPairs=[('H2', None)]
 detector Detector(H2)
 POSITION Ar40 H2
 Mapping mass to dac mass func: "parabolic"
-H2 map mass coeffs = [  1.08772369e-05   9.93017553e-02  -4.91977340e-01]
-H2 map mass to dac 39.9624 >> 3.49373
+H2 map mass coeffs = [  1.08772369e-05   9.93017553e-02  -4.92057340e-01]
+H2 map mass to dac 39.9624 >> 3.49365
 GetHighVoltage ===>> 9000
-positioning Ar40 (3.49373) on H2
+positioning Ar40 (3.49365) on H2
 setting magnet DAC
-current  : 3.716150
-requested: 3.493730
+current  : 3.716070
+requested: 3.493650
 Delta Dac: 0.222420
 Checking detector protection. dv=0.22242
 Move 0.22242>0.15. Do AF Demag
-Doing AF Demagnetization around target=3.49373. duration=4, start_amplitude=0.2, period=0.5
-set af dac raw:-0.1875 dac:3.30623
-SetMagnetDAC 3.30623 ===>> OK
-set af dac raw:0.1625 dac:3.65623
-SetMagnetDAC 3.65623 ===>> OK
+Doing AF Demagnetization around target=3.49365. duration=4, start_amplitude=0.2, period=0.5
+set af dac raw:-0.1875 dac:3.30615
+SetMagnetDAC 3.30615 ===>> OK
+set af dac raw:0.1625 dac:3.65615
+SetMagnetDAC 3.65615 ===>> OK
+set af dac raw:-0.1375 dac:3.35615
+SetMagnetDAC 3.35615 ===>> OK
+set af dac raw:0.1125 dac:3.60615
+SetMagnetDAC 3.60615 ===>> OK
+set af dac raw:-0.0875 dac:3.40615
+SetMagnetDAC 3.40615 ===>> OK
 Get Checksum: 1041668763
-set af dac raw:-0.1375 dac:3.35623
-SetMagnetDAC 3.35623 ===>> OK
-set af dac raw:0.1125 dac:3.60623
-SetMagnetDAC 3.60623 ===>> OK
-set af dac raw:-0.0875 dac:3.40623
-SetMagnetDAC 3.40623 ===>> OK
-set af dac raw:0.0625 dac:3.55623
-SetMagnetDAC 3.55623 ===>> OK
-set af dac raw:-0.0375 dac:3.45623
-SetMagnetDAC 3.45623 ===>> OK
-set af dac raw:0.0125 dac:3.50623
-SetMagnetDAC 3.50623 ===>> OK
-Get Checksum: 1041668763
-SetMagnetDAC 3.49373 ===>> OK
+set af dac raw:0.0625 dac:3.55615
+SetMagnetDAC 3.55615 ===>> OK
+set af dac raw:-0.0375 dac:3.45615
+SetMagnetDAC 3.45615 ===>> OK
+set af dac raw:0.0125 dac:3.50615
+SetMagnetDAC 3.50615 ===>> OK
+SetMagnetDAC 3.49365 ===>> OK
 Magnet settling time: 0.500
 update detector isotope pairing
 detectors=['H2']
@@ -1982,25 +1376,25 @@ isotopes=['Ar40']
 updating pairing H2 - Ar40
 could not locate det=H2 iso=Ar40
 Get Checksum: 1041668763
+Get Checksum: 1041668763
 Join finished
 delaying 5 for detectors to settle after peak hop
-GetData ===>> L2(CDD),3.32030048279311,H2,987.93674652744,H1,-0.0276933029127887,AX,0.341453037342379,L1,-0.432...
-GetData ===>> L2(CDD),3.32030048279311,H2,987.93674652744,H1,-0.0276933029127887,AX,0.341453037342379,L1,-0.432...
+GetData ===>> L2(CDD),3.37789881018516,H2,1014.73564473953,H1,-0.00103298046213183,AX,0.644216219438969,L1,-0.5...
+GetData ===>> L2(CDD),3.37789881018516,H2,1014.73564473953,H1,-0.00103298046213183,AX,0.644216219438969,L1,-0.5...
+GetData ===>> L2(CDD),3.38608224437474,H2,1015.32070842189,H1,-0.11008283174881,AX,0.297750113532258,L1,-0.5869...
 Get Checksum: 1041668763
-GetData ===>> L2(CDD),3.34831268360534,H2,987.914816153577,H1,-0.101694819337708,AX,0.506073725337343,L1,-0.647...
-GetData ===>> L2(CDD),3.29889803063021,H2,987.079073833016,H1,-0.116057809802281,AX,0.388025790931125,L1,-0.628...
+GetData ===>> L2(CDD),3.43235042776128,H2,1015.03128280961,H1,0.132394618106697,AX,0.796723769154609,L1,-0.6609...
 GetDeflection L2 (CDD) ===>> 0
 testing L2_CDD_==3250
 evaluate ot="L2(CDD).deflection==3250" t="L2_CDD_==3250", ctx="{'L2_CDD_': 0.0}"
-GetData ===>> L2(CDD),3.35020115342794,H2,987.986573551245,H1,0.153887266291922,AX,0.390549502036643,L1,-0.6328...
+GetData ===>> L2(CDD),3.42306527449364,H2,1014.61718448131,H1,0.00574713285695091,AX,0.433453603183139,L1,-0.52...
+GetData ===>> L2(CDD),3.43250780342057,H2,1014.10201881195,H1,-0.1172068397997,AX,0.277677257081608,L1,-0.51281...
 Get Checksum: 1041668763
-GetData ===>> L2(CDD),3.31636620016564,H2,987.556958620153,H1,0.110672588573096,AX,0.577666696245214,L1,-0.7234...
-GetData ===>> L2(CDD),3.33824085915734,H2,987.566956399249,H1,-0.1245605993729,AX,0.502517162077303,L1,-0.49065...
-Get Checksum: 1041668763
-GetData ===>> L2(CDD),3.3187267692917,H2,987.804467470358,H1,-0.226473338183332,AX,0.699180414973818,L1,-0.5015...
-GetData ===>> L2(CDD),3.33776874298992,H2,987.142022991476,H1,0.186299545044007,AX,0.450317503359099,L1,-0.3760...
-GetData ===>> L2(CDD),3.3033044087597,H2,986.355207650755,H1,0.152622979614008,AX,0.525921884161719,L1,-0.53451...
-Get Checksum: 1041668763
+GetData ===>> L2(CDD),3.38435113194187,H2,1014.07511472465,H1,-0.00321639664059692,AX,0.459380537746053,L1,-0.4...
+GetData ===>> L2(CDD),3.40197703795452,H2,1014.13352553375,H1,-0.034358268392819,AX,0.560571095908844,L1,-0.308...
+GetData ===>> L2(CDD),3.39017396755941,H2,1014.12910039203,H1,0.0989497917217989,AX,0.557702736332294,L1,-0.650...
+07:55:53 -- collecting point 50
+GetData ===>> L2(CDD),3.43471106328125,H2,1013.85936865033,H1,-0.16902666980522,AX,0.652822097136976,L1,-0.5833...
 $$$$$$$$$$$$$$$$$ SETTING is_baseline False
 Peak hop Detectors=['H1']
 Peak hop Deflections=[None]
@@ -2009,17 +1403,18 @@ Peak hop DeflectionsPairs=[('H1', None)]
 detector Detector(H1)
 POSITION Ar40 H1
 Mapping mass to dac mass func: "parabolic"
-H1 map mass coeffs = [ 0.       0.       3.56491]
-H1 map mass to dac 39.9624 >> 3.56491
+H1 map mass coeffs = [ 0.       0.       3.56483]
+H1 map mass to dac 39.9624 >> 3.56483
 GetHighVoltage ===>> 9000
-positioning Ar40 (3.56491) on H1
+positioning Ar40 (3.56483) on H1
 setting magnet DAC
-current  : 3.493730
-requested: 3.564910
+current  : 3.493650
+requested: 3.564830
 Delta Dac: 0.071180
 Checking detector protection. dv=0.07118
-SetMagnetDAC 3.56491 ===>> OK
+SetMagnetDAC 3.56483 ===>> OK
 Magnet settling time: 0.500
+Get Checksum: 1041668763
 update detector isotope pairing
 detectors=['H1']
 isotopes=['Ar40']
@@ -2028,22 +1423,22 @@ could not locate det=H1 iso=Ar40
 Get Checksum: 1041668763
 Join finished
 delaying 5 for detectors to settle after peak hop
-GetData ===>> L2(CDD),0,H2,0.0115887962058659,H1,988.605377055524,AX,-0.106264569561693,L1,-0.71914751716074
-GetData ===>> L2(CDD),0,H2,0.0115887962058659,H1,988.605377055524,AX,-0.106264569561693,L1,-0.71914751716074
+GetData ===>> L2(CDD),0,H2,-0.0218623246997726,H1,1015.1956480521,AX,-0.110736107822792,L1,-0.575943545080422
+GetData ===>> L2(CDD),0,H2,-0.0218623246997726,H1,1015.1956480521,AX,-0.110736107822792,L1,-0.575943545080422
 Get Checksum: 1041668763
-GetData ===>> L2(CDD),0,H2,0.101457925342493,H1,987.910432392276,AX,0.105067969526832,L1,-0.226672458534151
-GetData ===>> L2(CDD),0,H2,0.0390964984211828,H1,988.009491312185,AX,-0.212200045062646,L1,-0.685454370191742
+GetData ===>> L2(CDD),0,H2,-0.0567108820246003,H1,1015.33928144459,AX,-0.0522605052734012,L1,-0.680607999181985
+GetData ===>> L2(CDD),0,H2,-0.0789713507064561,H1,1015.019808932,AX,0.0963523082365738,L1,-0.40721032095234
 GetDeflection L2 (CDD) ===>> 0
 testing L2_CDD_==3250
 evaluate ot="L2(CDD).deflection==3250" t="L2_CDD_==3250", ctx="{'L2_CDD_': 0.0}"
-GetData ===>> L2(CDD),0,H2,-0.104261425499277,H1,987.943103713568,AX,-0.254158275357371,L1,-0.618756943801638
-GetData ===>> L2(CDD),0,H2,0.0329188538718195,H1,987.395286690556,AX,-0.219193210492652,L1,-0.563249181629746
+GetData ===>> L2(CDD),0,H2,0.127685881334441,H1,1014.95891944195,AX,0.168488249964126,L1,-0.726070621335982
 Get Checksum: 1041668763
-GetData ===>> L2(CDD),0,H2,0.0380474616912428,H1,986.871804979092,AX,-0.0930791434732897,L1,-0.524011006095673
-GetData ===>> L2(CDD),0,H2,0.14773617086618,H1,986.97832835699,AX,0.0909623993035398,L1,-0.44864616842472
-GetData ===>> L2(CDD),0,H2,0.170468100857457,H1,987.237457674902,AX,0.0876367258711744,L1,-0.528627344563674
+GetData ===>> L2(CDD),0,H2,-0.0503007054706824,H1,1014.97172883731,AX,0.0273178849310796,L1,-0.536705883929723
+GetData ===>> L2(CDD),0,H2,0.129434436738356,H1,1014.46189570195,AX,-0.0738166310636013,L1,-0.582175262603313
+GetData ===>> L2(CDD),0.000157244698251559,H2,0.0513353434041113,H1,1014.45505468235,AX,-0.100187830416562,L1,-...
 Get Checksum: 1041668763
-GetData ===>> L2(CDD),0,H2,0.0703349966201658,H1,987.100500963229,AX,-0.0484766674209667,L1,-0.708185834314913
+GetData ===>> L2(CDD),0,H2,0.0712675044381333,H1,1015.09719661575,AX,-0.208072907191971,L1,-0.627757902715419
+GetData ===>> L2(CDD),0,H2,0.102390462831454,H1,1014.79451285293,AX,-0.175628401316668,L1,-0.755724024136525
 $$$$$$$$$$$$$$$$$ SETTING is_baseline False
 Peak hop Detectors=['AX']
 Peak hop Deflections=[None]
@@ -2052,42 +1447,42 @@ Peak hop DeflectionsPairs=[('AX', None)]
 detector Detector(AX)
 POSITION Ar40 AX
 Mapping mass to dac mass func: "parabolic"
-AX map mass coeffs = [ 0.       0.       3.63922]
-AX map mass to dac 39.9624 >> 3.63922
+AX map mass coeffs = [ 0.       0.       3.63914]
+AX map mass to dac 39.9624 >> 3.63914
 GetHighVoltage ===>> 9000
-positioning Ar40 (3.63922) on AX
+positioning Ar40 (3.63914) on AX
 setting magnet DAC
-current  : 3.564910
-requested: 3.639220
+current  : 3.564830
+requested: 3.639140
 Delta Dac: 0.074310
 Checking detector protection. dv=0.07431
-SetMagnetDAC 3.63922 ===>> OK
+SetMagnetDAC 3.63914 ===>> OK
 Magnet settling time: 0.500
+Get Checksum: 1041668763
 update detector isotope pairing
 detectors=['AX']
 isotopes=['Ar40']
 updating pairing AX - Ar40
 could not locate det=AX iso=Ar40
 Get Checksum: 1041668763
-Get Checksum: 1041668763
 Join finished
 delaying 5 for detectors to settle after peak hop
-GetData ===>> L2(CDD),0,H2,0.0098404514491487,H1,-0.383170452677369,AX,990.707891808675,L1,-0.585175704885354
-GetData ===>> L2(CDD),0,H2,0.0098404514491487,H1,-0.383170452677369,AX,990.707891808675,L1,-0.585175704885354
-GetData ===>> L2(CDD),0,H2,-0.126171192046163,H1,-0.166154246569496,AX,989.584532816212,L1,-0.576751362577315
-GetData ===>> L2(CDD),0,H2,-0.0769900729862163,H1,-0.216937428076216,AX,989.998062282116,L1,-0.607447928106115
+GetData ===>> L2(CDD),0,H2,0.00238088226430913,H1,-0.0384951203559993,AX,1017.11899383307,L1,-0.638720496078986
+GetData ===>> L2(CDD),0,H2,0.00238088226430913,H1,-0.0384951203559993,AX,1017.11899383307,L1,-0.638720496078986
 Get Checksum: 1041668763
+GetData ===>> L2(CDD),0.000157244698251559,H2,0.17944444433513,H1,-0.21326090743139,AX,1016.74566239473,L1,-0.3...
+GetData ===>> L2(CDD),0,H2,0.0646234056312066,H1,0.0927436628268977,AX,1016.00233482054,L1,-0.669415097244204
 GetDeflection L2 (CDD) ===>> 0
 testing L2_CDD_==3250
 evaluate ot="L2(CDD).deflection==3250" t="L2_CDD_==3250", ctx="{'L2_CDD_': 0.0}"
-GetData ===>> L2(CDD),0,H2,0.0366487478007753,H1,-0.0644649523889703,AX,990.15353524778,L1,-0.448761586136776
-GetData ===>> L2(CDD),0,H2,0.152165941424043,H1,0.00436812289747085,AX,988.848945414875,L1,-0.715685946510542
-GetData ===>> L2(CDD),0,H2,-0.0299044096693481,H1,0.121820870674735,AX,989.444400564994,L1,-0.62360362438209
+GetData ===>> L2(CDD),0,H2,-0.322171841428171,H1,-0.05883438445293,AX,1015.83005301602,L1,-0.660068348041068
 Get Checksum: 1041668763
-GetData ===>> L2(CDD),0,H2,-0.0361981691743195,H1,-0.0563063636683608,AX,988.77813195766,L1,-0.547669508130932
-GetData ===>> L2(CDD),0,H2,0.0217292574221663,H1,-0.038724944944444,AX,988.974265899756,L1,-0.520779556074032
+GetData ===>> L2(CDD),0,H2,0.177462647131601,H1,-0.0580300149219055,AX,1015.69669306968,L1,-0.872482680951151
+GetData ===>> L2(CDD),0,H2,-0.0357319661553025,H1,0.0653912001394341,AX,1015.61310831092,L1,-0.820566044306111
+GetData ===>> L2(CDD),0,H2,-0.0830504392578556,H1,0.190782179951769,AX,1016.03966812687,L1,-0.470344456459976
 Get Checksum: 1041668763
-GetData ===>> L2(CDD),0,H2,0.0267412483386019,H1,0.108718779204856,AX,988.408710737238,L1,-0.472421926619941
+GetData ===>> L2(CDD),0,H2,-0.119178766684596,H1,0.191012059226482,AX,1015.67426315011,L1,-0.637220359053245
+GetData ===>> L2(CDD),0,H2,0.11299813933917,H1,0.111017378872139,AX,1014.97612778763,L1,-0.628911865755956
 $$$$$$$$$$$$$$$$$ SETTING is_baseline False
 Peak hop Detectors=['L1']
 Peak hop Deflections=[None]
@@ -2096,51 +1491,50 @@ Peak hop DeflectionsPairs=[('L1', None)]
 detector Detector(L1)
 POSITION Ar40 L1
 Mapping mass to dac mass func: "parabolic"
-L1 map mass coeffs = [ 0.       0.       3.71615]
-L1 map mass to dac 39.9624 >> 3.71615
+L1 map mass coeffs = [ 0.       0.       3.71607]
+L1 map mass to dac 39.9624 >> 3.71607
 GetHighVoltage ===>> 9000
-positioning Ar40 (3.71615) on L1
+positioning Ar40 (3.71607) on L1
 setting magnet DAC
-current  : 3.639220
-requested: 3.716150
+current  : 3.639140
+requested: 3.716070
 Delta Dac: 0.076930
 Checking detector protection. dv=0.07693
-SetMagnetDAC 3.71615 ===>> OK
+SetMagnetDAC 3.71607 ===>> OK
 Magnet settling time: 0.500
+Get Checksum: 1041668763
 update detector isotope pairing
 detectors=['L1']
 isotopes=['Ar40']
 updating pairing L1 - Ar40
 could not locate det=L1 iso=Ar40
 Get Checksum: 1041668763
+Join finished
+delaying 5 for detectors to settle after peak hop
+GetData ===>> L2(CDD),0,H2,0.0547156228158774,H1,0.135382872082197,AX,-0.179411739260439,L1,1014.33289309493
+GetData ===>> L2(CDD),0,H2,0.0547156228158774,H1,0.135382872082197,AX,-0.179411739260439,L1,1014.33289309493
+Get Checksum: 1041668763
+GetData ===>> L2(CDD),0,H2,-0.118712603216231,H1,-0.295749469081839,AX,-0.062923968271909,L1,1014.20066615615
 set states for children of O. state=False
 handle state [('O', False)]
-update switch state O False args=() kw={'refresh': False} ncanvase=5
+update switch state O False args=() kw={'refresh': False} ncanvase=6
 refresh_canvas_needed fired
-Get Checksum: 471081216
-Join finished
-delaying 5 for detectors to settle after peak hop
-GetData ===>> L2(CDD),0,H2,-0.0351492120693001,H1,-0.150872811146367,AX,-0.254960737342398,L1,987.612059594658
-GetData ===>> L2(CDD),0,H2,-0.00659383651474364,H1,-0.12364138249215,AX,0.293276697845723,L1,987.947645740644
-GetData ===>> L2(CDD),0,H2,-0.0764073434809804,H1,-0.151102608960478,AX,-0.167144498519315,L1,987.504339693991
-GetData ===>> L2(CDD),0.000157244698251559,H2,-0.0422587882002472,H1,-0.00436556106563036,AX,-0.195920676227716...
-set states for children of R. state=True
-handle state [('R', True)]
-update switch state R True args=() kw={'refresh': False} ncanvase=5
-refresh_canvas_needed fired
-Get Checksum: 1434984433
+GetData ===>> L2(CDD),0,H2,0.038863379050792,H1,0.0636673314123151,AX,-0.045495451361849,L1,1014.58331273849
 GetDeflection L2 (CDD) ===>> 0
 testing L2_CDD_==3250
 evaluate ot="L2(CDD).deflection==3250" t="L2_CDD_==3250", ctx="{'L2_CDD_': 0.0}"
-GetData ===>> L2(CDD),0.000157244698251559,H2,0.106237189369675,H1,-0.0142483186046321,AX,0.00335194242589556,L...
-GetData ===>> L2(CDD),0,H2,-0.000882661365118323,H1,-0.121688043712468,AX,-0.15338665931986,L1,987.258949225259
-GetData ===>> L2(CDD),0,H2,-0.132813949836083,H1,0.209747404270634,AX,0.194752121341551,L1,987.102116093288
+GetData ===>> L2(CDD),0,H2,-0.0893438567951709,H1,-0.209929048492108,AX,-0.101907666143401,L1,1014.8415145533
+Get Checksum: 471081216
+GetData ===>> L2(CDD),0.000157244698251559,H2,-0.0436573872574084,H1,0.0484974194534832,AX,-0.131259055376506,L...
+set states for children of R. state=True
+handle state [('R', True)]
+update switch state R True args=() kw={'refresh': False} ncanvase=6
+refresh_canvas_needed fired
+GetData ===>> L2(CDD),0.000157244698251559,H2,0.0800098084686447,H1,-0.208320560746733,AX,-0.278231843815698,L1...
+GetData ===>> L2(CDD),0,H2,-0.116614864859933,H1,-0.0574554648466231,AX,-0.0287546050373238,L1,1013.64414713734
 Get Checksum: 1434984433
-GetData ===>> L2(CDD),0,H2,-0.156704197051809,H1,-0.030910878204527,AX,-0.358931222679187,L1,986.773692314407
-GetData ===>> L2(CDD),0,H2,0.166970846475596,H1,-0.25772288888769,AX,0.141995725862863,L1,986.585731209271
-15:28:38 -- collecting point 200
-GetData ===>> L2(CDD),0.000157244698251559,H2,-0.0604404199608745,H1,0.0310293315009101,AX,0.0430279413989321,L...
-Get Checksum: 1434984433
+GetData ===>> L2(CDD),0.000314489402501528,H2,0.074880980630735,H1,0.0486123421321193,AX,0.0312167071378434,L1,...
+GetData ===>> L2(CDD),0,H2,0.0839730120348933,H1,0.16779452910801,AX,-0.466099622775481,L1,1013.68090436509
 $$$$$$$$$$$$$$$$$ SETTING is_baseline False
 Peak hop Detectors=['H2']
 Peak hop Deflections=[None]
@@ -2149,69 +1543,70 @@ Peak hop DeflectionsPairs=[('H2', None)]
 detector Detector(H2)
 POSITION Ar40 H2
 Mapping mass to dac mass func: "parabolic"
-H2 map mass coeffs = [  1.08772369e-05   9.93017553e-02  -4.91977340e-01]
-H2 map mass to dac 39.9624 >> 3.49373
+H2 map mass coeffs = [  1.08772369e-05   9.93017553e-02  -4.92057340e-01]
+H2 map mass to dac 39.9624 >> 3.49365
 GetHighVoltage ===>> 9000
-positioning Ar40 (3.49373) on H2
+positioning Ar40 (3.49365) on H2
 setting magnet DAC
-current  : 3.716150
-requested: 3.493730
+current  : 3.716070
+requested: 3.493650
 Delta Dac: 0.222420
 Checking detector protection. dv=0.22242
 Move 0.22242>0.15. Do AF Demag
-Doing AF Demagnetization around target=3.49373. duration=4, start_amplitude=0.2, period=0.5
-set af dac raw:-0.1875 dac:3.30623
-SetMagnetDAC 3.30623 ===>> OK
-set af dac raw:0.1625 dac:3.65623
-SetMagnetDAC 3.65623 ===>> OK
-set af dac raw:-0.1375 dac:3.35623
-SetMagnetDAC 3.35623 ===>> OK
-set af dac raw:0.1125 dac:3.60623
-SetMagnetDAC 3.60623 ===>> OK
-set af dac raw:-0.0875 dac:3.40623
+Doing AF Demagnetization around target=3.49365. duration=4, start_amplitude=0.2, period=0.5
+set af dac raw:-0.1875 dac:3.30615
+SetMagnetDAC 3.30615 ===>> OK
 Get Checksum: 1434984433
-SetMagnetDAC 3.40623 ===>> OK
-set af dac raw:0.0625 dac:3.55623
-SetMagnetDAC 3.55623 ===>> OK
-set af dac raw:-0.0375 dac:3.45623
-SetMagnetDAC 3.45623 ===>> OK
-set af dac raw:0.0125 dac:3.50623
-SetMagnetDAC 3.50623 ===>> OK
-SetMagnetDAC 3.49373 ===>> OK
+set af dac raw:0.1625 dac:3.65615
+SetMagnetDAC 3.65615 ===>> OK
+set af dac raw:-0.1375 dac:3.35615
+SetMagnetDAC 3.35615 ===>> OK
+set af dac raw:0.1125 dac:3.60615
+SetMagnetDAC 3.60615 ===>> OK
+set af dac raw:-0.0875 dac:3.40615
+SetMagnetDAC 3.40615 ===>> OK
+set af dac raw:0.0625 dac:3.55615
+SetMagnetDAC 3.55615 ===>> OK
+set af dac raw:-0.0375 dac:3.45615
+Get Checksum: 1434984433
+SetMagnetDAC 3.45615 ===>> OK
+set af dac raw:0.0125 dac:3.50615
+SetMagnetDAC 3.50615 ===>> OK
+SetMagnetDAC 3.49365 ===>> OK
 Magnet settling time: 0.500
 update detector isotope pairing
 detectors=['H2']
 isotopes=['Ar40']
 updating pairing H2 - Ar40
 could not locate det=H2 iso=Ar40
+Get Checksum: 1434984433
 set states for children of R. state=False
 handle state [('R', False)]
-update switch state R False args=() kw={'refresh': False} ncanvase=5
+update switch state R False args=() kw={'refresh': False} ncanvase=6
 refresh_canvas_needed fired
-Get Checksum: 471081216
-set states for children of U. state=True
-handle state [('U', True)]
-update switch state U True args=() kw={'refresh': False} ncanvase=5
-refresh_canvas_needed fired
-Get Checksum: 1499143366
 Join finished
 delaying 5 for detectors to settle after peak hop
-GetData ===>> L2(CDD),3.27167301303212,H2,979.147061935666,H1,0.232850999452539,AX,0.588566734142167,L1,-0.2960...
-GetData ===>> L2(CDD),3.27167301303212,H2,979.147061935666,H1,0.232850999452539,AX,0.588566734142167,L1,-0.2960...
-GetData ===>> L2(CDD),3.2850494443044,H2,978.404744630565,H1,-0.0167764496178315,AX,0.389861216532966,L1,-0.387...
-GetData ===>> L2(CDD),3.29811117788826,H2,978.507219447337,H1,0.0624031629705874,AX,0.307499937702097,L1,-0.741...
+GetData ===>> L2(CDD),3.39080346379432,H2,1004.53496768058,H1,-0.156732638311329,AX,0.702622953354416,L1,-0.718...
+GetData ===>> L2(CDD),3.39080346379432,H2,1004.53496768058,H1,-0.156732638311329,AX,0.702622953354416,L1,-0.718...
+set states for children of U. state=True
+handle state [('U', True)]
+update switch state U True args=() kw={'refresh': False} ncanvase=6
+refresh_canvas_needed fired
 Get Checksum: 1499143366
+GetData ===>> L2(CDD),3.35681080461755,H2,1004.67946213703,H1,-0.0838844141270103,AX,0.481751684079704,L1,-0.45...
+GetData ===>> L2(CDD),3.35917139689558,H2,1004.38343125976,H1,-0.134097422816969,AX,0.878553051907006,L1,-0.380...
 GetDeflection L2 (CDD) ===>> 0
 testing L2_CDD_==3250
 evaluate ot="L2(CDD).deflection==3250" t="L2_CDD_==3250", ctx="{'L2_CDD_': 0.0}"
-GetData ===>> L2(CDD),3.29071476945281,H2,977.807874909497,H1,0.0505660297639615,AX,0.55162184229365,L1,-0.7569...
-GetData ===>> L2(CDD),3.25609345954297,H2,977.736210926579,H1,0.0383842773475168,AX,0.675312487402057,L1,-0.453...
-GetData ===>> L2(CDD),3.28914106724197,H2,977.467589543395,H1,0.0317188552919895,AX,0.56045636136159,L1,-0.4286...
+GetData ===>> L2(CDD),3.3782135573537,H2,1004.84408656066,H1,0.384704813977809,AX,0.372195390372529,L1,-0.47599...
 Get Checksum: 1499143366
-GetData ===>> L2(CDD),3.30361915023484,H2,977.575766214434,H1,0.159059365410453,AX,0.54519678843961,L1,-0.55390...
-GetData ===>> L2(CDD),3.24853975782663,H2,977.359589684103,H1,0.34101996572533,AX,0.375292622170639,L1,-0.63895...
+GetData ===>> L2(CDD),3.37003013877917,H2,1004.48610034158,H1,-0.130650389080484,AX,0.557014331305703,L1,-0.596...
+GetData ===>> L2(CDD),3.37081700524412,H2,1004.02749635425,H1,-0.0129842506128773,AX,0.429438432399798,L1,-0.71...
 Get Checksum: 1499143366
-GetData ===>> L2(CDD),3.27718095006584,H2,976.747733555798,H1,0.229172778113609,AX,0.632741835505742,L1,-0.5887...
+GetData ===>> L2(CDD),3.36924327246437,H2,1003.66917859314,H1,0.0743553671782666,AX,0.354185758477649,L1,-0.623...
+GetData ===>> L2(CDD),3.33965720798393,H2,1002.99927141648,H1,-0.207975884452472,AX,0.421981731090514,L1,-0.695...
+GetData ===>> L2(CDD),3.37160387185922,H2,1003.506710854,H1,-0.0530888730869936,AX,0.704344227160738,L1,-0.6672...
+Get Checksum: 1499143366
 $$$$$$$$$$$$$$$$$ SETTING is_baseline False
 Peak hop Detectors=['H1']
 Peak hop Deflections=[None]
@@ -2220,16 +1615,211 @@ Peak hop DeflectionsPairs=[('H1', None)]
 detector Detector(H1)
 POSITION Ar40 H1
 Mapping mass to dac mass func: "parabolic"
-H1 map mass coeffs = [ 0.       0.       3.56491]
-H1 map mass to dac 39.9624 >> 3.56491
+H1 map mass coeffs = [ 0.       0.       3.56483]
+H1 map mass to dac 39.9624 >> 3.56483
 GetHighVoltage ===>> 9000
-positioning Ar40 (3.56491) on H1
+positioning Ar40 (3.56483) on H1
 setting magnet DAC
-current  : 3.493730
-requested: 3.564910
+current  : 3.493650
+requested: 3.564830
 Delta Dac: 0.071180
 Checking detector protection. dv=0.07118
-SetMagnetDAC 3.56491 ===>> OK
+SetMagnetDAC 3.56483 ===>> OK
+Magnet settling time: 0.500
+update detector isotope pairing
+detectors=['H1']
+isotopes=['Ar40']
+updating pairing H1 - Ar40
+could not locate det=H1 iso=Ar40
+Get Checksum: 1499143366
+Join finished
+delaying 5 for detectors to settle after peak hop
+GetData ===>> L2(CDD),0.000157244698251559,H2,0.162774157720852,H1,1005.85438779408,AX,0.0296113078457904,L1,-0...
+GetData ===>> L2(CDD),0.000157244698251559,H2,0.162774157720852,H1,1005.85438779408,AX,0.0296113078457904,L1,-0...
+Get Checksum: 1499143366
+GetData ===>> L2(CDD),0,H2,-0.125705031910514,H1,1005.20447881783,AX,-0.185373332502592,L1,-0.598446780402076
+GetData ===>> L2(CDD),0,H2,-0.0729109591601067,H1,1005.19293836416,AX,0.141766356543759,L1,-0.447376572686332
+GetDeflection L2 (CDD) ===>> 0
+testing L2_CDD_==3250
+evaluate ot="L2(CDD).deflection==3250" t="L2_CDD_==3250", ctx="{'L2_CDD_': 0.0}"
+GetData ===>> L2(CDD),0,H2,-0.0561281404374256,H1,1005.04466909527,AX,-0.0645292105343052,L1,-0.487079506101885
+Get Checksum: 1499143366
+GetData ===>> L2(CDD),0,H2,-0.028622342582652,H1,1005.19503662171,AX,-0.0274932966000759,L1,-0.398899853976525
+GetData ===>> L2(CDD),0,H2,0.371814457516008,H1,1005.09484817277,AX,-0.213346469107763,L1,-0.418867939164747
+GetData ===>> L2(CDD),0,H2,0.279005776925831,H1,1004.09620885272,AX,-0.0872316358192644,L1,-0.456263707901814
+Get Checksum: 1499143366
+GetData ===>> L2(CDD),0,H2,0.0523843943851622,H1,1004.63822937278,AX,-0.0725553816831604,L1,-0.544899762156489
+07:57:13 -- collecting point 100
+GetData ===>> L2(CDD),0,H2,0.281220956932843,H1,1004.64836714486,AX,-0.295082983399803,L1,-0.382163280442937
+Get Checksum: 1499143366
+$$$$$$$$$$$$$$$$$ SETTING is_baseline False
+Peak hop Detectors=['AX']
+Peak hop Deflections=[None]
+Peak hop DeflectionsPairs=[('AX', None)]
+----------------------- HOP Ar40 AX
+detector Detector(AX)
+POSITION Ar40 AX
+Mapping mass to dac mass func: "parabolic"
+AX map mass coeffs = [ 0.       0.       3.63914]
+AX map mass to dac 39.9624 >> 3.63914
+GetHighVoltage ===>> 9000
+positioning Ar40 (3.63914) on AX
+setting magnet DAC
+current  : 3.564830
+requested: 3.639140
+Delta Dac: 0.074310
+Checking detector protection. dv=0.07431
+SetMagnetDAC 3.63914 ===>> OK
+Magnet settling time: 0.500
+update detector isotope pairing
+detectors=['AX']
+isotopes=['Ar40']
+updating pairing AX - Ar40
+could not locate det=AX iso=Ar40
+Get Checksum: 1499143366
+Join finished
+delaying 5 for detectors to settle after peak hop
+GetData ===>> L2(CDD),0,H2,-0.0295547551756878,H1,-0.0571107346369192,AX,1006.10544171438,L1,-0.449684927336067
+GetData ===>> L2(CDD),0,H2,-0.0295547551756878,H1,-0.0571107346369192,AX,1006.10544171438,L1,-0.449684927336067
+Get Checksum: 1499143366
+GetData ===>> L2(CDD),0,H2,0.0453907424288871,H1,0.0360858507466556,AX,1006.89432310455,L1,-0.590599557725312
+GetData ===>> L2(CDD),0.000157244698251559,H2,0.174081943520721,H1,-0.0374609090283301,AX,1005.87685726904,L1,-...
+GetDeflection L2 (CDD) ===>> 0
+testing L2_CDD_==3250
+evaluate ot="L2(CDD).deflection==3250" t="L2_CDD_==3250", ctx="{'L2_CDD_': 0.0}"
+GetData ===>> L2(CDD),0,H2,-0.070813122568085,H1,0.0952720808905184,AX,1005.55752740386,L1,-0.700108725442737
+Get Checksum: 1499143366
+GetData ===>> L2(CDD),0,H2,-0.0419091381233455,H1,-0.109738120347446,AX,1005.94862440456,L1,-0.601331772751236
+GetData ===>> L2(CDD),0,H2,0.00144844011637336,H1,-0.034932832226649,AX,1006.13093921047,L1,-0.516047770515841
+GetData ===>> L2(CDD),0,H2,0.00144844011637336,H1,-0.034932832226649,AX,1006.13093921047,L1,-0.516047770515841
+Get Checksum: 1499143366
+GetData ===>> L2(CDD),0.000157244698251559,H2,-0.124190009935943,H1,0.114350358118739,AX,1005.61164621195,L1,-0...
+GetData ===>> L2(CDD),0.000157244698251559,H2,-0.0357319661553025,H1,-0.208435452817684,AX,1005.08370447828,L1,...
+Get Checksum: 1499143366
+$$$$$$$$$$$$$$$$$ SETTING is_baseline False
+Peak hop Detectors=['L1']
+Peak hop Deflections=[None]
+Peak hop DeflectionsPairs=[('L1', None)]
+----------------------- HOP Ar40 L1
+detector Detector(L1)
+POSITION Ar40 L1
+Mapping mass to dac mass func: "parabolic"
+L1 map mass coeffs = [ 0.       0.       3.71607]
+L1 map mass to dac 39.9624 >> 3.71607
+GetHighVoltage ===>> 9000
+positioning Ar40 (3.71607) on L1
+setting magnet DAC
+current  : 3.639140
+requested: 3.716070
+Delta Dac: 0.076930
+Checking detector protection. dv=0.07693
+SetMagnetDAC 3.71607 ===>> OK
+Magnet settling time: 0.500
+update detector isotope pairing
+detectors=['L1']
+isotopes=['Ar40']
+updating pairing L1 - Ar40
+could not locate det=L1 iso=Ar40
+Get Checksum: 1499143366
+Join finished
+delaying 5 for detectors to settle after peak hop
+GetData ===>> L2(CDD),0,H2,-0.0208133522201766,H1,0.0195373408816428,AX,-0.256451022110517,L1,1004.73264386397
+GetData ===>> L2(CDD),0,H2,-0.0208133522201766,H1,0.0195373408816428,AX,-0.256451022110517,L1,1004.73264386397
+GetData ===>> L2(CDD),0.000157244698251559,H2,-0.00251442909643341,H1,-0.0856080161012127,AX,-0.119220507923934...
+GetData ===>> L2(CDD),0,H2,-0.0437739370887566,H1,-0.141910653679864,AX,-0.215753955156695,L1,1004.18621610444
+Get Checksum: 1499143366
+GetDeflection L2 (CDD) ===>> 0
+testing L2_CDD_==3250
+evaluate ot="L2(CDD).deflection==3250" t="L2_CDD_==3250", ctx="{'L2_CDD_': 0.0}"
+GetData ===>> L2(CDD),0,H2,-0.00647728225356986,H1,0.058495743716014,AX,-0.112111961569127,L1,1004.44006325495
+GetData ===>> L2(CDD),0.000157244698251559,H2,-0.0125380854387819,H1,0.0994095065618442,AX,-0.256565659304936,L...
+GetData ===>> L2(CDD),0.000157244698251559,H2,0.107636002770928,H1,-0.106750616373574,AX,-0.223664224053675,L1,...
+Get Checksum: 1499143366
+GetData ===>> L2(CDD),0,H2,0.00529476970638488,H1,-0.13214410521188,AX,-0.0289839336666854,L1,1003.02920723169
+GetData ===>> L2(CDD),0,H2,0.0705681234912916,H1,0.447131595747782,AX,0.0205523191734905,L1,1003.30808171813
+Get Checksum: 1499143366
+GetData ===>> L2(CDD),0,H2,-0.0161512387007847,H1,-0.27185378709377,AX,-0.152813411751268,L1,1003.28285471418
+$$$$$$$$$$$$$$$$$ SETTING is_baseline False
+Peak hop Detectors=['H2']
+Peak hop Deflections=[None]
+Peak hop DeflectionsPairs=[('H2', None)]
+----------------------- HOP Ar40 H2
+detector Detector(H2)
+POSITION Ar40 H2
+Mapping mass to dac mass func: "parabolic"
+H2 map mass coeffs = [  1.08772369e-05   9.93017553e-02  -4.92057340e-01]
+H2 map mass to dac 39.9624 >> 3.49365
+GetHighVoltage ===>> 9000
+positioning Ar40 (3.49365) on H2
+setting magnet DAC
+current  : 3.716070
+requested: 3.493650
+Delta Dac: 0.222420
+Checking detector protection. dv=0.22242
+Move 0.22242>0.15. Do AF Demag
+Doing AF Demagnetization around target=3.49365. duration=4, start_amplitude=0.2, period=0.5
+set af dac raw:-0.1875 dac:3.30615
+SetMagnetDAC 3.30615 ===>> OK
+set af dac raw:0.1625 dac:3.65615
+SetMagnetDAC 3.65615 ===>> OK
+set af dac raw:-0.1375 dac:3.35615
+SetMagnetDAC 3.35615 ===>> OK
+set af dac raw:0.1125 dac:3.60615
+SetMagnetDAC 3.60615 ===>> OK
+Get Checksum: 1499143366
+set af dac raw:-0.0875 dac:3.40615
+SetMagnetDAC 3.40615 ===>> OK
+set af dac raw:0.0625 dac:3.55615
+SetMagnetDAC 3.55615 ===>> OK
+set af dac raw:-0.0375 dac:3.45615
+SetMagnetDAC 3.45615 ===>> OK
+set af dac raw:0.0125 dac:3.50615
+SetMagnetDAC 3.50615 ===>> OK
+SetMagnetDAC 3.49365 ===>> OK
+Magnet settling time: 0.500
+update detector isotope pairing
+detectors=['H2']
+isotopes=['Ar40']
+updating pairing H2 - Ar40
+could not locate det=H2 iso=Ar40
+Get Checksum: 1499143366
+Get Checksum: 1499143366
+Join finished
+delaying 5 for detectors to settle after peak hop
+GetData ===>> L2(CDD),3.33289021242485,H2,995.387149701294,H1,0.136532202998702,AX,0.77514862317011,L1,-0.70576...
+GetData ===>> L2(CDD),3.33289021242485,H2,995.387149701294,H1,0.136532202998702,AX,0.77514862317011,L1,-0.70576...
+Get Checksum: 1499143366
+GetData ===>> L2(CDD),3.33745399890833,H2,995.23448821927,H1,-0.210503507750822,AX,0.442401758322741,L1,-0.5520...
+GetData ===>> L2(CDD),3.34217516265456,H2,994.404975312655,H1,0.122510459365856,AX,0.668427618255925,L1,-0.6413...
+GetDeflection L2 (CDD) ===>> 0
+testing L2_CDD_==3250
+evaluate ot="L2(CDD).deflection==3250" t="L2_CDD_==3250", ctx="{'L2_CDD_': 0.0}"
+GetData ===>> L2(CDD),3.32061522556547,H2,993.766099701404,H1,-0.0203388047996684,AX,0.670837316856653,L1,-0.58...
+Get Checksum: 1499143366
+GetData ===>> L2(CDD),3.37128912519516,H2,994.689924937355,H1,-0.0848036688965225,AX,0.490929740664133,L1,-0.41...
+GetData ===>> L2(CDD),3.32879854607855,H2,994.232055606604,H1,0.153657395863933,AX,0.313120469450901,L1,-0.6784...
+GetData ===>> L2(CDD),3.27985623642239,H2,994.405678390205,H1,-0.0176957683438838,AX,0.323788099557281,L1,-0.67...
+Get Checksum: 1499143366
+GetData ===>> L2(CDD),3.35712555017655,H2,994.533644084279,H1,-0.258527091902391,AX,0.574339340842829,L1,-0.618...
+GetData ===>> L2(CDD),3.33430655941369,H2,994.218514434138,H1,0.109868078354008,AX,0.561259503478757,L1,-0.6245...
+$$$$$$$$$$$$$$$$$ SETTING is_baseline False
+Peak hop Detectors=['H1']
+Peak hop Deflections=[None]
+Peak hop DeflectionsPairs=[('H1', None)]
+----------------------- HOP Ar40 H1
+detector Detector(H1)
+POSITION Ar40 H1
+Mapping mass to dac mass func: "parabolic"
+H1 map mass coeffs = [ 0.       0.       3.56483]
+H1 map mass to dac 39.9624 >> 3.56483
+GetHighVoltage ===>> 9000
+positioning Ar40 (3.56483) on H1
+setting magnet DAC
+current  : 3.493650
+requested: 3.564830
+Delta Dac: 0.071180
+Checking detector protection. dv=0.07118
+SetMagnetDAC 3.56483 ===>> OK
 Magnet settling time: 0.500
 update detector isotope pairing
 detectors=['H1']
@@ -2240,22 +1830,22 @@ Get Checksum: 1499143366
 Get Checksum: 1499143366
 Join finished
 delaying 5 for detectors to settle after peak hop
-GetData ===>> L2(CDD),0,H2,0.11602892518382,H1,979.366467401191,AX,-0.271353742853189,L1,-0.613910238961704
-GetData ===>> L2(CDD),0,H2,0.11602892518382,H1,979.366467401191,AX,-0.271353742853189,L1,-0.613910238961704
-GetData ===>> L2(CDD),0,H2,-0.262396971691079,H1,979.125410983524,AX,-0.0639559100340395,L1,-0.78641491657068
-GetData ===>> L2(CDD),0,H2,0.0865374464280196,H1,979.24498106328,AX,-0.136189083725653,L1,-0.792645279705062
+GetData ===>> L2(CDD),0,H2,0.0202140094103567,H1,995.529690654534,AX,-0.185831915068417,L1,-0.633066121315878
+GetData ===>> L2(CDD),0,H2,0.0202140094103567,H1,995.529690654534,AX,-0.185831915068417,L1,-0.633066121315878
 Get Checksum: 1499143366
+GetData ===>> L2(CDD),0,H2,0.0016815505700442,H1,994.816483092266,AX,-0.0793202453800379,L1,-0.64587496376552
+GetData ===>> L2(CDD),0,H2,0.172799610725031,H1,995.426014871492,AX,0.00736533617131071,L1,-0.615872003366858
 GetDeflection L2 (CDD) ===>> 0
 testing L2_CDD_==3250
 evaluate ot="L2(CDD).deflection==3250" t="L2_CDD_==3250", ctx="{'L2_CDD_': 0.0}"
-GetData ===>> L2(CDD),0.000157244698251559,H2,0.0657890337365464,H1,978.544682862739,AX,-0.424379867720613,L1,-...
-GetData ===>> L2(CDD),0,H2,-0.157053806093463,H1,977.955144222338,AX,-0.0135041285448018,L1,-0.653490951925872
-GetData ===>> L2(CDD),0,H2,-0.0997162528850975,H1,977.95029314623,AX,-0.121284269611284,L1,-0.592099766976983
+GetData ===>> L2(CDD),0,H2,0.0128709176804537,H1,995.7151056747,AX,-0.153615958251548,L1,-0.569365577520818
 Get Checksum: 1499143366
-GetData ===>> L2(CDD),0,H2,-0.119994552219238,H1,978.075386782466,AX,-0.130112533536144,L1,-0.530012241812747
-GetData ===>> L2(CDD),0,H2,0.189236912980174,H1,978.275870918179,AX,-0.533145439516994,L1,-0.630988995763844
+GetData ===>> L2(CDD),0,H2,0.13386412441743,H1,995.200567196569,AX,-0.106149914461,L1,-0.507622826802374
+GetData ===>> L2(CDD),0.000157244698251559,H2,0.152865380714432,H1,995.148130332211,AX,-0.14341210290827,L1,-0....
+GetData ===>> L2(CDD),0,H2,0.0742981609873088,H1,994.469192625884,AX,-0.266539042927397,L1,-0.647836663413241
 Get Checksum: 1499143366
-GetData ===>> L2(CDD),0,H2,0.0514519045685655,H1,978.087688815607,AX,-0.282587948996783,L1,-0.528281119941655
+GetData ===>> L2(CDD),0,H2,-0.0690649219708733,H1,994.555963947062,AX,-0.0526044897948778,L1,-0.453724534733546
+GetData ===>> L2(CDD),0,H2,0.105071513063782,H1,994.117978211001,AX,0.155413926155342,L1,-0.582290664401513
 $$$$$$$$$$$$$$$$$ SETTING is_baseline False
 Peak hop Detectors=['AX']
 Peak hop Deflections=[None]
@@ -2264,16 +1854,16 @@ Peak hop DeflectionsPairs=[('AX', None)]
 detector Detector(AX)
 POSITION Ar40 AX
 Mapping mass to dac mass func: "parabolic"
-AX map mass coeffs = [ 0.       0.       3.63922]
-AX map mass to dac 39.9624 >> 3.63922
+AX map mass coeffs = [ 0.       0.       3.63914]
+AX map mass to dac 39.9624 >> 3.63914
 GetHighVoltage ===>> 9000
-positioning Ar40 (3.63922) on AX
+positioning Ar40 (3.63914) on AX
 setting magnet DAC
-current  : 3.564910
-requested: 3.639220
+current  : 3.564830
+requested: 3.639140
 Delta Dac: 0.074310
 Checking detector protection. dv=0.07431
-SetMagnetDAC 3.63922 ===>> OK
+SetMagnetDAC 3.63914 ===>> OK
 Magnet settling time: 0.500
 update detector isotope pairing
 detectors=['AX']
@@ -2284,22 +1874,23 @@ Get Checksum: 1499143366
 Get Checksum: 1499143366
 Join finished
 delaying 5 for detectors to settle after peak hop
-GetData ===>> L2(CDD),0,H2,0.0865374464280196,H1,-0.214754495633638,AX,980.182475893058,L1,-0.758493167140198
-GetData ===>> L2(CDD),0,H2,0.0865374464280196,H1,-0.214754495633638,AX,980.182475893058,L1,-0.758493167140198
-GetData ===>> L2(CDD),0,H2,-0.159384529843061,H1,-0.0417126596164152,AX,979.918378917483,L1,-0.67241526921859
-GetData ===>> L2(CDD),0,H2,0.0369984260858575,H1,0.0949272962188527,AX,979.955411902576,L1,-0.679223317295448
+GetData ===>> L2(CDD),0,H2,-0.0234940574320178,H1,-0.151332406719959,AX,996.516200397747,L1,-0.610794487326323
+GetData ===>> L2(CDD),0,H2,-0.0234940574320178,H1,-0.151332406719959,AX,996.516200397747,L1,-0.610794487326323
 Get Checksum: 1499143366
+GetData ===>> L2(CDD),0,H2,0.0404952158118631,H1,-0.447611071204466,AX,996.125874348059,L1,-0.504045088807009
+GetData ===>> L2(CDD),0,H2,0.112765002355111,H1,-0.160409374434964,AX,995.989929893864,L1,-0.690069939078897
 GetDeflection L2 (CDD) ===>> 0
 testing L2_CDD_==3250
 evaluate ot="L2(CDD).deflection==3250" t="L2_CDD_==3250", ctx="{'L2_CDD_': 0.0}"
-GetData ===>> L2(CDD),0.000157244698251559,H2,0.00727621812523005,H1,0.00494271014103432,AX,978.590913983993,L1...
-GetData ===>> L2(CDD),0,H2,-0.11253591628717,H1,0.185494971752537,AX,979.455480762107,L1,-0.776492403628083
-GetData ===>> L2(CDD),0.000157244698251559,H2,0.0987768850144365,H1,0.172392015455292,AX,979.190483748849,L1,-0...
+GetData ===>> L2(CDD),0,H2,0.082574232471999,H1,-0.204988684740862,AX,996.588255932661,L1,-0.570519610149446
 Get Checksum: 1499143366
-GetData ===>> L2(CDD),0,H2,0.156246011000772,H1,-0.00999644695692496,AX,978.972602776488,L1,-0.438373936976975
-GetData ===>> L2(CDD),0,H2,-0.180011192946913,H1,-0.0143632337941673,AX,979.183560895753,L1,-0.461111201825947
+GetData ===>> L2(CDD),0.000157244698251559,H2,0.0821079730618887,H1,-0.130880191712583,AX,995.977569588496,L1,-...
+GetData ===>> L2(CDD),0.000157244698251559,H2,0.0211464694479266,H1,-0.156043248728056,AX,996.914464824638,L1,-...
+GetData ===>> L2(CDD),0,H2,-0.000882661365118323,H1,-0.0904340852430235,AX,996.455286655366,L1,-0.613333248674479
 Get Checksum: 1499143366
-GetData ===>> L2(CDD),0,H2,-0.171737272991527,H1,-0.0474582387448214,AX,978.930034140952,L1,-0.590484156917326
+GetData ===>> L2(CDD),0,H2,-0.0596245847526288,H1,-0.0214879488260766,AX,994.847131160956,L1,-0.427755336004506
+07:58:33 -- collecting point 150
+GetData ===>> L2(CDD),0.000157244698251559,H2,-0.065335416920691,H1,-0.0151676397393569,AX,995.135052333276,L1,...
 $$$$$$$$$$$$$$$$$ SETTING is_baseline False
 Peak hop Detectors=['L1']
 Peak hop Deflections=[None]
@@ -2308,16 +1899,16 @@ Peak hop DeflectionsPairs=[('L1', None)]
 detector Detector(L1)
 POSITION Ar40 L1
 Mapping mass to dac mass func: "parabolic"
-L1 map mass coeffs = [ 0.       0.       3.71615]
-L1 map mass to dac 39.9624 >> 3.71615
+L1 map mass coeffs = [ 0.       0.       3.71607]
+L1 map mass to dac 39.9624 >> 3.71607
 GetHighVoltage ===>> 9000
-positioning Ar40 (3.71615) on L1
+positioning Ar40 (3.71607) on L1
 setting magnet DAC
-current  : 3.639220
-requested: 3.716150
+current  : 3.639140
+requested: 3.716070
 Delta Dac: 0.076930
 Checking detector protection. dv=0.07693
-SetMagnetDAC 3.71615 ===>> OK
+SetMagnetDAC 3.71607 ===>> OK
 Magnet settling time: 0.500
 update detector isotope pairing
 detectors=['L1']
@@ -2328,26 +1919,421 @@ Get Checksum: 1499143366
 Get Checksum: 1499143366
 Join finished
 delaying 5 for detectors to settle after peak hop
-GetData ===>> L2(CDD),0,H2,-0.178496255091344,H1,-0.233366708465506,AX,-0.180443556118712,L1,978.878985329466
-GetData ===>> L2(CDD),0,H2,-0.178496255091344,H1,-0.233366708465506,AX,-0.180443556118712,L1,978.878985329466
-GetData ===>> L2(CDD),0.000157244698251559,H2,-0.0842158900052571,H1,0.119637176405261,AX,-0.122545455130389,L1...
-GetData ===>> L2(CDD),0.000157244698251559,H2,-0.203317633441152,H1,0.0620583900468502,AX,-0.215868597199029,L1...
+GetData ===>> L2(CDD),0,H2,-0.133979341287455,H1,0.0503361839550766,AX,-0.00547746490181672,L1,995.069484059692
+GetData ===>> L2(CDD),0,H2,-0.133979341287455,H1,0.0503361839550766,AX,-0.00547746490181672,L1,995.069484059692
+Get Checksum: 1499143366
+GetData ===>> L2(CDD),0,H2,0.0279068313018814,H1,0.0298801262777695,AX,-0.317665340397698,L1,994.30301974084
+GetData ===>> L2(CDD),0,H2,-0.270903170264208,H1,0.0450497454606824,AX,0.09199450718824,L1,994.367997292259
+GetDeflection L2 (CDD) ===>> 0
+testing L2_CDD_==3250
+evaluate ot="L2(CDD).deflection==3250" t="L2_CDD_==3250", ctx="{'L2_CDD_': 0.0}"
+GetData ===>> L2(CDD),0.000157244698251559,H2,-0.162764069415229,H1,0.227103784773017,AX,-0.332796369382482,L1,...
+Get Checksum: 1499143366
+GetData ===>> L2(CDD),0,H2,-0.184789058505912,H1,-0.153170786826531,AX,-0.208646121843556,L1,993.6029990073
+GetData ===>> L2(CDD),0,H2,-0.149245841061114,H1,0.0776882197565067,AX,-0.216785733048058,L1,993.156025809057
+GetData ===>> L2(CDD),0,H2,-0.242121624697922,H1,-0.118700576750911,AX,-0.0559296671654087,L1,992.769597352372
+Get Checksum: 1499143366
+GetData ===>> L2(CDD),0,H2,0.00156499533612951,H1,0.26951903516774,AX,-0.0528338127413024,L1,993.110794618393
+GetData ===>> L2(CDD),0.000314489402501528,H2,0.18165939890214,H1,0.11343091441766,AX,0.139931403959753,L1,992....
+$$$$$$$$$$$$$$$$$ SETTING is_baseline False
+Peak hop Detectors=['H2']
+Peak hop Deflections=[None]
+Peak hop DeflectionsPairs=[('H2', None)]
+----------------------- HOP Ar40 H2
+detector Detector(H2)
+POSITION Ar40 H2
+Mapping mass to dac mass func: "parabolic"
+H2 map mass coeffs = [  1.08772369e-05   9.93017553e-02  -4.92057340e-01]
+H2 map mass to dac 39.9624 >> 3.49365
+GetHighVoltage ===>> 9000
+positioning Ar40 (3.49365) on H2
+setting magnet DAC
+current  : 3.716070
+requested: 3.493650
+Delta Dac: 0.222420
+Checking detector protection. dv=0.22242
+Move 0.22242>0.15. Do AF Demag
+Doing AF Demagnetization around target=3.49365. duration=4, start_amplitude=0.2, period=0.5
+set af dac raw:-0.1875 dac:3.30615
+SetMagnetDAC 3.30615 ===>> OK
+set af dac raw:0.1625 dac:3.65615
+SetMagnetDAC 3.65615 ===>> OK
+Get Checksum: 1499143366
+set af dac raw:-0.1375 dac:3.35615
+SetMagnetDAC 3.35615 ===>> OK
+set af dac raw:0.1125 dac:3.60615
+SetMagnetDAC 3.60615 ===>> OK
+set af dac raw:-0.0875 dac:3.40615
+SetMagnetDAC 3.40615 ===>> OK
+set af dac raw:0.0625 dac:3.55615
+SetMagnetDAC 3.55615 ===>> OK
+set af dac raw:-0.0375 dac:3.45615
+SetMagnetDAC 3.45615 ===>> OK
+Get Checksum: 1499143366
+set af dac raw:0.0125 dac:3.50615
+SetMagnetDAC 3.50615 ===>> OK
+SetMagnetDAC 3.49365 ===>> OK
+Magnet settling time: 0.500
+update detector isotope pairing
+detectors=['H2']
+isotopes=['Ar40']
+updating pairing H2 - Ar40
+could not locate det=H2 iso=Ar40
+Get Checksum: 1499143366
+Get Checksum: 1499143366
+Join finished
+delaying 5 for detectors to settle after peak hop
+GetData ===>> L2(CDD),3.30298966730859,H2,984.785628451907,H1,0.00344878401980925,AX,0.79557614283214,L1,-0.564...
+GetData ===>> L2(CDD),3.30298966730859,H2,984.785628451907,H1,0.00344878401980925,AX,0.79557614283214,L1,-0.564...
+GetData ===>> L2(CDD),3.30094384846192,H2,984.741105038541,H1,-0.314474998418546,AX,0.437812950424609,L1,-0.683...
+GetData ===>> L2(CDD),3.3321033531968,H2,985.017763494609,H1,-0.017236109090333,AX,0.461904435929837,L1,-0.5730...
 Get Checksum: 1499143366
 GetDeflection L2 (CDD) ===>> 0
 testing L2_CDD_==3250
 evaluate ot="L2(CDD).deflection==3250" t="L2_CDD_==3250", ctx="{'L2_CDD_': 0.0}"
-GetData ===>> L2(CDD),0,H2,-0.0253588915067118,H1,-0.205563146942557,AX,-0.0297865834386888,L1,976.601507917283
-GetData ===>> L2(CDD),0,H2,0.063224653737847,H1,-0.22038415345293,AX,-0.155450347738787,L1,977.145253249217
-GetData ===>> L2(CDD),0,H2,0.0583290378634576,H1,0.0764240329402698,AX,-0.138252809024254,L1,977.263142068234
+GetData ===>> L2(CDD),3.33147386592246,H2,984.735671170944,H1,0.105845537322805,AX,0.427029337968574,L1,-0.6728...
+GetData ===>> L2(CDD),3.31605145771759,H2,984.868719056916,H1,0.120441694771374,AX,0.32677046890551,L1,-0.49573...
+GetData ===>> L2(CDD),3.30361915023484,H2,984.588613799089,H1,-0.0972135225384076,AX,0.458233313486564,L1,-0.48...
 Get Checksum: 1499143366
-GetData ===>> L2(CDD),0,H2,-0.00985735020004492,H1,0.243655855740734,AX,-0.217244300644826,L1,977.68112522244
-GetData ===>> L2(CDD),0.000314489402501528,H2,-0.0604404199608745,H1,0.513816597783837,AX,-0.0138481269192655,L...
+GetData ===>> L2(CDD),3.29653747285479,H2,984.376554571158,H1,0.146071702457454,AX,0.506647365803763,L1,-0.4689...
+GetData ===>> L2(CDD),3.3067665663074,H2,984.13614093776,H1,0.120901419853472,AX,0.550245041429343,L1,-0.378007...
+GetData ===>> L2(CDD),3.30361915023484,H2,983.976003816873,H1,0.066310598053457,AX,0.5509334416155,L1,-0.719032...
 Get Checksum: 1499143366
-GetData ===>> L2(CDD),0.000157244698251559,H2,-0.103329084120851,H1,0.0484974194534832,AX,0.0797239628676022,L1...
+$$$$$$$$$$$$$$$$$ SETTING is_baseline False
+Peak hop Detectors=['H1']
+Peak hop Deflections=[None]
+Peak hop DeflectionsPairs=[('H1', None)]
+----------------------- HOP Ar40 H1
+detector Detector(H1)
+POSITION Ar40 H1
+Mapping mass to dac mass func: "parabolic"
+H1 map mass coeffs = [ 0.       0.       3.56483]
+H1 map mass to dac 39.9624 >> 3.56483
+GetHighVoltage ===>> 9000
+positioning Ar40 (3.56483) on H1
+setting magnet DAC
+current  : 3.493650
+requested: 3.564830
+Delta Dac: 0.071180
+Checking detector protection. dv=0.07118
+SetMagnetDAC 3.56483 ===>> OK
+Magnet settling time: 0.500
+update detector isotope pairing
+detectors=['H1']
+isotopes=['Ar40']
+updating pairing H1 - Ar40
+could not locate det=H1 iso=Ar40
+Get Checksum: 1499143366
+Get Checksum: 1499143366
+Join finished
+delaying 5 for detectors to settle after peak hop
+GetData ===>> L2(CDD),0,H2,0.0540162537033241,H1,985.417048227871,AX,-0.110392144078552,L1,-0.579290213180192
+GetData ===>> L2(CDD),0,H2,0.0540162537033241,H1,985.417048227871,AX,-0.110392144078552,L1,-0.579290213180192
+GetData ===>> L2(CDD),0,H2,0.147969316185186,H1,985.098510320394,AX,0.0573621582608963,L1,-0.740147447176762
+GetData ===>> L2(CDD),0,H2,0.193433715265285,H1,985.287123595776,AX,-0.0319652008739453,L1,-0.428332436875572
+GetDeflection L2 (CDD) ===>> 0
+testing L2_CDD_==3250
+evaluate ot="L2(CDD).deflection==3250" t="L2_CDD_==3250", ctx="{'L2_CDD_': 0.0}"
+GetData ===>> L2(CDD),0,H2,-0.0484359189487751,H1,984.873977728933,AX,0.0575915074663793,L1,-0.773031037981198
+GetData ===>> L2(CDD),0.000157244698251559,H2,0.114163825091278,H1,984.770318903148,AX,-0.377729537889709,L1,-0...
+Get Checksum: 1499143366
+GetData ===>> L2(CDD),0,H2,-0.00927458069786247,H1,984.272442614574,AX,-0.0213013948389158,L1,-0.354807016815782
+GetData ===>> L2(CDD),0,H2,-0.0464545793734532,H1,984.217249235885,AX,0.0916504711037816,L1,-0.496889573161204
+GetData ===>> L2(CDD),0,H2,-0.00193165521909582,H1,983.533947290806,AX,-0.118532586378066,L1,-0.484194173347763
+Get Checksum: 1499143366
+GetData ===>> L2(CDD),0,H2,-0.00193165521909582,H1,983.533947290806,AX,-0.118532586378066,L1,-0.484194173347763
+$$$$$$$$$$$$$$$$$ SETTING is_baseline False
+Peak hop Detectors=['AX']
+Peak hop Deflections=[None]
+Peak hop DeflectionsPairs=[('AX', None)]
+----------------------- HOP Ar40 AX
+detector Detector(AX)
+POSITION Ar40 AX
+Mapping mass to dac mass func: "parabolic"
+AX map mass coeffs = [ 0.       0.       3.63914]
+AX map mass to dac 39.9624 >> 3.63914
+GetHighVoltage ===>> 9000
+positioning Ar40 (3.63914) on AX
+setting magnet DAC
+current  : 3.564830
+requested: 3.639140
+Delta Dac: 0.074310
+Checking detector protection. dv=0.07431
+SetMagnetDAC 3.63914 ===>> OK
+Magnet settling time: 0.500
+update detector isotope pairing
+detectors=['AX']
+isotopes=['Ar40']
+updating pairing AX - Ar40
+could not locate det=AX iso=Ar40
+Get Checksum: 1499143366
+Get Checksum: 1499143366
+Join finished
+delaying 5 for detectors to settle after peak hop
+GetData ===>> L2(CDD),0,H2,0.0192815502621073,H1,-0.265420233095033,AX,987.025935317957,L1,-0.381009023330477
+GetData ===>> L2(CDD),0,H2,0.0192815502621073,H1,-0.265420233095033,AX,987.025935317957,L1,-0.381009023330477
+GetData ===>> L2(CDD),0,H2,-0.0567108820246003,H1,-0.128007654872702,AX,986.647292677572,L1,-0.486733266625368
+Get Checksum: 1499143366
+GetData ===>> L2(CDD),0.000157244698251559,H2,-0.0501841564171357,H1,0.219517513821184,AX,986.34053642286,L1,-0...
+GetDeflection L2 (CDD) ===>> 0
+testing L2_CDD_==3250
+evaluate ot="L2(CDD).deflection==3250" t="L2_CDD_==3250", ctx="{'L2_CDD_': 0.0}"
+GetData ===>> L2(CDD),0,H2,0.016484178150659,H1,-0.257263344006552,AX,985.798665826018,L1,-0.54259163445912
+GetData ===>> L2(CDD),0.000157244698251559,H2,-0.00333031194132374,H1,-0.075381265979561,AX,985.555548756599,L1...
+set states for children of O. state=True
+handle state [('O', True)]
+update switch state O True args=() kw={'refresh': False} ncanvase=6
+refresh_canvas_needed fired
+Get Checksum: 1509310064
+GetData ===>> L2(CDD),0,H2,-0.179661592111697,H1,0.165380857546518,AX,985.676235177987,L1,-0.81064388133889
+GetData ===>> L2(CDD),0.000157244698251559,H2,-0.0356154153655888,H1,0.026087758756584,AX,985.92648331299,L1,-0...
+GetData ===>> L2(CDD),0,H2,0.0812920196296825,H1,0.0126422122264122,AX,985.505265701605,L1,-0.400862053999229
+Get Checksum: 1509310064
+GetData ===>> L2(CDD),0,H2,-0.194461251478183,H1,-0.0275783893107535,AX,985.139465433333,L1,-0.606524737320432
+$$$$$$$$$$$$$$$$$ SETTING is_baseline False
+Peak hop Detectors=['L1']
+Peak hop Deflections=[None]
+Peak hop DeflectionsPairs=[('L1', None)]
+----------------------- HOP Ar40 L1
+detector Detector(L1)
+POSITION Ar40 L1
+Mapping mass to dac mass func: "parabolic"
+L1 map mass coeffs = [ 0.       0.       3.71607]
+L1 map mass to dac 39.9624 >> 3.71607
+GetHighVoltage ===>> 9000
+positioning Ar40 (3.71607) on L1
+setting magnet DAC
+current  : 3.639140
+requested: 3.716070
+Delta Dac: 0.076930
+Checking detector protection. dv=0.07693
+SetMagnetDAC 3.71607 ===>> OK
+Magnet settling time: 0.500
+update detector isotope pairing
+detectors=['L1']
+isotopes=['Ar40']
+updating pairing L1 - Ar40
+could not locate det=L1 iso=Ar40
+Get Checksum: 1509310064
+Get Checksum: 1509310064
+Join finished
+delaying 5 for detectors to settle after peak hop
+GetData ===>> L2(CDD),0,H2,-0.0379464285167168,H1,-0.00654896970057825,AX,-0.232950108919832,L1,984.692139020026
+GetData ===>> L2(CDD),0,H2,-0.0379464285167168,H1,-0.00654896970057825,AX,-0.232950108919832,L1,984.692139020026
+GetData ===>> L2(CDD),0.000157244698251559,H2,-0.0198809312937169,H1,-0.00907712089366618,AX,-0.37108139521593,...
+Get Checksum: 1509310064
+GetData ===>> L2(CDD),0,H2,0.0725497041399538,H1,0.10147822605226,AX,-0.121513576192176,L1,983.532540353103
+GetDeflection L2 (CDD) ===>> 0
+testing L2_CDD_==3250
+evaluate ot="L2(CDD).deflection==3250" t="L2_CDD_==3250", ctx="{'L2_CDD_': 0.0}"
+GetData ===>> L2(CDD),0,H2,0.0240604127934174,H1,0.12814211879384,AX,-0.175628401316668,L1,984.371184193193
+GetData ===>> L2(CDD),0,H2,0.0078589978359629,H1,-0.0413679237804057,AX,0.0350008732079912,L1,984.29105018344
+Get Checksum: 1509310064
+GetData ===>> L2(CDD),0,H2,-0.104727595855239,H1,-0.0788284972359653,AX,-0.040908947084632,L1,983.880497222192
+GetData ===>> L2(CDD),0.000157244698251559,H2,0.12803559216496,H1,0.305038931557002,AX,0.070664502496789,L1,983...
+GetData ===>> L2(CDD),0,H2,0.0783779057851014,H1,-0.0481477059403475,AX,-0.200162510130763,L1,982.898111089759
+Get Checksum: 1509310064
+07:59:53 -- collecting point 200
+GetData ===>> L2(CDD),0,H2,-0.17686478093023,H1,-0.194073837904292,AX,-0.0944550224637049,L1,983.005627972448
+$$$$$$$$$$$$$$$$$ SETTING is_baseline False
+Peak hop Detectors=['H2']
+Peak hop Deflections=[None]
+Peak hop DeflectionsPairs=[('H2', None)]
+----------------------- HOP Ar40 H2
+detector Detector(H2)
+POSITION Ar40 H2
+Mapping mass to dac mass func: "parabolic"
+H2 map mass coeffs = [  1.08772369e-05   9.93017553e-02  -4.92057340e-01]
+H2 map mass to dac 39.9624 >> 3.49365
+GetHighVoltage ===>> 9000
+positioning Ar40 (3.49365) on H2
+setting magnet DAC
+current  : 3.716070
+requested: 3.493650
+Delta Dac: 0.222420
+Checking detector protection. dv=0.22242
+Move 0.22242>0.15. Do AF Demag
+Doing AF Demagnetization around target=3.49365. duration=4, start_amplitude=0.2, period=0.5
+set af dac raw:-0.1875 dac:3.30615
+SetMagnetDAC 3.30615 ===>> OK
+set af dac raw:0.1625 dac:3.65615
+SetMagnetDAC 3.65615 ===>> OK
+set af dac raw:-0.1375 dac:3.35615
+SetMagnetDAC 3.35615 ===>> OK
+Get Checksum: 1509310064
+set af dac raw:0.1125 dac:3.60615
+SetMagnetDAC 3.60615 ===>> OK
+set af dac raw:-0.0875 dac:3.40615
+SetMagnetDAC 3.40615 ===>> OK
+set af dac raw:0.0625 dac:3.55615
+SetMagnetDAC 3.55615 ===>> OK
+set af dac raw:-0.0375 dac:3.45615
+SetMagnetDAC 3.45615 ===>> OK
+set af dac raw:0.0125 dac:3.50615
+SetMagnetDAC 3.50615 ===>> OK
+SetMagnetDAC 3.49365 ===>> OK
+Magnet settling time: 0.500
+Get Checksum: 1509310064
+update detector isotope pairing
+detectors=['H2']
+isotopes=['Ar40']
+updating pairing H2 - Ar40
+could not locate det=H2 iso=Ar40
+Get Checksum: 1509310064
+Join finished
+delaying 5 for detectors to settle after peak hop
+GetData ===>> L2(CDD),3.2878821059057,H2,975.155119365858,H1,0.241127048741114,AX,0.516972952645731,L1,-0.58136...
+GetData ===>> L2(CDD),3.2878821059057,H2,975.155119365858,H1,0.241127048741114,AX,0.516972952645731,L1,-0.58136...
+Get Checksum: 1509310064
+GetData ===>> L2(CDD),3.23815344055935,H2,975.114414543556,H1,0.219862343024688,AX,0.680246673910429,L1,-0.5334...
+GetData ===>> L2(CDD),3.28363311423343,H2,974.710746799178,H1,0.0112631924094357,AX,0.137981770672345,L1,-0.570...
+GetDeflection L2 (CDD) ===>> 0
+testing L2_CDD_==3250
+evaluate ot="L2(CDD).deflection==3250" t="L2_CDD_==3250", ctx="{'L2_CDD_': 0.0}"
+GetData ===>> L2(CDD),3.28064308568109,H2,974.408636431786,H1,-0.109393408822468,AX,0.506647365803763,L1,-0.655...
+Get Checksum: 1509310064
+GetData ===>> L2(CDD),3.2828462644042,H2,975.508233090291,H1,0.112856262549564,AX,0.612088289053077,L1,-0.50704...
+GetData ===>> L2(CDD),3.2664798219957,H2,974.839992219557,H1,0.234230336070458,AX,0.646855347087773,L1,-0.60767...
+GetData ===>> L2(CDD),3.23028503580307,H2,973.776327243661,H1,0.0903301790390183,AX,0.547261979644636,L1,-0.552...
+Get Checksum: 1509310064
+GetData ===>> L2(CDD),3.24255975378085,H2,974.094891774229,H1,0.0224103257011686,AX,0.307844050947332,L1,-0.450...
+GetData ===>> L2(CDD),3.26175874491056,H2,974.370920666831,H1,0.0919391675598746,AX,0.418540196122092,L1,-0.715...
+$$$$$$$$$$$$$$$$$ SETTING is_baseline False
+Peak hop Detectors=['H1']
+Peak hop Deflections=[None]
+Peak hop DeflectionsPairs=[('H1', None)]
+----------------------- HOP Ar40 H1
+detector Detector(H1)
+POSITION Ar40 H1
+Mapping mass to dac mass func: "parabolic"
+H1 map mass coeffs = [ 0.       0.       3.56483]
+H1 map mass to dac 39.9624 >> 3.56483
+GetHighVoltage ===>> 9000
+positioning Ar40 (3.56483) on H1
+setting magnet DAC
+current  : 3.493650
+requested: 3.564830
+Delta Dac: 0.071180
+Checking detector protection. dv=0.07118
+SetMagnetDAC 3.56483 ===>> OK
+Magnet settling time: 0.500
+Get Checksum: 1509310064
+update detector isotope pairing
+detectors=['H1']
+isotopes=['Ar40']
+updating pairing H1 - Ar40
+could not locate det=H1 iso=Ar40
+Get Checksum: 1509310064
+Join finished
+delaying 5 for detectors to settle after peak hop
+GetData ===>> L2(CDD),0,H2,0.0877031006477284,H1,975.554801420895,AX,-0.385409231732382,L1,-0.605947742632712
+GetData ===>> L2(CDD),0,H2,0.0877031006477284,H1,975.554801420895,AX,-0.385409231732382,L1,-0.605947742632712
+Get Checksum: 1509310064
+GetData ===>> L2(CDD),0.000157244698251559,H2,0.0402620961075691,H1,975.740697554167,AX,-0.103742154197003,L1,-...
+GetData ===>> L2(CDD),0,H2,-0.210192927301274,H1,975.144494835913,AX,0.06814162997904,L1,-0.551939517654445
+GetDeflection L2 (CDD) ===>> 0
+testing L2_CDD_==3250
+evaluate ot="L2(CDD).deflection==3250" t="L2_CDD_==3250", ctx="{'L2_CDD_': 0.0}"
+GetData ===>> L2(CDD),0,H2,-0.0858475187182617,H1,974.782393053257,AX,-0.149832518891611,L1,-0.593138372020713
+Get Checksum: 1509310064
+GetData ===>> L2(CDD),0.000157244698251559,H2,0.0732490865036525,H1,974.943796597287,AX,0.134197199681933,L1,-0...
+GetData ===>> L2(CDD),0,H2,0.0407283355710454,H1,974.34161895542,AX,0.00495729791573436,L1,-0.52689622021694
+GetData ===>> L2(CDD),0,H2,0.0403786559527462,H1,974.393878465074,AX,-0.141233737753524,L1,-0.304709577226102
+Get Checksum: 1509310064
+GetData ===>> L2(CDD),0.000157244698251559,H2,0.254522542519078,H1,974.290918646228,AX,-0.109360252108909,L1,-0...
+GetData ===>> L2(CDD),0,H2,-0.0346830085504084,H1,974.57316710589,AX,-0.182965770446569,L1,-0.56278756527731
+$$$$$$$$$$$$$$$$$ SETTING is_baseline False
+Peak hop Detectors=['AX']
+Peak hop Deflections=[None]
+Peak hop DeflectionsPairs=[('AX', None)]
+----------------------- HOP Ar40 AX
+detector Detector(AX)
+POSITION Ar40 AX
+Mapping mass to dac mass func: "parabolic"
+AX map mass coeffs = [ 0.       0.       3.63914]
+AX map mass to dac 39.9624 >> 3.63914
+GetHighVoltage ===>> 9000
+positioning Ar40 (3.63914) on AX
+setting magnet DAC
+current  : 3.564830
+requested: 3.639140
+Delta Dac: 0.074310
+Checking detector protection. dv=0.07431
+SetMagnetDAC 3.63914 ===>> OK
+Magnet settling time: 0.500
+Get Checksum: 1509310064
+update detector isotope pairing
+detectors=['AX']
+isotopes=['Ar40']
+updating pairing AX - Ar40
+could not locate det=AX iso=Ar40
+Get Checksum: 1509310064
+Join finished
+delaying 5 for detectors to settle after peak hop
+GetData ===>> L2(CDD),0,H2,-0.0297878581850373,H1,-0.107899657458641,AX,976.856951773268,L1,-0.537629141280512
+GetData ===>> L2(CDD),0,H2,-0.0297878581850373,H1,-0.107899657458641,AX,976.856951773268,L1,-0.537629141280512
+Get Checksum: 1509310064
+GetData ===>> L2(CDD),0,H2,0.00622721552115748,H1,-0.119275090346472,AX,976.435994045735,L1,-0.558286794312024
+GetData ===>> L2(CDD),0,H2,-0.207745794348476,H1,0.0678046215321364,AX,976.322088498487,L1,-0.440566894411021
+GetDeflection L2 (CDD) ===>> 0
+testing L2_CDD_==3250
+evaluate ot="L2(CDD).deflection==3250" t="L2_CDD_==3250", ctx="{'L2_CDD_': 0.0}"
+GetData ===>> L2(CDD),0,H2,-0.121043418335519,H1,0.307797813192813,AX,976.843292500524,L1,-0.582752271456667
+Get Checksum: 1509310064
+GetData ===>> L2(CDD),0,H2,0.0849055328543956,H1,-0.190627018504516,AX,975.421334633495,L1,-0.320639458832893
+GetData ===>> L2(CDD),0,H2,0.00447888034765984,H1,0.127222661947362,AX,975.18024109415,L1,-0.678184804581335
+GetData ===>> L2(CDD),0,H2,0.184107512416549,H1,0.0634374824817754,AX,975.31936186497,L1,-0.611140682447427
+Get Checksum: 1509310064
+GetData ===>> L2(CDD),0,H2,0.0584455998614711,H1,-0.112036194030776,AX,975.084678906959,L1,-0.737493635008273
+GetData ===>> L2(CDD),0,H2,-0.138757431721676,H1,-0.112380904611396,AX,975.549934246307,L1,-0.650144540263443
+$$$$$$$$$$$$$$$$$ SETTING is_baseline False
+Peak hop Detectors=['L1']
+Peak hop Deflections=[None]
+Peak hop DeflectionsPairs=[('L1', None)]
+----------------------- HOP Ar40 L1
+detector Detector(L1)
+POSITION Ar40 L1
+Mapping mass to dac mass func: "parabolic"
+L1 map mass coeffs = [ 0.       0.       3.71607]
+L1 map mass to dac 39.9624 >> 3.71607
+GetHighVoltage ===>> 9000
+positioning Ar40 (3.71607) on L1
+setting magnet DAC
+current  : 3.639140
+requested: 3.716070
+Delta Dac: 0.076930
+Checking detector protection. dv=0.07693
+SetMagnetDAC 3.71607 ===>> OK
+Magnet settling time: 0.500
+Get Checksum: 1509310064
+update detector isotope pairing
+detectors=['L1']
+isotopes=['Ar40']
+updating pairing L1 - Ar40
+could not locate det=L1 iso=Ar40
+Get Checksum: 1509310064
+Join finished
+delaying 5 for detectors to settle after peak hop
+GetData ===>> L2(CDD),0,H2,0.019514664965911,H1,-0.196371710660896,AX,-0.379105009949353,L1,973.888099187151
+GetData ===>> L2(CDD),0,H2,0.019514664965911,H1,-0.196371710660896,AX,-0.379105009949353,L1,973.888099187151
+Get Checksum: 1509310064
+GetData ===>> L2(CDD),0.000157244698251559,H2,-0.132114714298761,H1,0.124004569887311,AX,-0.179755678335946,L1,...
+GetData ===>> L2(CDD),0,H2,0.136661832234269,H1,0.0322934588274591,AX,-0.441801523871173,L1,973.657433649743
+GetDeflection L2 (CDD) ===>> 0
+testing L2_CDD_==3250
+evaluate ot="L2(CDD).deflection==3250" t="L2_CDD_==3250", ctx="{'L2_CDD_': 0.0}"
+GetData ===>> L2(CDD),0,H2,0.11043363557389,H1,-0.02677399371495,AX,0.0129841155321147,L1,974.616236129801
+Get Checksum: 1509310064
+GetData ===>> L2(CDD),0.000314489402501528,H2,-0.232216848342691,H1,0.0427513029777515,AX,-0.11773001061953,L1,...
+GetData ===>> L2(CDD),0,H2,-0.092840182373689,H1,-0.205907824099125,AX,0.0653894129566803,L1,973.608703728477
+GetData ===>> L2(CDD),0,H2,-0.163812889666318,H1,0.229747499273188,AX,-0.110965416916871,L1,973.510034969776
+Get Checksum: 1509310064
+GetData ===>> L2(CDD),0,H2,0.190985578410975,H1,-0.00700863404676907,AX,-0.0967481497430168,L1,973.765997988152
+GetData ===>> L2(CDD),0.000314489402501528,H2,0.124888199189382,H1,0.0122974570873883,AX,-0.0938817397899938,L1...
 $$$$$$$$$$$$$$$$$ SETTING is_baseline False
 measurement finished
-estimated time: 402.653 actual time: :384.484
-flush and close file /Users/obama/PychronDev/data/isotopes/6b/132c1e-5b28-4202-bfcb-b6243297816f.h5
+estimated time: 402.653 actual time: :384.785
+flush and close file /Users/obama/PychronDev/data/isotopes/c4/36115d-f4a6-4025-8593-4c9b4a71fbc1.h5
 define_detectors ('Ar40', 'H2') {}
 setting detector H2 to Ar40 (39.9624)
 setting detector H1 to Ar39 (38.8624)
@@ -2399,148 +2385,153 @@ add group baseline table H2
 add group baseline table H1
 add group baseline table AX
 add group baseline table L1
-flush and close file /Users/obama/PychronDev/data/isotopes/6b/132c1e-5b28-4202-bfcb-b6243297816f.h5
+flush and close file /Users/obama/PychronDev/data/isotopes/c4/36115d-f4a6-4025-8593-4c9b4a71fbc1.h5
 detector Detector(H2)
 POSITION 40.1 H2
 Mapping mass to dac mass func: "parabolic"
-H2 map mass coeffs = [  1.08772369e-05   9.93017553e-02  -4.91977340e-01]
-H2 map mass to dac 40.1 >> 3.50751375154
+H2 map mass coeffs = [  1.08772369e-05   9.93017553e-02  -4.92057340e-01]
+H2 map mass to dac 40.1 >> 3.50743375154
 GetHighVoltage ===>> 9000
-positioning 40.1 (3.50751375154) on H2
+positioning 40.1 (3.50743375154) on H2
 setting magnet DAC
-current  : 3.716150
-requested: 3.507514
+current  : 3.716070
+requested: 3.507434
 Delta Dac: 0.208636
 Checking detector protection. dv=0.20864
 Move 0.208636248458>0.15. Do AF Demag
-Doing AF Demagnetization around target=3.50751375154. duration=4, start_amplitude=0.2, period=0.5
-set af dac raw:-0.1875 dac:3.32001375154
-SetMagnetDAC 3.32001375154 ===>> OK
-set af dac raw:0.1625 dac:3.67001375154
-SetMagnetDAC 3.67001375154 ===>> OK
-set af dac raw:-0.1375 dac:3.37001375154
-SetMagnetDAC 3.37001375154 ===>> OK
-set af dac raw:0.1125 dac:3.62001375154
-SetMagnetDAC 3.62001375154 ===>> OK
-set af dac raw:-0.0875 dac:3.42001375154
-SetMagnetDAC 3.42001375154 ===>> OK
-set af dac raw:0.0625 dac:3.57001375154
-SetMagnetDAC 3.57001375154 ===>> OK
-set af dac raw:-0.0375 dac:3.47001375154
-SetMagnetDAC 3.47001375154 ===>> OK
-set af dac raw:0.0125 dac:3.52001375154
-SetMagnetDAC 3.52001375154 ===>> OK
-Get Checksum: 1499143366
-SetMagnetDAC 3.50751375154 ===>> OK
+Doing AF Demagnetization around target=3.50743375154. duration=4, start_amplitude=0.2, period=0.5
+set af dac raw:-0.1875 dac:3.31993375154
+SetMagnetDAC 3.31993375154 ===>> OK
+set af dac raw:0.1625 dac:3.66993375154
+SetMagnetDAC 3.66993375154 ===>> OK
+set af dac raw:-0.1375 dac:3.36993375154
+SetMagnetDAC 3.36993375154 ===>> OK
+set af dac raw:0.1125 dac:3.61993375154
+SetMagnetDAC 3.61993375154 ===>> OK
+set af dac raw:-0.0875 dac:3.41993375154
+SetMagnetDAC 3.41993375154 ===>> OK
+Get Checksum: 1509310064
+set af dac raw:0.0625 dac:3.56993375154
+SetMagnetDAC 3.56993375154 ===>> OK
+set af dac raw:-0.0375 dac:3.46993375154
+SetMagnetDAC 3.46993375154 ===>> OK
+set af dac raw:0.0125 dac:3.51993375154
+SetMagnetDAC 3.51993375154 ===>> OK
+SetMagnetDAC 3.50743375154 ===>> OK
 Magnet settling time: 0.500
 Delaying 10s for detectors to settle
-Get Checksum: 1499143366
-Get Checksum: 1499143366
-Get Checksum: 1499143366
+Get Checksum: 1509310064
+Get Checksum: 1509310064
+Get Checksum: 1509310064
+Get Checksum: 1509310064
 Join finished
 measuring baseline. ncounts=60
 starting measurement
-GetData ===>> L2(CDD),0,H2,-0.0818849871221319,H1,0.0264325188241422,AX,-0.0661344501191597,L1,-0.503352621861689
-Get Checksum: 1499143366
-GetData ===>> L2(CDD),0,H2,0.125354478991112,H1,-0.166498937809181,AX,-0.29519761599209,L1,-0.521587419590334
-GetData ===>> L2(CDD),0,H2,0.154963701586149,H1,0.170782892741626,AX,-0.111080071443713,L1,-0.47380690425123
-GetData ===>> L2(CDD),0.000157244698251559,H2,0.0460901053745784,H1,-0.065269316553988,AX,-0.131029751117519,L1...
-Get Checksum: 1499143366
-GetData ===>> L2(CDD),0.000157244698251559,H2,0.0371149855418075,H1,0.0131018859369249,AX,0.0197496280872408,L1...
-GetData ===>> L2(CDD),0,H2,0.0112391270045633,H1,0.0208014531481513,AX,-0.0717527675805093,L1,-0.591176561558884
-GetData ===>> L2(CDD),0,H2,0.0148523814466509,H1,0.0390738063957707,AX,-0.269978116761376,L1,-0.649452177785989
-Get Checksum: 1499143366
-GetData ===>> L2(CDD),0,H2,0.101457925342493,H1,0.0232147629841651,AX,0.228013074261471,L1,-0.49458133102921
-GetData ===>> L2(CDD),0,H2,0.0305876773888669,H1,0.0637822558984732,AX,-0.089410123215288,L1,-0.529550609616245
-GetData ===>> L2(CDD),0,H2,0.157761469749734,H1,0.0586106675860249,AX,-0.108328359033241,L1,-0.547669508130932
-Get Checksum: 1499143366
-GetData ===>> L2(CDD),0,H2,0.251024987623877,H1,0.133084214356118,AX,-0.00456012765176795,L1,-0.688916048919767
-GetData ===>> L2(CDD),0,H2,-0.095287602842215,H1,-0.202805725255082,AX,-0.272844002233605,L1,-0.448299915206484
-GetData ===>> L2(CDD),0,H2,-0.0290885489903612,H1,-0.186261029582693,AX,-0.077485710771877,L1,-0.557248151887889
-Get Checksum: 1499143366
-GetData ===>> L2(CDD),0.000157244698251559,H2,0.103439568568715,H1,-0.0142483186046321,AX,-0.0526044897948778,L...
+GetData ===>> L2(CDD),0,H2,0.0110060142734677,H1,-0.1274331464784,AX,-0.0967481497430168,L1,-0.578482397801371
+GetData ===>> L2(CDD),0,H2,-0.0433077376805983,H1,0.124234433250175,AX,-0.251063058575033,L1,-0.543630292603463
+GetData ===>> L2(CDD),0,H2,0.0280233896748776,H1,-0.0573405547902187,AX,-0.269863481164762,L1,-0.454532454191214
+Get Checksum: 1509310064
+GetData ===>> L2(CDD),0,H2,-0.0334009477272838,H1,-0.122492360159507,AX,-0.125755738084464,L1,-0.425793190471125
+GetData ===>> L2(CDD),0,H2,0.0179994203843962,H1,-0.118700576750911,AX,-0.0182054290192004,L1,-0.7266475444498
+Get Checksum: 1509310064
+GetData ===>> L2(CDD),0,H2,0.0424767355387586,H1,0.0543584935217106,AX,0.143371942924551,L1,-0.631335183665242
+GetData ===>> L2(CDD),0.000157244698251559,H2,0.132698415188636,H1,-0.148115233102997,AX,-0.221027474979214,L1,...
+set states for children of U. state=False
+handle state [('U', False)]
+update switch state U False args=() kw={'refresh': False} ncanvase=6
+refresh_canvas_needed fired
+GetData ===>> L2(CDD),0,H2,0.225842961515604,H1,0.153197655171418,AX,0.118256291287043,L1,-0.483040037839014
+Get Checksum: 1041668763
+GetData ===>> L2(CDD),0,H2,-0.00671039076263186,H1,-0.116402518945153,AX,-0.238911370496038,L1,-0.505545432156272
+GetData ===>> L2(CDD),0,H2,0.0734822140695924,H1,-0.119160187654697,AX,-0.164507594575953,L1,-0.594176975950157
+GetData ===>> L2(CDD),0,H2,-0.0424918881818162,H1,0.0183881493495649,AX,-0.125526432514277,L1,-0.61206386883197
+Get Checksum: 1041668763
+GetData ===>> L2(CDD),0,H2,-0.209843337254421,H1,-0.0363117840304982,AX,-0.0654464906249937,L1,-0.563595393749268
+GetData ===>> L2(CDD),0,H2,-0.107174986578498,H1,-0.0243608029026589,AX,-0.147883468567311,L1,-0.546977072380036
+GetData ===>> L2(CDD),0,H2,-0.0959868647088864,H1,-0.000343479589753556,AX,-0.292790328690787,L1,-0.54963140673...
+Get Checksum: 1041668763
 GetDeflection L2 (CDD) ===>> 0
 testing L2_CDD_==3250
 evaluate ot="L2(CDD).deflection==3250" t="L2_CDD_==3250", ctx="{'L2_CDD_': 0.0}"
-GetData ===>> L2(CDD),0,H2,-0.116148700169434,H1,-0.0937663569865073,AX,-0.0172881039008006,L1,-0.504045088807009
-Get Checksum: 1499143366
-GetData ===>> L2(CDD),0.000157244698251559,H2,0.13386412441743,H1,0.257449465151063,AX,-0.0382716972273737,L1,-...
-GetData ===>> L2(CDD),0.000314489402501528,H2,0.0428264159071966,H1,0.00505762763083776,AX,-0.303909653031738,L...
-GetData ===>> L2(CDD),0,H2,0.160675820095382,H1,0.0927436628268977,AX,-0.207270406105816,L1,-0.597408181051913
-Get Checksum: 1499143366
-GetData ===>> L2(CDD),0,H2,0.0751141085856833,H1,-0.234285820780781,AX,-0.0143067912272668,L1,-0.82148903104057
-GetData ===>> L2(CDD),0.000157244698251559,H2,-0.104611053286995,H1,-0.150413215353183,AX,-0.176545575517507,L1...
-GetData ===>> L2(CDD),0,H2,0.0793104212706458,H1,-0.144668249461886,AX,-0.0359784306075348,L1,-0.587483731083775
-Get Checksum: 1499143366
-GetData ===>> L2(CDD),0.000314489402501528,H2,-0.0100904579040791,H1,-0.00850254165851537,AX,-0.422889843012152...
-GetData ===>> L2(CDD),0,H2,-0.129201227511157,H1,-0.10847417748754,AX,-0.075995148827325,L1,-0.496658749195741
-GetData ===>> L2(CDD),0,H2,-0.133280106583258,H1,0.0593002110923117,AX,-0.155221049243952,L1,-0.52839652816278
-Get Checksum: 1499143366
+GetData ===>> L2(CDD),0,H2,-0.0685987346174283,H1,-0.284031468238141,AX,-0.194201008507856,L1,-0.660991487780449
+GetData ===>> L2(CDD),0,H2,-0.0332843966598619,H1,0.0587255914697471,AX,0.0559860641786912,L1,-0.667568832947137
+GetData ===>> L2(CDD),0,H2,0.117311183560693,H1,-0.0989371006943258,AX,0.0105760632179483,L1,-0.439989800831177
+Get Checksum: 1041668763
+GetData ===>> L2(CDD),0,H2,0.19961237361847,H1,0.00138027474824276,AX,-0.19099095387555,L1,-0.5580559849807
+GetData ===>> L2(CDD),0,H2,0.162307860081762,H1,-0.00585947277081283,AX,-0.21667109111451,L1,-0.73149368503315
+GetData ===>> L2(CDD),0,H2,-0.0589252968894246,H1,-0.030910878204527,AX,-0.320531083848439,L1,-0.565557260089348
+Get Checksum: 1041668763
+GetData ===>> L2(CDD),0,H2,0.0784944701720585,H1,0.168943898640614,AX,0.155872671352759,L1,-0.492273083395144
+GetData ===>> L2(CDD),0,H2,-0.0398112350370969,H1,-0.0663034980664363,AX,-0.245789703349945,L1,-0.554016812776856
+GetData ===>> L2(CDD),0,H2,-0.0438904869061633,H1,-0.227622236651556,AX,-0.103971464958133,L1,-0.499082398091003
+Get Checksum: 1041668763
+GetData ===>> L2(CDD),0,H2,-0.00927458069786247,H1,-0.100545770861232,AX,-0.109360252108909,L1,-0.976999732141215
 GetDeflection L2 (CDD) ===>> 0
 testing L2_CDD_==3250
 evaluate ot="L2(CDD).deflection==3250" t="L2_CDD_==3250", ctx="{'L2_CDD_': 0.0}"
-15:30:24 -- collecting point 25
-GetData ===>> L2(CDD),0,H2,-0.045172533980012,H1,-0.0127544198910268,AX,-0.152010864581817,L1,-0.739339765982341
-GetData ===>> L2(CDD),0,H2,-0.22837143754938,H1,0.150439215618578,AX,-0.346895523153416,L1,-0.390820164934268
-GetData ===>> L2(CDD),0.000314489402501528,H2,0.00622721552115748,H1,-0.125824521153334,AX,0.00128791787396555,...
-Get Checksum: 1499143366
-GetData ===>> L2(CDD),0,H2,-0.0401608858641391,H1,-0.126399030505707,AX,0.0226163850411628,L1,-0.705762708727656
-GetData ===>> L2(CDD),0,H2,-0.0215126673314516,H1,-0.00873237339392353,AX,0.118944382599913,L1,-0.532204991740053
-GetData ===>> L2(CDD),0,H2,-0.0765238894098211,H1,-0.0318301834591102,AX,-0.13148835958078,L1,-0.600639375371389
-Get Checksum: 1499143366
-GetData ===>> L2(CDD),0,H2,0.0332685308236855,H1,0.0811360104029206,AX,-0.0574202601878677,L1,-0.607217130492356
-GetData ===>> L2(CDD),0.000157244698251559,H2,0.162541008873753,H1,0.0651613507973441,AX,0.156904848846063,L1,-...
-GetData ===>> L2(CDD),0,H2,0.0128709176804537,H1,-0.142140453629709,AX,-0.00777080420212332,L1,-0.376276554786779
-Get Checksum: 1499143366
-GetData ===>> L2(CDD),0,H2,-0.127220051538613,H1,0.0368902994341579,AX,-0.433549199752316,L1,-0.59256136935614
+08:01:39 -- collecting point 25
+GetData ===>> L2(CDD),0,H2,-0.0120718711424183,H1,0.0732061103386668,AX,-0.0607454209190841,L1,-0.837641156472035
+GetData ===>> L2(CDD),0,H2,0.253006933862595,H1,-0.00942186827000801,AX,-0.0164854437048077,L1,-0.600177776842799
+Get Checksum: 1041668763
+GetData ===>> L2(CDD),0,H2,0.0800098084686447,H1,0.0582658960175543,AX,-0.0646438705936224,L1,-0.508315290694338
+GetData ===>> L2(CDD),0,H2,-0.167192413936875,H1,0.0140212340141597,AX,0.249002473984708,L1,-0.468728643254009
+Get Checksum: 1041668763
+GetData ===>> L2(CDD),0,H2,-0.179078923774788,H1,-0.220154372144106,AX,-0.197525696660227,L1,-0.519279236327266
+GetData ===>> L2(CDD),0,H2,0.0604271559522378,H1,-0.0217177774672523,AX,-0.341622693080644,L1,-0.58494490196274
+GetData ===>> L2(CDD),0,H2,-0.0866633320542133,H1,-0.0537783362576394,AX,-0.0781736616597811,L1,-0.530358465815479
+Get Checksum: 1041668763
+GetData ===>> L2(CDD),0,H2,0.0178828632065252,H1,-0.0397591549164182,AX,0.00541597140470304,L1,-0.622449655015558
+GetData ===>> L2(CDD),0,H2,-0.142952808954417,H1,-0.338944007210958,AX,-0.0675103676323643,L1,-0.556440318121076
+GetData ===>> L2(CDD),0,H2,-0.0222119819430705,H1,0.13032583231534,AX,-0.205550758667992,L1,-0.362079010399974
+Get Checksum: 1041668763
 GetDeflection L2 (CDD) ===>> 0
 testing L2_CDD_==3250
 evaluate ot="L2(CDD).deflection==3250" t="L2_CDD_==3250", ctx="{'L2_CDD_': 0.0}"
-GetData ===>> L2(CDD),0.000157244698251559,H2,0.0183490920029578,H1,0.0451646677286252,AX,-0.00696813606861262,...
-GetData ===>> L2(CDD),0,H2,0.123722500657032,H1,0.0268921991061764,AX,-0.216097881243303,L1,-0.537975362559887
-Get Checksum: 1499143366
-GetData ===>> L2(CDD),0,H2,-0.183856793887984,H1,0.277105699322327,AX,-0.100417142024683,L1,-0.689262216111977
-GetData ===>> L2(CDD),0,H2,-0.194927378844268,H1,0.00310403216654603,AX,-0.307577855556576,L1,-0.383663812632002
-GetData ===>> L2(CDD),0,H2,-0.272534487563334,H1,0.0673449217536312,AX,-0.152813411751268,L1,-0.717070576255446
-Get Checksum: 1499143366
-GetData ===>> L2(CDD),0.000157244698251559,H2,-0.233382121355343,H1,0.0296502853978472,AX,-0.0922765464869864,L...
-GetData ===>> L2(CDD),0.000157244698251559,H2,-0.0424918881818162,H1,0.130555697184508,AX,-0.032423856547473,L1...
-Get Checksum: 1499143366
-GetData ===>> L2(CDD),0,H2,0.177695799535106,H1,0.00103552363431316,AX,-0.120825656285361,L1,-0.474383977679569
-GetData ===>> L2(CDD),0.000157244698251559,H2,-0.128851608513609,H1,0.0756195512833277,AX,-0.173794050292377,L1...
-GetData ===>> L2(CDD),0,H2,-0.192480207695162,H1,-0.0394144183824229,AX,-0.296000043754039,L1,-0.67010744544789
-Get Checksum: 1499143366
+GetData ===>> L2(CDD),0,H2,0.0659055966236617,H1,-0.149608922188192,AX,-0.272958637475008,L1,-0.591522763693769
+GetData ===>> L2(CDD),0,H2,0.16732057135096,H1,-0.0129842506128773,AX,-0.243840847366273,L1,-0.447722826234352
+GetData ===>> L2(CDD),0.000157244698251559,H2,0.0502862935478311,H1,-0.130075882259757,AX,-0.161756034931331,L1...
+Get Checksum: 1041668763
+GetData ===>> L2(CDD),0.000157244698251559,H2,0.0267412483386019,H1,-0.195567455818712,AX,-0.130800446804245,L1...
+GetData ===>> L2(CDD),0,H2,0.0442251386309627,H1,-0.0376907338635764,AX,-0.151208316743194,L1,-0.542822447476227
+GetData ===>> L2(CDD),0,H2,-0.117430652533037,H1,0.0336725087094576,AX,-0.0735873131174773,L1,-0.67241526921859
+Get Checksum: 1041668763
+GetData ===>> L2(CDD),0,H2,0.11602892518382,H1,-0.00930695249153391,AX,0.0561007386101325,L1,-0.542937853964425
+GetData ===>> L2(CDD),0,H2,0.113347844918935,H1,-0.101005390416142,AX,0.061719802502488,L1,-0.945161295681142
+GetData ===>> L2(CDD),0,H2,0.118360305300696,H1,0.145726899628944,AX,-0.0552417003761812,L1,-0.520202510293052
+Get Checksum: 1041668763
+GetData ===>> L2(CDD),0,H2,-0.207745794348476,H1,-0.0802073862892174,AX,-0.178953153635361,L1,-0.383317536179394
 GetDeflection L2 (CDD) ===>> 0
 testing L2_CDD_==3250
 evaluate ot="L2(CDD).deflection==3250" t="L2_CDD_==3250", ctx="{'L2_CDD_': 0.0}"
-GetData ===>> L2(CDD),0,H2,-0.260066493417203,H1,-0.0803222936211633,AX,-0.00937613846098844,L1,-0.500698160651322
-GetData ===>> L2(CDD),0,H2,-0.137242429964913,H1,-0.00608930513565087,AX,-0.0810401183994684,L1,-0.552631949856987
-GetData ===>> L2(CDD),0,H2,0.00762588590989339,H1,0.241586831338916,AX,-0.227562013798604,L1,-0.542130008259475
-Get Checksum: 1499143366
-GetData ===>> L2(CDD),0,H2,0.24472942032457,H1,0.185724849767534,AX,-0.240172401866494,L1,-0.611140682447427
-GetData ===>> L2(CDD),0,H2,-0.044939434636845,H1,-0.0171211942425066,AX,-0.089410123215288,L1,-0.618179956402123
-15:30:51 -- collecting point 50
-GetData ===>> L2(CDD),0,H2,-0.136193581220314,H1,-0.0565361840131887,AX,-0.0287546050373238,L1,-0.486964092956617
-Get Checksum: 1499143366
-GetData ===>> L2(CDD),0,H2,0.0216126997999614,H1,-0.0242458889038558,AX,-0.230313385289497,L1,-0.7887224631466
-GetData ===>> L2(CDD),0.000157244698251559,H2,-0.0501841564171357,H1,0.00436812289747085,AX,-0.142265595546681,...
-GetData ===>> L2(CDD),0,H2,0.125121339062693,H1,0.126648001863899,AX,-0.317436080553246,L1,-0.60490915132747
-Get Checksum: 1499143366
-GetData ===>> L2(CDD),0,H2,0.139459548052806,H1,-0.148919527513351,AX,-0.0933084567749645,L1,-0.77453096461421
+GetData ===>> L2(CDD),0,H2,-0.0979681039481404,H1,0.00413828809589535,AX,-0.225039916354376,L1,-0.627296317114103
+GetData ===>> L2(CDD),0,H2,-0.0801368063142959,H1,-0.0868719889245922,AX,-0.100187830416562,L1,-0.430525417048776
+Get Checksum: 1041668763
+GetData ===>> L2(CDD),0,H2,0.0181159775768614,H1,-0.0873316149953225,AX,-0.166800554936357,L1,-0.695147039442938
+GetData ===>> L2(CDD),0,H2,-0.0732605981546021,H1,-0.0735427376047739,AX,-0.285912331789073,L1,-0.833603150375226
+GetData ===>> L2(CDD),0,H2,0.0605437182002984,H1,-0.179712009143509,AX,-0.0856264314241643,L1,-0.600523975759758
+Get Checksum: 1041668763
+08:02:06 -- collecting point 50
+GetData ===>> L2(CDD),0.000157244698251559,H2,0.0737153416908553,H1,-0.0674525873348065,AX,-0.267112222753414,L...
+GetData ===>> L2(CDD),0,H2,-0.164512102542438,H1,-0.10847417748754,AX,-0.0263466511313642,L1,-0.32479503703008
+GetData ===>> L2(CDD),0,H2,0.0422436153622527,H1,0.101018510226294,AX,-0.0861997190156783,L1,-0.638951286184181
+Get Checksum: 1041668763
+GetData ===>> L2(CDD),0,H2,0.105537783419514,H1,-0.0434363369482358,AX,-0.129424619775836,L1,-0.452570362911074
+GetData ===>> L2(CDD),0,H2,-0.0476200737273531,H1,-0.119964506209833,AX,-0.177348102226035,L1,-0.433410909710022
+Get Checksum: 1041668763
 GetDeflection L2 (CDD) ===>> 0
 testing L2_CDD_==3250
 evaluate ot="L2(CDD).deflection==3250" t="L2_CDD_==3250", ctx="{'L2_CDD_': 0.0}"
-GetData ===>> L2(CDD),0,H2,0.100758522809339,H1,0.00609188565500157,AX,0.0135574622095025,L1,-0.64379786568917
-GetData ===>> L2(CDD),0,H2,0.0035464361993523,H1,-0.188099343116671,AX,-0.149947168787896,L1,-0.623719021243222
-Get Checksum: 1499143366
-GetData ===>> L2(CDD),0,H2,0.0668381002189413,H1,0.0572315820516901,AX,0.111375405213314,L1,-0.638605101005494
-GetData ===>> L2(CDD),0.000157244698251559,H2,0.0983106178812077,H1,-0.129616276556801,AX,-0.194315653118304,L1...
-GetData ===>> L2(CDD),0,H2,-0.0262913072111681,H1,0.171357579116959,AX,-0.268258581380852,L1,-0.576635960118901
-Get Checksum: 1499143366
-GetData ===>> L2(CDD),0,H2,0.0379309021237747,H1,0.172162140617652,AX,-0.0776003692870341,L1,-0.341301741004792
+GetData ===>> L2(CDD),0,H2,-0.00869181084827428,H1,-0.123871186794872,AX,-0.124379903844132,L1,-0.642297736529996
+GetData ===>> L2(CDD),0,H2,0.0514519045685655,H1,-0.0490669947678405,AX,0.109081787453799,L1,-0.493311795511194
+GetData ===>> L2(CDD),0,H2,-0.047037326723889,H1,-0.0890552108091253,AX,-0.240057762719273,L1,-0.538090769625799
+Get Checksum: 1041668763
+GetData ===>> L2(CDD),0,H2,-0.0705800293358036,H1,-0.24554487555948,AX,-0.107181809873105,L1,-0.804182883350041
+GetData ===>> L2(CDD),0,H2,-0.0831669843949548,H1,-0.0410231878209953,AX,-0.184800103988189,L1,-0.63479705587223
+GetData ===>> L2(CDD),0,H2,-0.0774562563404459,H1,0.0979154341333201,AX,-0.201194304739023,L1,-0.627296317114103
+Get Checksum: 1041668763
 measurement finished
-estimated time: 62.915 actual time: :63.114
-flush and close file /Users/obama/PychronDev/data/isotopes/6b/132c1e-5b28-4202-bfcb-b6243297816f.h5
+estimated time: 62.915 actual time: :63.155
+flush and close file /Users/obama/PychronDev/data/isotopes/c4/36115d-f4a6-4025-8593-4c9b4a71fbc1.h5
 activate_detectors ('H1', 'AX', 'L2') {'peak_center': True}
 peak_center () {'detector': 'H1', 'isotope': 'Ar40'}
 _execute: Traceback (most recent call last):
@@ -2558,7 +2549,7 @@ _execute: Traceback (most recent call last):
 AttributeError: 'NoneType' object has no attribute 'ys'
 
 Post Measurement Started felix_pump_ms.py
-15:31:02 -- ******* Post Measurement Started felix_pump_ms.py *******
+08:02:17 -- ******* Post Measurement Started felix_pump_ms.py *******
 testing...
 no interpolation path defined
 executed 0
@@ -2571,32 +2562,28 @@ interlocks []
 actuate state mode=None-script, software_lock=False
 doing actuation None-script open_channel True
 Open V ===>> OK
-set states for children of V. state=True
-handle state [('V', True)]
-update switch state V True args=() kw={'refresh': False} ncanvase=5
 GetValveState V ===>> OK
-refresh_canvas_needed fired
 change switch state (True, True)
-update switch state V True args=() kw={} ncanvase=5
-15:31:02 -- OPEN   VALVE-V (Felix Ion Pump)
+update switch state V True args=() kw={} ncanvase=6
+08:02:17 -- OPEN   VALVE-V (Felix Ion Pump)
 ---------------------------------------- open V () result=[(True, True)], time=0.11 sec
 locked=[False]
 executed 0
 felix_pump_ms.py completed successfully
 setting _ms_pumptime
 Post Measurement Finished
-15:31:03 -- ******* Post Measurement Finished *******
+08:02:18 -- ******* Post Measurement Finished *******
 ----------------- finish -----------------
 state changed from measurement to failed
 ----------------- stop -----------------
 Measurement Finished unsuccessfully. Aborted=False
-15:31:03 -- ******* Measurement Finished unsuccessfully. Aborted=False *******
+08:02:18 -- ******* Measurement Finished unsuccessfully. Aborted=False *******
 failed execution step Measurement Failed
 measurement did not complete successfully
-15:31:03 -- Automated run ic-01-F-41 failed duration: 596.743 s
+08:02:18 -- Automated run ic-01-F-41 failed duration: 596.709 s
 ----------------- finish -----------------
 ----------------- stop -----------------
-finish run. runs completed=11
+finish run. runs completed=5
 write rem/ex queues
 /Users/obama/PychronDev/experiments/rem/Airs_Cocktails.rem.txt
 /Users/obama/PychronDev/experiments/rem/Airs_Cocktails.ex.txt
