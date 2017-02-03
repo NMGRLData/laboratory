@@ -45,7 +45,7 @@ Script duration 556.0
 Run total estimated duration= 557.000
 run duration: 0:09:17
 doing event level: 2
-15:21:29 -- Setting default integration. t=1.048576
+15:24:21 -- Setting default integration. t=1.048576
 setting integration time = 1.048576
 no handle    SetIntegrationTime 1.048576
 ----------------- start -----------------
@@ -68,10 +68,10 @@ $$$$$$$$$$$$$$$ auto_save_detector_ic=False
 loading queue conditionals pre_run_terminations
 loading system conditionals pre_run_terminations
 loading conditionals from /Users/jan/PychronDev/setupfiles/spectrometer/default_conditionals.yaml
-15:21:29 -- ******* Pre Extraction Check *******
+15:24:21 -- ******* Pre Extraction Check *******
 Get a measurement from the spectrometer
 Pre Extraction Termination data. keys=, signals=
-15:21:29 -- testing system defined conditionals
+15:24:21 -- testing system defined conditionals
 Checking default pre extraction terminations n=2
 testing CDD
 evaluate ot="CDD.inactive" t="CDD", ctx="{'CDD': True}"
@@ -80,8 +80,8 @@ condition CDD is true trips=1/1
 Pre Extraction Termination. CDD.inactive condition CDD is True
 _cancel
 Queue cancel. stop timer
-Stop timer. self._timer: <pychron.core.helpers.timer.Timer object at 0x12ca79dd0>
-Estimated total time= 33378.0, elapsed time= 7.0, deviation= 33371.0
+Stop timer. self._timer: <pychron.core.helpers.timer.Timer object at 0x12ca64dd0>
+Estimated total time= 32791.0, elapsed time= 6.0, deviation= 32785.0
 set extraction state False (0.75, 'green', 1.5)
 wait dialog stopped
 Cancel run state=None do_post_equilibration=True
@@ -91,24 +91,24 @@ no interpolation path defined
 no application available. self.manager = None
 no application available. self.manager = None
 Post Termination Started
-15:21:29 -- ******* Post Termination Started *******
+15:24:21 -- ******* Post Termination Started *******
 Post Equilibration Started jan_pump_extraction_line.py
 Post Measurement Started jan_pump_ms.py
-15:21:29 -- ******* Post Equilibration Started jan_pump_extraction_line.py *******
-15:21:29 -- ******* Post Measurement Started jan_pump_ms.py *******
-testing...
+15:24:21 -- ******* Post Equilibration Started jan_pump_extraction_line.py *******
+15:24:21 -- ******* Post Measurement Started jan_pump_ms.py *******
 testing...
 no interpolation path defined
+testing...
 no interpolation path defined
 calculate duration
 executed 0
 testing...
 Pumping spectrometer
 no interpolation path defined
+executed 4.0
 open () {'name': 'O'}
 executed 4.0
 opening name=O desc=---
-executed 4.0
 Pump after analysis
 doing GOSUB
 checking ownership. requestor=129.138.12.150
@@ -117,7 +117,7 @@ interlocks []
 testing...
 actuate state mode=None-script, software_lock=False
 no interpolation path defined
-doing actuation None-script open_channel True
+doing actuation None-script open_channel False
 executed 4.0
 Pump Microbone
 close () {'description': 'Jan Inlet'}
@@ -127,175 +127,33 @@ check software interlocks R
 interlocks []
 actuate state mode=None-script, software_lock=False
 doing actuation None-script close_channel False
-Open O ===>> ERROR 004 : invalid arguments: Open O
-change switch state (None, False)
----------------------------------------- open O () result=[(None, False)], time=0.57 sec
-action=open, ok=None, locked=[False]
-Failed to open valve Name="O", Description=""
-checking ownership. requestor=129.138.12.150
-check software interlocks O
-interlocks []
-actuate state mode=None-script, software_lock=False
-doing actuation None-script open_channel True
+Open O ===>> OK
 Close R ===>> OK
-Open O ===>> ERROR 004 : invalid arguments: Open O
-change switch state (None, False)
-action=open, ok=None, locked=[False]
-Failed to open valve Name="O", Description=""
-Failed to open valve Name="O", Description=""
+GetIndicatorState O ===>> OK
+change switch state (True, True)
+update switch state O True args=() kw={} ncanvase=2
+15:24:21 -- OPEN   VALVE-O (Jan Ion Pump)
+---------------------------------------- open O () result=[(True, True)], time=0.38 sec
 GetIndicatorState R ===>> False
 change switch state (True, True)
 update switch state R False args=() kw={} ncanvase=2
-15:21:31 -- CLOSE  VALVE-R (Jan Inlet)
+15:24:21 -- CLOSE  VALVE-R (Jan Inlet)
 ---------------------------------------- close None (Jan Inlet) result=[(True, True)]
-action=close, ok=True, locked=[False]
-is_closed ('F',) {}
-is F () closed?
-is closed True
-open () {'description': 'CO2 Laser to Jan'}
-opening name=--- desc=CO2 Laser to Jan
-checking ownership. requestor=129.138.12.150
-check software interlocks A
-interlocks []
-actuate state mode=None-script, software_lock=False
-doing actuation None-script open_channel False
-Open A ===>> OK
-GetIndicatorState A ===>> OK
-change switch state (True, True)
-update switch state A True args=() kw={} ncanvase=2
-15:21:31 -- OPEN   VALVE-A (CO2 Laser to Jan)
----------------------------------------- open None (CO2 Laser to Jan) result=[(True, True)], time=0.13 sec
 action=open, ok=True, locked=[False]
-sleep (1,) {}
-SLEEP 1.0
-Get Checksum: -1990985319
-close () {'description': 'CO2 Laser to Roughing'}
-closing name=--- desc=CO2 Laser to Roughing
-checking ownership. requestor=129.138.12.150
-check software interlocks G
-interlocks []
-actuate state mode=None-script, software_lock=True
-VALVE-G(CO2 Laser to Roughing) software locked
-change switch state (True, False)
----------------------------------------- close None (CO2 Laser to Roughing) result=[(True, False)]
-action=close, ok=True, locked=[True]
-open () {'description': 'Microbone to Turbo'}
-opening name=--- desc=Microbone to Turbo
-checking ownership. requestor=129.138.12.150
-check software interlocks U
-interlocks []
-actuate state mode=None-script, software_lock=False
-doing actuation None-script open_channel False
-Open U ===>> OK
-GetIndicatorState U ===>> OK
-change switch state (True, True)
-update switch state U True args=() kw={} ncanvase=2
-15:21:32 -- OPEN   VALVE-U (Microbone to Turbo)
----------------------------------------- open None (Microbone to Turbo) result=[(True, True)], time=0.14 sec
-action=open, ok=True, locked=[False]
-open () {'description': 'Microbone to Getter NP-10'}
-opening name=--- desc=Microbone to Getter NP-10
-checking ownership. requestor=129.138.12.150
-check software interlocks M
-interlocks []
-actuate state mode=None-script, software_lock=False
-doing actuation None-script open_channel False
-Open M ===>> OK
-GetIndicatorState M ===>> OK
-change switch state (True, True)
-update switch state M True args=() kw={} ncanvase=2
-15:21:33 -- OPEN   VALVE-M (Microbone to Getter NP-10)
----------------------------------------- open None (Microbone to Getter NP-10) result=[(True, True)], time=0.13 sec
-action=open, ok=True, locked=[False]
-open () {'description': 'Microbone to Getter D-50'}
-opening name=--- desc=Microbone to Getter D-50
-checking ownership. requestor=129.138.12.150
-check software interlocks K
-interlocks []
-actuate state mode=None-script, software_lock=False
-doing actuation None-script open_channel False
-Open K ===>> OK
-GetIndicatorState K ===>> OK
-change switch state (True, True)
-update switch state K True args=() kw={} ncanvase=2
-15:21:33 -- OPEN   VALVE-K (Microbone to Getter D-50)
----------------------------------------- open None (Microbone to Getter D-50) result=[(True, True)], time=0.41 sec
-action=open, ok=True, locked=[False]
-open () {'description': 'Microbone to CO2 Laser'}
-opening name=--- desc=Microbone to CO2 Laser
-checking ownership. requestor=129.138.12.150
-check software interlocks T
-interlocks []
-actuate state mode=None-script, software_lock=False
-doing actuation None-script open_channel False
-Open T ===>> OK
-GetIndicatorState T ===>> OK
-change switch state (True, True)
-update switch state T True args=() kw={} ncanvase=2
-15:21:34 -- OPEN   VALVE-T (Microbone to CO2 Laser)
----------------------------------------- open None (Microbone to CO2 Laser) result=[(True, True)], time=0.41 sec
-action=open, ok=True, locked=[False]
-open () {'description': 'Microbone to Inlet Pipette'}
-opening name=--- desc=Microbone to Inlet Pipette
-checking ownership. requestor=129.138.12.150
-check software interlocks S
-interlocks []
-actuate state mode=None-script, software_lock=False
-doing actuation None-script open_channel False
-Open S ===>> OK
-GetIndicatorState S ===>> OK
-change switch state (True, True)
-update switch state S True args=() kw={} ncanvase=2
-15:21:35 -- OPEN   VALVE-S (Microbone to Inlet Pipette)
----------------------------------------- open None (Microbone to Inlet Pipette) result=[(True, True)], time=0.42 sec
-action=open, ok=True, locked=[False]
-sleep (1,) {}
-SLEEP 1.0
-Get Checksum: -1990985319
-set_resource () {'name': 'CO2PumpTimeFlag', 'value': 30}
-Set CO2PumpTimeFlag 30 ===>> OK
-release ('JanCO2Flag',) {}
-release JanCO2Flag
-Set JanCO2Flag 0 ===>> OK
-executed 6.0
-PumpMicrobone.py completed successfully
-gosub finished
-get_resource_value () {'name': 'JanMiniboneFlag'}
-Read JanMiniboneFlag ===>> 0
-Get Resource Value JanMiniboneFlag=0.0
-get resource value 0.0
-get_resource_value () {'name': 'JanMiniboneFlag'}
-Read JanMiniboneFlag ===>> 0
-Get Resource Value JanMiniboneFlag=0.0
-executed 4.0
-jan_pump_extraction_line.py completed successfully
-Post Equilibration Finished
-15:21:36 -- ******* Post Equilibration Finished *******
-Get Checksum: -1990985319
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% disable
-set extraction state False (0.75, 'red', 1.5)
-disabling laser
-Disable ===>> OK
-AbortPattern ===>> OK
-Failed to open valve Name="O", Description=""
-Get Checksum: -1990985319
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% disable
-set extraction state False (0.75, 'red', 1.5)
-disabling laser
-Disable ===>> OK
-AbortPattern ===>> OK
 executed 0
-Post Measurement Finished unsuccessfully
-15:21:42 -- ******* Post Measurement Finished unsuccessfully *******
+jan_pump_ms.py completed successfully
+setting _ms_pumptime
+Post Measurement Finished
+15:24:21 -- ******* Post Measurement Finished *******
 ----------------- stop -----------------
 Post Termination Finished
-15:21:42 -- ******* Post Termination Finished *******
+15:24:21 -- ******* Post Termination Finished *******
 ----------------- finish -----------------
 ----------------- stop -----------------
-15:21:42 -- ******* Pre Extraction Check Failed *******
+15:24:21 -- ******* Pre Extraction Check Failed *******
 extraction did not complete successfully
 state changed from not run to failed
-15:21:42 -- Automated run bu-FC-J-7568 failed duration: 13.160 s
+15:24:21 -- Automated run bu-FC-J-7568 failed duration: 0.728 s
 ----------------- finish -----------------
 ----------------- stop -----------------
 finish run. runs completed=1
